@@ -5,8 +5,7 @@ import Link from './NavLink'
 
 const styles = {
   nav: {
-    backgroundColor: 'purple',
-    color: 'white',
+    backgroundColor: 'white',
     height: '3%',
   },
   nav__logo: {
