@@ -5,9 +5,9 @@ import injectSheet from 'react-jss'
 const styles = {
   link: {
     textDecoration: 'none',
-    color: 'white',
+    color: 'black',
     '&:hover': {
-      borderBottom: '3px solid white',
+      borderBottom: '2px solid black',
     },
     '&:focus, &:visited, &:link, &:active': {
       textDecoration: 'none',

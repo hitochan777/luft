@@ -6,7 +6,7 @@ const styles = {
     left: 0,
     bottom: 0,
     width: '100%',
-    backgroundColor: 'purple',
+    backgroundColor: 'black',
     color: 'white',
     textAlign: 'center',
   },
