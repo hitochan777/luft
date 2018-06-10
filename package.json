@@ -4,9 +4,11 @@
   "version": "1.0.0",
   "author": "Hitoshi Otsuki<hitochan777@gmail.com>",
   "dependencies": {
+    "bootstrap": "^4.1.1",
     "gatsby": "^1.9.247",
     "gatsby-link": "^1.6.40",
     "gatsby-plugin-react-helmet": "^2.0.10",
+    "gatsby-plugin-sass": "^1.0.26",
     "normalize.css": "^8.0.0",
     "react-helmet": "^5.2.0",
     "react-jss": "^8.4.0"
