@@ -4,8 +4,7 @@ import Helmet from 'react-helmet'
 
 import Header from '../components/header'
 import Footer from '../components/footer'
-import 'normalize.css'
-// import '../assets/milligram.css'
+import '../assets/index.scss'
 
 const Layout = ({ children, data }) => (
   <div>
@@ -17,6 +16,7 @@ const Layout = ({ children, data }) => (
       ]}
     />
     <Header siteTitle={data.site.siteMetadata.title} />
+
     <div>{children()}</div>
     <Footer />
   </div>
