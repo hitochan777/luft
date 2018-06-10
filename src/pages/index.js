@@ -9,6 +9,7 @@ import ConceptImage from '../assets/img/concept.jpg'
 const styles = {
   sectionHeader: {
     display: 'flex',
+    marginBottom: '50px',
   },
   sectionHeader__text: {
     borderBottom: '1px solid black',
@@ -17,7 +18,9 @@ const styles = {
   },
   sectionContent: {
     display: 'flex',
-    justifyContent: 'center',
+    justifyContent: 'space-evenly',
+    width: '80%',
+    marginLeft: '10%',
   },
   contact: {
     backgroundImage: `url(${TopImage})`,
@@ -56,7 +59,7 @@ const IndexPage = ({ classes }) => (
         style={{
           color: 'white',
           fontWeight: 'bold',
-          fontSize: '5em',
+          fontSize: '3vw',
           fontFamily: 'Quicksand, sans-serif',
         }}
       >
@@ -71,7 +74,7 @@ const IndexPage = ({ classes }) => (
           style={{
             color: 'black',
             fontWeight: 'bold',
-            fontSize: '3em',
+            fontSize: '3vw',
             fontFamily: 'Quicksand, sans-serif',
           }}
         >
@@ -88,7 +91,7 @@ const IndexPage = ({ classes }) => (
           style={{
             color: 'black',
             fontWeight: 'bold',
-            fontSize: '3em',
+            fontSize: '3vw',
             fontFamily: 'Quicksand, sans-serif',
           }}
         >
@@ -108,7 +111,7 @@ const IndexPage = ({ classes }) => (
           style={{
             color: 'black',
             fontWeight: 'bold',
-            fontSize: '3em',
+            fontSize: '3vw',
             fontFamily: 'Quicksand, sans-serif',
           }}
         >
@@ -139,17 +142,21 @@ const IndexPage = ({ classes }) => (
           <h1>Access</h1>
         </div>
       </div>
-      <p className={classes.sectionContent}>
-        Hair Luft（ヘアールフト）<br /> 兵庫県豊岡市若松町７‐４
-      </p>
-      <iframe
-        src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3246.186222723647!2d134.81301481571583!3d35.54910278022534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5fffc43e1396ea11%3A0x535fd767914f80fe!2z772I772B772J772S77ys772V772G772U!5e0!3m2!1sen!2sjp!4v1527418838679`}
-        width="100%"
-        height="450"
-        frameBorder="0"
-        style={{ border: '0' }}
-        allowFullScreen
-      />
+      <div className={classes.sectionContent}>
+        <div style={{ flex: '0 0 50%' }}>
+          <iframe
+            src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3246.186222723647!2d134.81301481571583!3d35.54910278022534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5fffc43e1396ea11%3A0x535fd767914f80fe!2z772I772B772J772S77ys772V772G772U!5e0!3m2!1sen!2sjp!4v1527418838679`}
+            width="100%"
+            height="450"
+            frameBorder="0"
+            style={{ border: '0' }}
+            allowFullScreen
+          />
+        </div>
+        <p style={{ flex: '0 0 50%' }}>
+          Hair Luft（ヘアールフト）<br /> 兵庫県豊岡市若松町７‐４
+        </p>
+      </div>
     </section>
     <section>
       <div className={classes.sectionHeader}>
