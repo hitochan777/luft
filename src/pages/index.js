@@ -1,10 +1,12 @@
 import React from 'react'
 import injectSheet from 'react-jss'
 
-import Table from '../components/Table'
 import TopImage from '../assets/img/top.jpg'
 import MenuImage from '../assets/img/menu.jpg'
 import ConceptImage from '../assets/img/concept.jpg'
+
+import Table from '../components/Table'
+import Button from '../components/Button'
 
 const styles = {
   sectionHeader: {
@@ -17,10 +19,19 @@ const styles = {
     flex: '0 0 25%',
   },
   contact: {
-    backgroundImage: `url(${TopImage})`,
-    backgroundSize: 'cover',
+    position: 'relative',
+  },
+  contact__image: {
     width: '100%',
-    height: '500px',
+    height: '400px',
+    opacity: '0.4',
+  },
+  contact__text: {
+    position: 'absolute',
+    left: '50%',
+    top: '50%',
+    transform: 'translate(-50%,-50%)',
+    fontSize: '30px',
   },
   imageNav: {
     display: 'flex',
@@ -149,7 +160,24 @@ const IndexPage = ({ classes }) => (
       </div>
     </section>
 
-    <section className={classes.contact} />
+    <section className={classes.contact}>
+      <img className={classes.contact__image} src={TopImage} />
+      <div className={'container-fluid ' + classes.contact__text}>
+        <div className="row justify-content-center my-2">
+          <div className="col-2 text-center">Tel: xxx-yyy-zzzz</div>
+        </div>
+        <div className="row justify-content-center my-2">
+          <div className="col-2">
+            <Button>Contact</Button>
+          </div>
+        </div>
+        <div className="row justify-content-center my-2">
+          <div className="col-2">
+            <Button>Access</Button>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 )
 
