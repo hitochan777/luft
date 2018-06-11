@@ -9,7 +9,7 @@ const styles = {
     textAlign: 'center',
     border: 'none',
     width: '100%',
-    transition: '0.3s',
+    transition: '0.8s',
     '&:hover': {
       backgroundColor: 'black',
       color: 'white',
