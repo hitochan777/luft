@@ -14,6 +14,7 @@ const styles = {
       backgroundColor: 'black',
       color: 'white',
     },
+    fontSize: '0.7em',
   },
 }
 
