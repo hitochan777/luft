@@ -154,7 +154,7 @@ const IndexPage = ({ classes }) => (
       </div>
       <div className="container-fluid">
         <div className="row justify-content-center">
-          <p className="col-11 col-md-6">
+          <div className="col-md-3">
             <Table
               list={[
                 { key: '営業時間', value: '火～日・祝　9：00～19：00' },
@@ -162,7 +162,7 @@ const IndexPage = ({ classes }) => (
                 { key: '駐車場', value: '2台あり' },
               ]}
             />
-          </p>
+          </div>
         </div>
       </div>
     </section>
