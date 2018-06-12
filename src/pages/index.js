@@ -54,6 +54,9 @@ const styles = {
     fontSize: '3vw',
     fontFamily: 'Quicksand, sans-serif',
   },
+  fadeIn: {
+    animation: 'fadeIn 3s',
+  },
   jumbotron: {
     position: 'relative',
   },
@@ -72,11 +75,15 @@ const styles = {
     fontSize: '3vw',
     fontFamily: 'Quicksand, sans-serif',
   },
+  '@keyframes fadeIn': {
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+  },
 }
 
 const IndexPage = ({ classes }) => (
   <div>
-    <div className={classes.jumbotron}>
+    <div className={classes.jumbotron + ' ' + classes.fadeIn}>
       <img src={TopImage} className={classes.jumbotron__image} />
       <p className={classes.jumbotron__text}>
         Long<br />User <br />Future <br />Together<br />
