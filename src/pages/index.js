@@ -62,6 +62,7 @@ const styles = {
   },
   jumbotron__image: {
     width: '100%',
+    height: '100vh',
   },
   jumbotron__text: {
     position: 'absolute',
