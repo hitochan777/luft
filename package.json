@@ -14,7 +14,9 @@
     "react-helmet": "^5.2.0",
     "react-jss": "^8.4.0"
   },
-  "keywords": ["gatsby"],
+  "keywords": [
+    "gatsby"
+  ],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
@@ -22,7 +24,7 @@
     "format": "prettier --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "gatsby serve -H 0.0.0.0 -p 8080",
-    "start": "npm run develop",
+    "start": "npm run serve",
     "deploy": "now"
   },
   "devDependencies": {
