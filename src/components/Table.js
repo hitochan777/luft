@@ -1,29 +1,18 @@
 import React from 'react'
-import injectSheet from 'react-jss'
 
-const styles = {
-  table: {
-    borderSpacing: 0,
-    width: '100%',
-  },
-  table__cell: {
-    borderBottom: '.1rem solid black',
-    padding: '1.5rem',
-    textAlign: 'left',
-  },
-}
+import styles from './Table.module.scss'
 
-const Table = ({ classes, list }) => (
-  <table className={classes.table}>
+const Table = ({ list }) => (
+  <table className={styles.table}>
     <tbody>
       {list.map((item, index) => (
         <tr key={index}>
-          <td className={classes.table__cell}>{item.key}</td>
-          <td className={classes.table__cell}>{item.value}</td>
+          <td className={styles.table__cell}>{item.key}</td>
+          <td className={styles.table__cell}>{item.value}</td>
         </tr>
       ))}
     </tbody>
   </table>
 )
 
-export default injectSheet(styles)(Table)
+export default Table
