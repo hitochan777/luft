@@ -16,8 +16,8 @@ const styles = {
 const Table = ({ classes, list }) => (
   <table className={classes.table}>
     <tbody>
-      {list.map(item => (
-        <tr>
+      {list.map((item, index) => (
+        <tr key={index}>
           <td className={classes.table__cell}>{item.key}</td>
           <td className={classes.table__cell}>{item.value}</td>
         </tr>
