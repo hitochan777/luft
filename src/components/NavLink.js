@@ -1,22 +1,8 @@
 import React from 'react'
 import GatsbyLink from 'gatsby-link'
-import injectSheet from 'react-jss'
 
-const styles = {
-  link: {
-    textDecoration: 'none',
-    color: 'black',
-    '&:hover': {
-      borderBottom: '2px solid black',
-    },
-    '&:focus, &:visited, &:link, &:active': {
-      textDecoration: 'none',
-    },
-  },
-}
+import styles from './NavLink.module.scss'
 
-const Link = ({ classes, ...props }) => (
-  <GatsbyLink className={classes.link} {...props} />
-)
+const Link = ({ ...props }) => <GatsbyLink className={styles.link} {...props} />
 
-export default injectSheet(styles)(Link)
+export default Link

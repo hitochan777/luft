@@ -1,5 +1,4 @@
 import React from 'react'
-import injectSheet from 'react-jss'
 
 import TopImage from '../assets/img/top.jpg'
 import MenuImage from '../assets/img/menu.jpg'
@@ -7,126 +6,53 @@ import ConceptImage from '../assets/img/concept.jpg'
 
 import Table from '../components/Table'
 import Button from '../components/Button'
+import styles from './index.module.scss'
 
-const styles = {
-  sectionHeader: {
-    display: 'flex',
-    marginBottom: '50px',
-  },
-  sectionHeader__text: {
-    borderBottom: '1px solid black',
-    textAlign: 'right',
-    flex: '0 0 25%',
-  },
-  contact: {
-    position: 'relative',
-  },
-  contact__image: {
-    width: '100%',
-    height: '400px',
-    opacity: '0.4',
-  },
-  contact__text: {
-    position: 'absolute',
-    left: '50%',
-    top: '50%',
-    transform: 'translate(-50%,-50%)',
-    fontSize: '30px',
-  },
-  imageNav: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    marginTop: '60px',
-  },
-  imageNav__item: {
-    flex: '0 0 25%',
-    position: 'relative',
-  },
-  imageNav__text: {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%,-50%)',
-    margin: 0,
-    padding: 0,
-    color: 'black',
-    fontWeight: 'bold',
-    fontSize: '3vw',
-    fontFamily: 'Quicksand, sans-serif',
-  },
-  fadeIn: {
-    animation: 'fadeIn 3s',
-  },
-  jumbotron: {
-    position: 'relative',
-  },
-  jumbotron__image: {
-    width: '100%',
-    height: '100vh',
-  },
-  jumbotron__text: {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%,-50%)',
-    margin: 0,
-    padding: 0,
-    color: 'white',
-    fontWeight: 'bold',
-    fontSize: '3vw',
-    fontFamily: 'Quicksand, sans-serif',
-  },
-  '@keyframes fadeIn': {
-    from: { opacity: 0 },
-    to: { opacity: 1 },
-  },
-}
-
-const IndexPage = ({ classes }) => (
+const IndexPage = () => (
   <div>
-    <div className={classes.jumbotron + ' ' + classes.fadeIn}>
-      <img src={TopImage} className={classes.jumbotron__image} />
-      <p className={classes.jumbotron__text}>
+    <div className={styles.jumbotron + ' ' + styles.fadeIn}>
+      <img src={TopImage} className={styles.jumbotron__image} />
+      <p className={styles.jumbotron__text}>
         Long<br />User <br />Future <br />Together<br />
       </p>
     </div>
-    <nav className={'container-fluid ' + classes.imageNav}>
+    <nav className={'container-fluid ' + styles.imageNav}>
       <div className="row">
-        <div className={'col-6 col-md-3 ' + classes.imageNav__item}>
+        <div className={'col-6 col-md-3 ' + styles.imageNav__item}>
           <img src={MenuImage} className="w-100" />
-          <p className={classes.imageNav__text}>Concept</p>
+          <p className={styles.imageNav__text}>Concept</p>
         </div>
-        <div className={'col-6 col-md-3 ' + classes.imageNav__item}>
+        <div className={'col-6 col-md-3 ' + styles.imageNav__item}>
           <img src={ConceptImage} className="w-100" />
         </div>
-        <div className={'col-6 col-md-3 ' + classes.imageNav__item}>
+        <div className={'col-6 col-md-3 ' + styles.imageNav__item}>
           <img src={MenuImage} className="w-100" />
-          <p className={classes.imageNav__text}>Menu</p>
+          <p className={styles.imageNav__text}>Menu</p>
         </div>
-        <div className={'col-6 col-md-3 ' + classes.imageNav__item}>
+        <div className={'col-6 col-md-3 ' + styles.imageNav__item}>
           <img src={ConceptImage} className="w-100" />
         </div>
       </div>
       <div className="row">
-        <div className={'col-6 col-md-3 ' + classes.imageNav__item}>
+        <div className={'col-6 col-md-3 ' + styles.imageNav__item}>
           <img src={MenuImage} className="w-100" />
         </div>
-        <div className={'col-6 col-md-3 ' + classes.imageNav__item}>
+        <div className={'col-6 col-md-3 ' + styles.imageNav__item}>
           <img src={ConceptImage} className="w-100" />
-          <p className={classes.imageNav__text}>Info</p>
+          <p className={styles.imageNav__text}>Info</p>
         </div>
-        <div className={'col-6 col-md-3 ' + classes.imageNav__item}>
+        <div className={'col-6 col-md-3 ' + styles.imageNav__item}>
           <img src={MenuImage} className="w-100" />
         </div>
-        <div className={'col-6 col-md-3 ' + classes.imageNav__item}>
+        <div className={'col-6 col-md-3 ' + styles.imageNav__item}>
           <img src={ConceptImage} className="w-100" />
-          <p className={classes.imageNav__text}>Contact</p>
+          <p className={styles.imageNav__text}>Contact</p>
         </div>
       </div>
     </nav>
     <section>
-      <div className={classes.sectionHeader}>
-        <div className={classes.sectionHeader__text}>
+      <div className={styles.sectionHeader}>
+        <div className={styles.sectionHeader__text}>
           <h1>Access</h1>
         </div>
       </div>
@@ -148,8 +74,8 @@ const IndexPage = ({ classes }) => (
       </div>
     </section>
     <section>
-      <div className={classes.sectionHeader}>
-        <div className={classes.sectionHeader__text}>
+      <div className={styles.sectionHeader}>
+        <div className={styles.sectionHeader__text}>
           <h1>Info</h1>
         </div>
       </div>
@@ -168,9 +94,9 @@ const IndexPage = ({ classes }) => (
       </div>
     </section>
 
-    <section className={classes.contact}>
-      <img className={classes.contact__image} src={TopImage} />
-      <div className={'container-fluid ' + classes.contact__text}>
+    <section className={styles.contact}>
+      <img className={styles.contact__image} src={TopImage} />
+      <div className={'container-fluid ' + styles.contact__text}>
         <div className="row justify-content-center my-2">
           <div className="col-2 text-center">Tel: xxx-yyy-zzzz</div>
         </div>
@@ -189,4 +115,4 @@ const IndexPage = ({ classes }) => (
   </div>
 )
 
-export default injectSheet(styles)(IndexPage)
+export default IndexPage
