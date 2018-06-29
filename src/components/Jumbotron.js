@@ -10,7 +10,7 @@ import styles from './Jumbotron.module.scss'
 const Jumbotron = () => (
   <div
     id="carousel"
-    className="carousel slide justify-content-center"
+    className="carousel slide justify-content-center fadeIn"
     data-ride="carousel"
   >
     <ul className="carousel-indicators">
