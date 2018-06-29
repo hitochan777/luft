@@ -48,47 +48,34 @@ const IndexPage = () => (
         </div>
       </nav>
     </section>
-    <section>
-      <div className={'row justify-content-center mb-5 mt-5'}>
-        <div className={'col-12 col-lg-6 ' + styles.sectionHeader__text}>
-          <h1>Access</h1>
-        </div>
-      </div>
-      <div className="container-fluid mb-5 mt-5">
-        <div className="row justify-content-center mb-5">
-          <p className="col-12 col-lg-6 text-center">
-            Hair Luft（ヘアールフト）<br /> 兵庫県豊岡市若松町７‐４
-          </p>
-        </div>
-        <div className="row justify-content-center">
-          <iframe
-            src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3246.186222723647!2d134.81301481571583!3d35.54910278022534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5fffc43e1396ea11%3A0x535fd767914f80fe!2z772I772B772J772S77ys772V772G772U!5e0!3m2!1sen!2sjp!4v1527418838679`}
-            width="100%"
-            height="450"
-            frameBorder="0"
-            style={{ border: '0' }}
-            className="col-12 col-lg-6"
-            allowFullScreen
-          />
-        </div>
-      </div>
-    </section>
     <section className="container-fluid mb-5 mt-5">
       <div className={'row justify-content-center mb-5'}>
         <div className={'col-12 col-lg-6 ' + styles.sectionHeader__text}>
-          <h1>Info</h1>
+          <h1>Shop Information</h1>
         </div>
       </div>
-      <div className="row justify-content-center">
+      <div className="row justify-content-center mb-5">
         <div className="col-12 col-lg-3">
           <Table
             list={[
               { key: '営業時間', value: '火～日・祝　9：00～19：00' },
               { key: '定休日', value: '毎週月曜日、第2・3火曜日' },
               { key: '駐車場', value: '2台あり' },
+              { key: '住所', value: '兵庫県豊岡市若松町７‐４' },
             ]}
           />
         </div>
+      </div>
+      <div className="row justify-content-center">
+        <iframe
+          src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3246.186222723647!2d134.81301481571583!3d35.54910278022534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5fffc43e1396ea11%3A0x535fd767914f80fe!2z772I772B772J772S77ys772V772G772U!5e0!3m2!1sen!2sjp!4v1527418838679`}
+          width="100%"
+          height="450"
+          frameBorder="0"
+          style={{ border: '0' }}
+          className="col-12"
+          allowFullScreen
+        />
       </div>
     </section>
 
