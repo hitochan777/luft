@@ -32,3 +32,16 @@
   font-size: 3vw;
   font-family: Quicksand, sans-serif;
 }
+
+.fadeIn {
+  animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+  from: {
+    opacity: 0;
+  }
+  to: {
+    opacity: 1;
+  }
+}
