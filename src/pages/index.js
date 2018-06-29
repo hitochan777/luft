@@ -1,6 +1,6 @@
 import React from 'react'
+import Jumbotron from '../components/Jumbotron'
 
-import TopImage from '../assets/img/top.jpg'
 import MenuImage from '../assets/img/menu.jpg'
 import ConceptImage from '../assets/img/concept.jpg'
 
@@ -10,11 +10,12 @@ import styles from './index.module.scss'
 
 const IndexPage = () => (
   <div>
-    <div className={styles.jumbotron + ' ' + styles.fadeIn}>
-      <img src={TopImage} className={styles.jumbotron__image} />
-      <p className={styles.jumbotron__text}>
-        Long<br />User <br />Future <br />Together<br />
-      </p>
+    <div className={'container-fluid'}>
+      <div className="row justify-content-center">
+        <div className={'col-12 col-md-8'}>
+          <Jumbotron />
+        </div>
+      </div>
     </div>
     <nav className={'container-fluid ' + styles.imageNav}>
       <div className="row">
@@ -34,17 +35,17 @@ const IndexPage = () => (
         </div>
       </div>
       <div className="row">
-        <div className={'col-6 col-md-3 ' + styles.imageNav__item}>
+        <div className={'col-12 col-md-3 ' + styles.imageNav__item}>
           <img src={MenuImage} className="w-100" />
         </div>
-        <div className={'col-6 col-md-3 ' + styles.imageNav__item}>
+        <div className={'col-12 col-md-3 ' + styles.imageNav__item}>
           <img src={ConceptImage} className="w-100" />
           <p className={styles.imageNav__text}>Info</p>
         </div>
-        <div className={'col-6 col-md-3 ' + styles.imageNav__item}>
+        <div className={'col-12 col-md-3 ' + styles.imageNav__item}>
           <img src={MenuImage} className="w-100" />
         </div>
-        <div className={'col-6 col-md-3 ' + styles.imageNav__item}>
+        <div className={'col-12 col-md-3 ' + styles.imageNav__item}>
           <img src={ConceptImage} className="w-100" />
           <p className={styles.imageNav__text}>Contact</p>
         </div>
@@ -95,7 +96,7 @@ const IndexPage = () => (
     </section>
 
     <section className={styles.contact}>
-      <img className={styles.contact__image} src={TopImage} />
+      <img className={styles.contact__image} src={MenuImage} />
       <div className={'container-fluid ' + styles.contact__text}>
         <div className="row justify-content-center my-2">
           <div className="col-2 text-center">Tel: xxx-yyy-zzzz</div>
