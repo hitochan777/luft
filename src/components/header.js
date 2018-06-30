@@ -1,30 +1,65 @@
 import React from 'react'
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+} from 'reactstrap'
 
 import Link from './NavLink'
 import styles from './header.module.scss'
 
-const Header = ({ siteTitle }) => (
-  <header>
-    <nav className={styles.nav}>
-      <ul className={styles.nav__menu}>
-        <li className={styles.nav__logo + ' ' + styles.nav__menuItem}>
-          <Link to="/">{siteTitle}</Link>
-        </li>
-        <li className={styles.nav__menuItem}>
-          <Link to="/concept">Concept</Link>
-        </li>
-        <li className={styles.nav__menuItem}>
-          <Link to="/menu">Menu</Link>
-        </li>
-        <li className={styles.nav__menuItem}>
-          <Link to="/info">Info</Link>
-        </li>
-        <li className={styles.nav__menuItem}>
-          <Link to="/contact">Contact</Link>
-        </li>
-      </ul>
-    </nav>
-  </header>
-)
+export default class Header extends React.Component {
+  constructor(props) {
+    super(props)
 
-export default Header
+    this.toggle = this.toggle.bind(this)
+    this.state = {
+      isOpen: false,
+    }
+  }
+  toggle() {
+    this.setState({
+      isOpen: !this.state.isOpen,
+    })
+  }
+  render() {
+    return (
+      <div>
+        <Navbar color="light" light expand="md">
+          <NavbarBrand tag={Link} to="/">
+            {this.props.siteTitle}
+          </NavbarBrand>
+          <NavbarToggler onClick={this.toggle} />
+          <Collapse isOpen={this.state.isOpen} navbar>
+            <Nav className="ml-auto" navbar>
+              <NavItem>
+                <NavLink tag={Link} to="/concept/">
+                  Concept
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink tag={Link} to="/stylist">
+                  Stylist
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink tag={Link} to="/menu">
+                  Menu
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink tag={Link} to="/info">
+                  Shop Information
+                </NavLink>
+              </NavItem>
+            </Nav>
+          </Collapse>
+        </Navbar>
+      </div>
+    )
+  }
+}
