@@ -99,6 +99,7 @@ class Jumbotron extends React.Component {
         activeIndex={activeIndex}
         next={this.next}
         previous={this.previous}
+        className={styles.jumbotron}
       >
         <CarouselIndicators
           items={items}
