@@ -12,13 +12,7 @@ import styles from './index.module.scss'
 
 const IndexPage = () => (
   <div>
-    <div className={'container-fluid'}>
-      <div className="row justify-content-center">
-        <div className={'col-12 col-lg-8'}>
-          <Jumbotron />
-        </div>
-      </div>
-    </div>
+    <Jumbotron />
     <section className="container-fluid mb-5 mt-5">
       <div className={'row justify-content-center mb-5'}>
         <div className={'col-12 col-lg-6 ' + styles.sectionHeader__text}>
