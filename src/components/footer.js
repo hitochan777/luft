@@ -9,7 +9,7 @@ const Footer = () => (
     <div className={'row justify-content-center py-5'}>
       <div className={'col-12 col-md-2'}>
         <span>
-          <strong>Luft</strong>
+          <strong>hoge</strong>
         </span>
         <br />
         <span>〒xxx-yyy 兵庫県豊岡市若松町7-4</span>
