@@ -11,6 +11,7 @@ import {
 
 import Link from './NavLink'
 import styles from './header.module.scss'
+import Logo from '../assets/img/logo.png'
 
 export default class Header extends React.Component {
   constructor(props) {
@@ -29,9 +30,15 @@ export default class Header extends React.Component {
   render() {
     return (
       <div>
-        <Navbar color="light" light expand="md">
+        <Navbar
+          color="white"
+          light
+          expand="md"
+          className="py-0"
+          style={{ height: '60px' }}
+        >
           <NavbarBrand tag={Link} to="/">
-            {this.props.siteTitle}
+            <img src={Logo} />
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
