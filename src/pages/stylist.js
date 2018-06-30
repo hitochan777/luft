@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Menu = () => (
+const Stylist = () => (
   <div className="container-fluid mt-5">
     <div className="row justify-content-center">
-      <h1>Menu</h1>
+      <h1>Stylists</h1>
     </div>
   </div>
 )
 
-export default Menu
+export default Stylist
