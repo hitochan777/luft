@@ -13,7 +13,7 @@ import styles from './index.module.scss'
 const IndexPage = () => (
   <div>
     <Jumbotron />
-    <section className="container-fluid mb-5 mt-5">
+    <section className="container-fluid mb-5 mt-5 pl-0 pr-0">
       <div className={'row justify-content-center mb-5'}>
         <div className={'col-12 col-lg-6 ' + styles.sectionHeader__text}>
           <h1>What's Luft?</h1>
