@@ -15,7 +15,8 @@ const Footer = () => (
         <span>〒xxx-yyy 兵庫県豊岡市若松町7-4</span>
         <br />
         <span>
-          <FontAwesome name="phone" /> xxx-yyy-zzzz
+          <FontAwesome name="phone" />
+          <a href="tel:xxx-yyy-zzzz">xxx-yyy-zzzz</a>
         </span>
       </div>
       <div className={'col-12 col-md-2'}>
