@@ -29,11 +29,11 @@
 .imageNav__item {
   position: relative;
   transition: 0.8s;
-  opacity: 0.5;
+  opacity: 1;
 }
 
 .imageNav__item:hover {
-  opacity: 1;
+  opacity: 0.5;
 }
 
 .imageNav__text {
