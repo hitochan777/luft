@@ -30,14 +30,8 @@ export default class Header extends React.Component {
   render() {
     return (
       <div>
-        <Navbar
-          color="white"
-          light
-          expand="md"
-          className="py-0"
-          style={{ height: '60px' }}
-        >
-          <NavbarBrand tag={Link} to="/">
+        <Navbar color="white" light expand="md">
+          <NavbarBrand className="py-0" tag={Link} to="/">
             <img src={Logo} />
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
