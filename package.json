@@ -5,6 +5,7 @@
   "author": "Hitoshi Otsuki<hitochan777@gmail.com>",
   "dependencies": {
     "bootstrap": "^4.1.1",
+    "classnames": "^2.2.6",
     "gatsby": "^1.9.247",
     "gatsby-link": "^1.6.40",
     "gatsby-plugin-react-helmet": "^2.0.10",
