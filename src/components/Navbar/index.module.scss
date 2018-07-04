@@ -1,7 +1,4 @@
-$threshold: 800px;
-$navbarHeight: 50px;
-$toggleButtonZIndex: 200;
-$navbarZIndex: 100;
+@import './variables';
 
 .navbar {
   display: flex;
@@ -36,20 +33,6 @@ $navbarZIndex: 100;
       margin-left: 25%;
       margin-right: 25%;
       height: $navbarHeight;
-    }
-  }
-
-  &__toggle {
-    position: fixed;
-    top: 1px;
-    right: 1px;
-    height: $navbarHeight;
-    width: $navbarHeight;
-    background-color: transparent;
-    border: 0px;
-    z-index: $toggleButtonZIndex;
-    @media screen and (min-width: $threshold) {
-      display: none;
     }
   }
 
