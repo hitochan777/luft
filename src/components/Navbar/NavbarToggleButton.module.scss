@@ -7,9 +7,12 @@
   height: $navbarHeight;
   width: $navbarHeight;
   background-color: transparent;
-  border: 0px;
+  border: none;
   z-index: $toggleButtonZIndex;
   padding: 0;
+  &:focus {
+    outline: none;
+  }
   @media screen and (min-width: $threshold) {
     display: none;
   }
