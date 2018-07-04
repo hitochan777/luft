@@ -3,20 +3,18 @@ import classNames from 'classnames'
 import { compose, withState } from 'recompose'
 
 import styles from './index.module.scss'
+import NavbarToggleButton from './NavbarToggleButton'
 
 const withIsNavbarOpen = withState('isNavbarOpen', 'setIsNavbarOpen', false)
 
 const Navbar = ({ isNavbarOpen, setIsNavbarOpen }) => (
   <div className={styles.navbar}>
-    <button
-      className={styles.navbar__toggle}
+    <NavbarToggleButton
       onClick={() => {
         setIsNavbarOpen(!isNavbarOpen)
-        console.log(isNavbarOpen)
       }}
-    >
-      <span>x</span>
-    </button>
+      isCollapsed={!isNavbarOpen}
+    />
     <div className={styles.navbar__brand}>LOGO</div>
     <ul
       className={classNames(styles.navbar__nav, {
