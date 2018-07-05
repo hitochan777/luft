@@ -4,6 +4,7 @@ import { compose, withState } from 'recompose'
 
 import styles from './index.module.scss'
 import NavbarToggleButton from './NavbarToggleButton'
+import NavLink from '../NavLink'
 
 const withIsNavbarOpen = withState('isNavbarOpen', 'setIsNavbarOpen', false)
 
@@ -22,24 +23,24 @@ const Navbar = ({ isNavbarOpen, setIsNavbarOpen }) => (
       })}
     >
       <li className={styles.navbar__item}>
-        <a className={styles.navbar__link} href="/">
-          Home
-        </a>
+        <NavLink className={styles.navbar__link} to="/concept">
+          Concept
+        </NavLink>
       </li>
       <li className={styles.navbar__item}>
-        <a className={styles.navbar__link} href="/">
-          News
-        </a>
+        <NavLink className={styles.navbar__link} to="/stylist">
+          Stylists
+        </NavLink>
       </li>
       <li className={styles.navbar__item}>
-        <a className={styles.navbar__link} href="/">
-          Contact
-        </a>
+        <NavLink className={styles.navbar__link} to="/menu">
+          Menu
+        </NavLink>
       </li>
       <li className={styles.navbar__item}>
-        <a className={styles.navbar__link} href="/">
-          About
-        </a>
+        <NavLink className={styles.navbar__link} to="/info">
+          Info
+        </NavLink>
       </li>
     </ul>
   </div>
