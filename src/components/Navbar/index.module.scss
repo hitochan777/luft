@@ -1,4 +1,4 @@
-@import './variables';
+@import '../../assets/variables';
 
 .navbar {
   display: flex;
@@ -53,10 +53,9 @@
       line-height: $navbarHeight;
       padding-left: 0px;
       margin-bottom: 0px;
-      // &:hover {
-      //   border-bottom: 5px solid brown;
-      //   border-left: 0px;
-      // }
+      &:hover {
+        border-left: none;
+      }
     }
   }
 
