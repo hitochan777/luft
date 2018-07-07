@@ -5,15 +5,13 @@ import { compose, withState } from 'recompose'
 import Logo from '../../assets/img/logo.png'
 import styles from './index.module.scss'
 import NavbarToggleButton from './NavbarToggleButton'
-import Link from '../NavLink'
+import Link from 'gatsby-link'
 
 const withIsNavbarOpen = withState('isNavbarOpen', 'setIsNavbarOpen', false)
 
-const NavLink = ({ children, to, ...rest }) => (
+const NavLink = props => (
   <li className={styles.navbar__item}>
-    <Link className={styles.navbar__link} to={to} {...rest}>
-      {children}
-    </Link>
+    <Link className={styles.navbar__link} {...props} />
   </li>
 )
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from './NavLink'
+import Link from 'gatsby-link'
 import FontAwesome from 'react-fontawesome'
 
 import styles from './footer.module.scss'
