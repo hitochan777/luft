@@ -2,6 +2,7 @@ import React from 'react'
 import classNames from 'classnames'
 import { compose, withState } from 'recompose'
 
+import Logo from '../../assets/img/logo.png'
 import styles from './index.module.scss'
 import NavbarToggleButton from './NavbarToggleButton'
 import Link from '../NavLink'
@@ -24,7 +25,9 @@ const Navbar = ({ isNavbarOpen, setIsNavbarOpen }) => (
       }}
       isCollapsed={!isNavbarOpen}
     />
-    <div className={styles.navbar__brand}>LOGO</div>
+    <Link to="/">
+      <img src={Logo} className={styles.navbar__brand} />
+    </Link>
     <ul
       className={classNames(styles.navbar__nav, {
         [styles.navbar__nav___show]: isNavbarOpen,
