@@ -1,11 +1,12 @@
-@import './variables';
+@import '../../assets/variables';
 
 .navbar {
   display: flex;
   background-color: white;
   height: $navbarHeight;
-
-  &__brand {
+  justify-content: center;
+  @media screen and (min-width: $threshold) {
+    justify-content: flex-start;
   }
 
   &__nav {
@@ -40,9 +41,6 @@
     display: flex;
   }
 
-  &__nav___slideIn {
-  }
-
   &__item {
     margin-bottom: 10px;
     padding-left: 10px;
@@ -54,8 +52,7 @@
       padding-left: 0px;
       margin-bottom: 0px;
       &:hover {
-        border-bottom: 5px solid brown;
-        border-left: 0px;
+        border-left: none;
       }
     }
   }
@@ -64,7 +61,7 @@
     color: white;
     &:hover,
     &:focus {
-      text-decoration: none;
+      border-bottom: 0;
       color: white;
     }
 
@@ -72,8 +69,7 @@
       color: black;
       &:hover,
       &:focus {
-        text-decoration: none;
-        color: brown;
+        color: black;
       }
     }
   }
