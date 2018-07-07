@@ -1,1 +1,11 @@
 @import 'node_modules/bootstrap/scss/bootstrap';
+
+$carousel-indicator-length: 10px;
+
+.carousel-indicators {
+  & li {
+    border-radius: 50%;
+    height: $carousel-indicator-length;
+    max-width: $carousel-indicator-length;
+  }
+}
