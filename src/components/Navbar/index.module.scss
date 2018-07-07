@@ -4,8 +4,9 @@
   display: flex;
   background-color: white;
   height: $navbarHeight;
-
-  &__brand {
+  justify-content: center;
+  @media screen and (min-width: $threshold) {
+    justify-content: flex-start;
   }
 
   &__nav {
