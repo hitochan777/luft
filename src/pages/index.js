@@ -15,7 +15,7 @@ const IndexPage = () => (
   <div>
     <Jumbotron />
     <section className="container-fluid mb-5 mt-5">
-      <ScrollAnimation animateIn="fadeIn" duration={2}>
+      <ScrollAnimation animateIn="fadeIn" duration={2} animateOnce={true}>
         <div className={'row justify-content-center mb-5'}>
           <div className={'col-12 col-lg-6 ' + styles.sectionHeader__text}>
             <h1>What's Luft?</h1>
@@ -28,6 +28,7 @@ const IndexPage = () => (
             animateIn="fadeIn"
             duration={2}
             className={'col-12 col-lg-3 mb-3 ' + styles.imageNav__item}
+            animateOnce={true}
           >
             <img src={ConceptImage} className="w-100" />
             <h3 className={styles.imageNav__text}>Concept</h3>
@@ -36,6 +37,7 @@ const IndexPage = () => (
             animateIn="fadeIn"
             duration={2}
             className={'col-12 col-lg-3 mb-3 ' + styles.imageNav__item}
+            animateOnce={true}
           >
             <img src={StylistImage} className="w-100" />
             <h3 className={styles.imageNav__text}>Stylist</h3>
@@ -46,6 +48,7 @@ const IndexPage = () => (
             animateIn="fadeIn"
             duration={2}
             className={'col-12 col-lg-3 mb-3 ' + styles.imageNav__item}
+            animateOnce={true}
           >
             <img src={MenuImage} className="w-100" />
             <h3 className={styles.imageNav__text}>Menu</h3>
@@ -54,6 +57,7 @@ const IndexPage = () => (
             animateIn="fadeIn"
             duration={2}
             className={'col-12 col-lg-3 mb-3 ' + styles.imageNav__item}
+            animateOnce={true}
           >
             <img src={InfoImage} className="w-100" />
             <h3 className={styles.imageNav__text}>Info</h3>
@@ -61,7 +65,7 @@ const IndexPage = () => (
         </div>
       </nav>
     </section>
-    <ScrollAnimation animateIn="fadeIn" duration={2}>
+    <ScrollAnimation animateIn="fadeIn" duration={2} animateOnce={true}>
       <section className="container-fluid mb-5 mt-5">
         <div className={'row justify-content-center mb-5'}>
           <div className={'col-12 col-lg-6 ' + styles.sectionHeader__text}>
@@ -93,7 +97,7 @@ const IndexPage = () => (
         </div>
       </section>
     </ScrollAnimation>
-    <ScrollAnimation animateIn="fadeIn" duration={2}>
+    <ScrollAnimation animateIn="fadeIn" duration={2} animateOnce={true}>
       <section className={styles.contact}>
         <img className={styles.contact__image} src={MenuImage} />
         <div className={'container-fluid ' + styles.contact__text}>
