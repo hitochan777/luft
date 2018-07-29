@@ -7,15 +7,9 @@
 }
 
 .jumbotron__image {
-  width: 100%;
-}
-
-@include media-breakpoint-up(md) {
-  .jumbotron__image {
-    width: 100vw;
-    height: calc(100vh - 50px);
-    object-fit: cover;
-  }
+  width: 100vw;
+  height: calc(100vh - 50px);
+  object-fit: cover;
 }
 
 .jumbotron__text {
