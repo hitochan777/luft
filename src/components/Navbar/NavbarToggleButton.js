@@ -14,6 +14,7 @@ const IconBar = ({ isOpened }) => (
 
 const NavbarToggleButton = ({ isCollapsed, onClick }) => (
   <button className={styles.toggleButton} onClick={onClick}>
+    MENU
     <IconBar isOpened={!isCollapsed} />
     <IconBar isOpened={!isCollapsed} />
     <IconBar isOpened={!isCollapsed} />
