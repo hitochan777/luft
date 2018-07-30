@@ -16,7 +16,7 @@
     background-color: brown;
     flex-direction: column;
     position: fixed;
-    width: 70%;
+    width: 100%;
     height: 100vh;
     right: 0;
     z-index: $navbarZIndex;
@@ -24,6 +24,8 @@
     padding-left: 20px;
     padding-top: $navbarHeight;
     font-size: 25px;
+    animation-name: slide-from-left;
+    animation-duration: 0.2s;
     @media screen and (min-width: $threshold) {
       background-color: white;
       padding: 0px;
@@ -34,6 +36,13 @@
       margin-left: 25%;
       margin-right: 25%;
       height: $navbarHeight;
+      animation-name: none;
+    }
+  }
+
+  @keyframes slide-from-left {
+    from {
+      width: 0;
     }
   }
 
