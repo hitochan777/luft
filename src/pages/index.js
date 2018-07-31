@@ -9,6 +9,8 @@ import InfoImage from '../assets/img/info.jpg'
 import Jumbotron from '../components/Jumbotron'
 import Table from '../components/Table'
 import Button from '../components/Button'
+import BlogPosts from '../components/BlogUpdates'
+
 import styles from './index.module.scss'
 
 const IndexPage = () => (
@@ -65,6 +67,9 @@ const IndexPage = () => (
         </div>
       </nav>
     </section>
+    <ScrollAnimation animateIn="fadeIn" duration={2} animateOnce={true}>
+      <BlogPosts />
+    </ScrollAnimation>
     <ScrollAnimation animateIn="fadeIn" duration={2} animateOnce={true}>
       <section className="container-fluid mb-5 mt-5">
         <div className={'row justify-content-center mb-5'}>
