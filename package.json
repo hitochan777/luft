@@ -19,9 +19,12 @@
     "react-fontawesome": "^1.6.1",
     "react-helmet": "^5.2.0",
     "reactstrap": "^6.2.0",
-    "recompose": "^0.27.1"
+    "recompose": "^0.27.1",
+    "wpapi": "^1.1.2"
   },
-  "keywords": ["gatsby"],
+  "keywords": [
+    "gatsby"
+  ],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
