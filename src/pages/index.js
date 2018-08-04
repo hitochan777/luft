@@ -9,7 +9,7 @@ import InfoImage from '../assets/img/info.jpg'
 import Jumbotron from '../components/Jumbotron'
 import Table from '../components/Table'
 import Button from '../components/Button'
-import BlogPosts from '../components/BlogUpdates'
+import BlogPosts from '../components/BlogPosts'
 
 import styles from './index.module.scss'
 
