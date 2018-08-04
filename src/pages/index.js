@@ -68,7 +68,18 @@ const IndexPage = () => (
       </nav>
     </section>
     <ScrollAnimation animateIn="fadeIn" duration={2} animateOnce={true}>
-      <BlogPosts />
+      <section className="container-fluid mb-5 mt-5">
+        <div className={'row justify-content-center mb-5'}>
+          <div className={'col-12 col-lg-6 ' + styles.sectionHeader__text}>
+            <h1>Information</h1>
+          </div>
+        </div>
+      </section>
+      <div className="row justify-content-center mb-5">
+        <div className="col-12 col-lg-6">
+          <BlogPosts />
+        </div>
+      </div>
     </ScrollAnimation>
     <ScrollAnimation animateIn="fadeIn" duration={2} animateOnce={true}>
       <section className="container-fluid mb-5 mt-5">
