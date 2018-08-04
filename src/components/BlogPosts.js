@@ -5,8 +5,6 @@ import axios from 'axios'
 const withBlogs = withState('blogs', 'setBlogs', [])
 
 const extractInnerText = htmlString => htmlString.replace(/<(?:.|\n)*?>/gm, '')
-const trimText = (str, maxLen = 300) =>
-  str.length > maxLen ? str.slice(0, maxLen) + '...' : str
 
 const withLifecycle = lifecycle({
   componentDidMount() {
@@ -24,20 +22,24 @@ const withLifecycle = lifecycle({
   },
 })
 
+const getDateString = timestamp => {
+  const date = new Date(timestamp)
+  return `${date.getFullYear()}年${date.getMonth()}月${date.getDate()}日`
+}
+
 const BlogUpdates = ({ blogs }) => (
-  <section>
+  <table>
     {blogs.map(blog => (
-      <article key={blog.id}>
-        <a href={blog.link}>
-          <h1>{extractInnerText(blog.title.rendered)}</h1>
-        </a>
-        <span>{blog.modified}</span>
-        <p>
-          {trimText(extractInnerText(blog.content.rendered).slice(0, 300))}...
-        </p>
-      </article>
+      <tr key={blog.id}>
+        <td>
+          <span>{getDateString(blog.modified)}</span>
+        </td>
+        <td>
+          <a href={blog.link}>{extractInnerText(blog.title.rendered)}</a>
+        </td>
+      </tr>
     ))}
-  </section>
+  </table>
 )
 
 export default compose(withBlogs, withLifecycle)(BlogUpdates)
