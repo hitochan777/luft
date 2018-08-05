@@ -1,0 +1,15 @@
+thumbnail {
+  &__front {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+
+  &__back {
+    position: absolute;
+    &__left {
+      left: 0px;
+    }
+    top: 0px;
+  }
+}

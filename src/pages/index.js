@@ -1,5 +1,6 @@
 import React from 'react'
 import ScrollAnimation from 'react-animate-on-scroll'
+import Link from 'gatsby-link'
 
 import MenuImage from '../assets/img/menu.jpg'
 import ConceptImage from '../assets/img/concept.jpg'
@@ -9,6 +10,8 @@ import InfoImage from '../assets/img/info.jpg'
 import Jumbotron from '../components/Jumbotron'
 import Table from '../components/Table'
 import Button from '../components/Button'
+import BlogPosts from '../components/BlogPosts'
+
 import styles from './index.module.scss'
 
 const IndexPage = () => (
@@ -65,6 +68,35 @@ const IndexPage = () => (
         </div>
       </nav>
     </section>
+    <ScrollAnimation animateIn="fadeIn" duration={2} animateOnce={true}>
+      <section className="container-fluid mb-5 mt-5">
+        <div className={'row justify-content-center mb-5'}>
+          <div className={'col-12 col-lg-6 ' + styles.sectionHeader__text}>
+            <h1>Information</h1>
+          </div>
+        </div>
+      </section>
+      <div className="row justify-content-center mb-5">
+        <div className="col-12 col-lg-6">
+          <BlogPosts limit={5} />
+        </div>
+      </div>
+      <div className="row justify-content-center mb-5">
+        <Link to="/blog">
+          <button
+            style={{
+              border: 'none',
+              width: '200px',
+              height: '50px',
+              backgroundColor: 'brown',
+              color: 'white',
+            }}
+          >
+            もっと見る
+          </button>
+        </Link>
+      </div>
+    </ScrollAnimation>
     <ScrollAnimation animateIn="fadeIn" duration={2} animateOnce={true}>
       <section className="container-fluid mb-5 mt-5">
         <div className={'row justify-content-center mb-5'}>
