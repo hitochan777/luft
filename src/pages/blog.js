@@ -3,7 +3,7 @@ import { Route, Redirect } from 'react-router-dom'
 import BlogPosts from '../components/BlogPosts'
 import Blog from '../components/Blog'
 
-const withRouter = (BlogComponent, BlogListComponent) => () => (
+const withRouter = (BlogComponent, BlogListComponent) => ({ location }) => (
   <div className="container-fluid">
     <div className="row justify-content-center">
       <div className="col-12 col-lg-6">
