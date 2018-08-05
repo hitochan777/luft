@@ -1,5 +1,6 @@
 import React from 'react'
 import ScrollAnimation from 'react-animate-on-scroll'
+import Link from 'gatsby-link'
 
 import MenuImage from '../assets/img/menu.jpg'
 import ConceptImage from '../assets/img/concept.jpg'
@@ -77,8 +78,23 @@ const IndexPage = () => (
       </section>
       <div className="row justify-content-center mb-5">
         <div className="col-12 col-lg-6">
-          <BlogPosts />
+          <BlogPosts limit={5} />
         </div>
+      </div>
+      <div className="row justify-content-center mb-5">
+        <Link to="/blog">
+          <button
+            style={{
+              border: 'none',
+              width: '200px',
+              height: '50px',
+              backgroundColor: 'brown',
+              color: 'white',
+            }}
+          >
+            もっと見る
+          </button>
+        </Link>
       </div>
     </ScrollAnimation>
     <ScrollAnimation animateIn="fadeIn" duration={2} animateOnce={true}>
