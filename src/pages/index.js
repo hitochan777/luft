@@ -6,6 +6,7 @@ import MenuImage from '../assets/img/menu.png'
 import ConceptImage from '../assets/img/concept.png'
 import StylistImage from '../assets/img/stylist.png'
 import InfoImage from '../assets/img/info.png'
+import Logo from '../assets/img/logo.png'
 
 import Jumbotron from '../components/Jumbotron'
 import Table from '../components/Table'
@@ -86,7 +87,7 @@ const IndexPage = () => (
                 color: 'white',
               }}
             >
-              もっと見る
+              ▶&nbsp;&nbsp;More News
             </button>
           </Link>
         </div>
@@ -99,6 +100,8 @@ const IndexPage = () => (
           <div className="col-12 col-lg-7">
             <div className="row justify-content-center mb-5">
               <div className="col-12 col-lg-6">
+                <img src={Logo} />
+                <br />
                 〒668-0027 兵庫県豊岡市若松町7-4<br />
                 TEL: 0796-23-2123 <hr />
                 営業時間: 火～日・祝　9：00～19：00<br />
