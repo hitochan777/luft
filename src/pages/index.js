@@ -11,6 +11,7 @@ import Jumbotron from '../components/Jumbotron'
 import Table from '../components/Table'
 import Button from '../components/Button'
 import BlogPosts from '../components/BlogPosts'
+import SectionTitle from '../components/SectionTitle'
 
 import styles from './index.module.scss'
 
@@ -19,11 +20,7 @@ const IndexPage = () => (
     <Jumbotron />
     <section className="container-fluid mb-5 mt-5">
       <ScrollAnimation animateIn="fadeIn" duration={2} animateOnce={true}>
-        <div className={'row justify-content-center mb-5'}>
-          <div className={'col-12 col-lg-6 ' + styles.sectionHeader__text}>
-            <h1>What's Luft?</h1>
-          </div>
-        </div>
+        <SectionTitle>What's Luft?</SectionTitle>
       </ScrollAnimation>
       <nav className={styles.imageNav}>
         <div className="row justify-content-center">
@@ -72,40 +69,32 @@ const IndexPage = () => (
     </section>
     <ScrollAnimation animateIn="fadeIn" duration={2} animateOnce={true}>
       <section className="container-fluid mb-5 mt-5">
-        <div className={'row justify-content-center mb-5'}>
-          <div className={'col-12 col-lg-6 ' + styles.sectionHeader__text}>
-            <h1>Information</h1>
+        <SectionTitle>Information</SectionTitle>
+        <div className="row justify-content-center mb-5">
+          <div className="col-12 col-lg-6">
+            <BlogPosts limit={5} />
           </div>
         </div>
-      </section>
-      <div className="row justify-content-center mb-5">
-        <div className="col-12 col-lg-6">
-          <BlogPosts limit={5} />
+        <div className="row justify-content-center mb-5">
+          <Link to="/blog">
+            <button
+              style={{
+                border: 'none',
+                width: '200px',
+                height: '50px',
+                backgroundColor: 'brown',
+                color: 'white',
+              }}
+            >
+              もっと見る
+            </button>
+          </Link>
         </div>
-      </div>
-      <div className="row justify-content-center mb-5">
-        <Link to="/blog">
-          <button
-            style={{
-              border: 'none',
-              width: '200px',
-              height: '50px',
-              backgroundColor: 'brown',
-              color: 'white',
-            }}
-          >
-            もっと見る
-          </button>
-        </Link>
-      </div>
+      </section>
     </ScrollAnimation>
     <ScrollAnimation animateIn="fadeIn" duration={2} animateOnce={true}>
       <section className="container-fluid mb-5 mt-5">
-        <div className={'row justify-content-center mb-5'}>
-          <div className={'col-12 col-lg-8 ' + styles.sectionHeader__text}>
-            <h1>Shop Information</h1>
-          </div>
-        </div>
+        <SectionTitle>Shop Information</SectionTitle>
         <div className="row justify-content-center mb-5">
           <div className="col-12 col-lg-7">
             <div className="row justify-content-center mb-5">
