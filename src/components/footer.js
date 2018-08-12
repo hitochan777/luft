@@ -9,7 +9,9 @@ const Footer = () => (
     <div
       className={'row justify-content-center ' + styles.footer__copywriteBar}
     >
-      <div className="col-2">Copyright ©hair Luft all rights reserved</div>
+      <div className="col-12 col-lg-3">
+        Copyright ©hair Luft all rights reserved
+      </div>
     </div>
   </footer>
 )
