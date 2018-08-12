@@ -102,20 +102,24 @@ const IndexPage = () => (
     <ScrollAnimation animateIn="fadeIn" duration={2} animateOnce={true}>
       <section className="container-fluid mb-5 mt-5">
         <div className={'row justify-content-center mb-5'}>
-          <div className={'col-12 col-lg-6 ' + styles.sectionHeader__text}>
+          <div className={'col-12 col-lg-8 ' + styles.sectionHeader__text}>
             <h1>Shop Information</h1>
           </div>
         </div>
         <div className="row justify-content-center mb-5">
-          <div className="col-12 col-lg-3">
-            <Table
-              list={[
-                { key: '営業時間', value: '火～日・祝　9：00～19：00' },
-                { key: '定休日', value: '毎週月曜日、第2・3火曜日' },
-                { key: '駐車場', value: '2台あり' },
-                { key: '住所', value: '兵庫県豊岡市若松町７‐４' },
-              ]}
-            />
+          <div className="col-12 col-lg-7">
+            <div className="row justify-content-center mb-5">
+              <div className="col-12 col-lg-6">
+                〒668-0027 兵庫県豊岡市若松町7-4<br />
+                TEL: 0796-23-2123 <hr />
+                営業時間: 火～日・祝　9：00～19：00<br />
+                定休日: 毎週月曜日、第2・3火曜日<br />
+                駐車場: 2台あり
+              </div>
+              <div className="col-12 col-lg-6">
+                <img src={MenuImage} />
+              </div>
+            </div>
           </div>
         </div>
         <div className="row justify-content-center">
@@ -128,26 +132,6 @@ const IndexPage = () => (
             className="col-12"
             allowFullScreen
           />
-        </div>
-      </section>
-    </ScrollAnimation>
-    <ScrollAnimation animateIn="fadeIn" duration={2} animateOnce={true}>
-      <section className={styles.contact}>
-        <img className={styles.contact__image} src={MenuImage} />
-        <div className={'container-fluid ' + styles.contact__text}>
-          <div className="row justify-content-center my-2">
-            <div className="col-8 col-lg-2 text-center">Tel: xxx-yyy-zzzz</div>
-          </div>
-          <div className="row justify-content-center my-2">
-            <div className="col-8 col-lg-2">
-              <Button>Contact</Button>
-            </div>
-          </div>
-          <div className="row justify-content-center my-2">
-            <div className="col-8 col-lg-2">
-              <Button>Access</Button>
-            </div>
-          </div>
         </div>
       </section>
     </ScrollAnimation>
