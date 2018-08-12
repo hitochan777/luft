@@ -2,10 +2,10 @@ import React from 'react'
 import ScrollAnimation from 'react-animate-on-scroll'
 import Link from 'gatsby-link'
 
-import MenuImage from '../assets/img/menu.jpg'
-import ConceptImage from '../assets/img/concept.jpg'
-import StylistImage from '../assets/img/stylist.jpg'
-import InfoImage from '../assets/img/info.jpg'
+import MenuImage from '../assets/img/menu.png'
+import ConceptImage from '../assets/img/concept.png'
+import StylistImage from '../assets/img/stylist.png'
+import InfoImage from '../assets/img/info.png'
 
 import Jumbotron from '../components/Jumbotron'
 import Table from '../components/Table'
@@ -30,40 +30,42 @@ const IndexPage = () => (
           <ScrollAnimation
             animateIn="fadeIn"
             duration={2}
-            className={'col-12 col-lg-3 mb-3 ' + styles.imageNav__item}
             animateOnce={true}
+            className="col-12 col-lg-3 mb-3"
           >
-            <img src={ConceptImage} className="w-100" />
-            <h3 className={styles.imageNav__text}>Concept</h3>
+            <img
+              src={ConceptImage}
+              className={'w100 ' + styles.imageNav__item}
+            />
           </ScrollAnimation>
           <ScrollAnimation
             animateIn="fadeIn"
             duration={2}
-            className={'col-12 col-lg-3 mb-3 ' + styles.imageNav__item}
             animateOnce={true}
+            className="col-12 col-lg-3 mb-3"
           >
-            <img src={StylistImage} className="w-100" />
-            <h3 className={styles.imageNav__text}>Stylist</h3>
+            <img
+              src={StylistImage}
+              className={'w100 ' + styles.imageNav__item}
+            />
           </ScrollAnimation>
         </div>
         <div className="row justify-content-center">
           <ScrollAnimation
             animateIn="fadeIn"
             duration={2}
-            className={'col-12 col-lg-3 mb-3 ' + styles.imageNav__item}
             animateOnce={true}
+            className="col-12 col-lg-3 mb-3"
           >
-            <img src={MenuImage} className="w-100" />
-            <h3 className={styles.imageNav__text}>Menu</h3>
+            <img src={MenuImage} className={'w100 ' + styles.imageNav__item} />
           </ScrollAnimation>
           <ScrollAnimation
             animateIn="fadeIn"
             duration={2}
-            className={'col-12 col-lg-3 mb-3 ' + styles.imageNav__item}
             animateOnce={true}
+            className="col-12 col-lg-3 mb-3"
           >
-            <img src={InfoImage} className="w-100" />
-            <h3 className={styles.imageNav__text}>Info</h3>
+            <img src={InfoImage} className={'w100 ' + styles.imageNav__item} />
           </ScrollAnimation>
         </div>
       </nav>
