@@ -1,9 +1,14 @@
+$height: 50px;
 .footer {
   left: 0;
   bottom: 0;
+  height: $height;
 }
 
 .footer__copywriteBar {
-  background-color: black;
-  color: white;
+  background-color: lightgrey;
+  color: brown;
+  height: 100%;
+  line-height: $height;
+  vertical-align: middle;
 }
