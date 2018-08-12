@@ -4,8 +4,8 @@ const typography = new Typography({
   baseFontSize: '18px',
   baseLineHeight: 1.11,
   headerFontFamily: ['Hind'],
-  bodyFontFamily: ['Open Sans'],
-  // See below for the full list of options.
+  bodyFontFamily: ['Playfair Display', 'Open Sans'],
+  googleFonts: [{ name: 'Playfair Display', styles: ['700'] }],
 })
 
 export default typography
