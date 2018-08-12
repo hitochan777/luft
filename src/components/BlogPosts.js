@@ -37,6 +37,7 @@ const BlogPosts = ({ blogs }) => (
           </td>
           <td>
             <Link to={`/blog/${blog.id}`}>
+              <span style={{ color: 'orange' }}>★</span>
               {extractInnerText(blog.title.rendered)}
             </Link>
           </td>
