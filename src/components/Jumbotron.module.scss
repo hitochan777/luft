@@ -4,22 +4,18 @@
 
 .jumbotron {
   position: relative;
-}
+  &__logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+  }
 
-.jumbotron__image {
-  width: 100vw;
-  height: calc(100vh - 50px);
-  object-fit: cover;
-}
-
-.jumbotron__text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0;
-  padding: 0;
-  color: white;
-  font-weight: bold;
-  font-size: 3vw;
+  &__image {
+    width: 100vw;
+    height: calc(100vh - 50px);
+    object-fit: cover;
+  }
 }

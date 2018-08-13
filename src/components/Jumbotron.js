@@ -10,7 +10,7 @@ import {
 import SlideImage1 from '../assets/img/slide1.jpg'
 import SlideImage2 from '../assets/img/slide2.jpg'
 import SlideImage3 from '../assets/img/slide3.jpg'
-import SlideImage4 from '../assets/img/slide4.jpg'
+import Logo from '../assets/img/top_logo.png'
 
 import styles from './Jumbotron.module.scss'
 
@@ -26,10 +26,6 @@ const items = [
   {
     src: SlideImage3,
     altText: 'Luft 3',
-  },
-  {
-    src: SlideImage4,
-    altText: 'Luft 4',
   },
 ]
 
@@ -90,6 +86,8 @@ class Jumbotron extends React.Component {
             alt={item.altText}
             className={styles.jumbotron__image}
           />
+
+          <img src={Logo} className={styles.jumbotron__logo} />
         </CarouselItem>
       )
     })
