@@ -87,7 +87,7 @@ class Jumbotron extends React.Component {
             className={styles.jumbotron__image}
           />
 
-          <img src={Logo} className={styles.jumbotron__logo} />
+          <img src={Logo} className={styles.jumbotron__logo} width="400px" />
         </CarouselItem>
       )
     })

@@ -1,6 +1,7 @@
 @import 'node_modules/bootstrap/scss/functions';
 @import 'node_modules/bootstrap/scss/variables';
 @import 'node_modules/bootstrap/scss/mixins';
+@import '../assets/variables';
 
 .jumbotron {
   position: relative;
@@ -11,6 +12,10 @@
     transform: translate(-50%, -50%);
     margin: 0;
     padding: 0;
+    width: 200px;
+    @media screen and (min-width: $threshold) {
+      width: 350px;
+    }
   }
 
   &__image {
