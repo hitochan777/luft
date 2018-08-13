@@ -33,11 +33,11 @@ const BlogPosts = ({ blogs }) => (
       {blogs.map(blog => (
         <tr key={blog.id}>
           <td>
+            <span style={{ color: 'orange' }}>★</span>
             <span>{getDateString(blog.modified)}</span>
           </td>
           <td>
             <Link to={`/blog/${blog.id}`}>
-              <span style={{ color: 'orange' }}>★</span>
               {extractInnerText(blog.title.rendered)}
             </Link>
           </td>
