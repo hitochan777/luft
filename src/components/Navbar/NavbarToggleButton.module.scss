@@ -10,6 +10,14 @@
   border: none;
   z-index: $toggleButtonZIndex;
   padding: 0;
+
+  &_opened {
+    color: white;
+  }
+  &_closed {
+    color: black;
+  }
+
   &:focus {
     outline: none;
   }
@@ -23,7 +31,7 @@
     margin-left: 14px;
     margin-right: 14px;
     padding: 0;
-    transition: all 0.2s;
+    transition: all 0.8s;
     &:nth-of-type(1) {
       transform: rotate(0);
     }
