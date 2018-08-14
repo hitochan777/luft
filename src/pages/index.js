@@ -7,6 +7,7 @@ import ConceptImage from '../assets/img/concept.png'
 import StylistImage from '../assets/img/stylist.png'
 import InfoImage from '../assets/img/info.png'
 import Logo from '../assets/img/logo.png'
+import ShopInfoImage from '../assets/img/shop_info.jpg'
 
 import Jumbotron from '../components/Jumbotron'
 import Table from '../components/Table'
@@ -109,7 +110,7 @@ const IndexPage = () => (
                 駐車場: 2台あり
               </div>
               <div className="col-12 col-lg-6">
-                <img src={MenuImage} />
+                <img src={ShopInfoImage} />
               </div>
             </div>
           </div>
