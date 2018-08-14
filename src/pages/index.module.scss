@@ -1,3 +1,5 @@
+@import '../assets/variables';
+
 .contact {
   position: relative;
 }
@@ -33,4 +35,15 @@
   border: 0;
   width: 100%;
   height: 450px;
+}
+
+.more_info_button {
+  border: none;
+  width: 200px;
+  height: 50px;
+  background-color: $luftColor;
+  color: white;
+  &:hover {
+    opacity: 0.5;
+  }
 }

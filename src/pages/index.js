@@ -79,15 +79,7 @@ const IndexPage = () => (
         </div>
         <div className="row justify-content-center mb-5">
           <Link to="/blog">
-            <button
-              style={{
-                border: 'none',
-                width: '200px',
-                height: '50px',
-                backgroundColor: 'brown',
-                color: 'white',
-              }}
-            >
+            <button className={styles.more_info_button}>
               ▶&nbsp;&nbsp;More News
             </button>
           </Link>
