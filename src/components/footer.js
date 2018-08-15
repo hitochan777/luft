@@ -1,15 +1,20 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import FontAwesome from 'react-fontawesome'
+import classNames from 'classnames'
 
 import styles from './footer.module.scss'
 
 const Footer = () => (
-  <footer className={'container-fluid ' + styles.footer}>
+  <footer className={classNames('container-fluid', styles.footer)}>
     <div
-      className={'row justify-content-center ' + styles.footer__copywriteBar}
+      className={classNames(
+        'row',
+        'justify-content-center',
+        styles.footer__copywriteBar
+      )}
     >
-      <div className="col-12 col-lg-3">
+      <div className={classNames('col-12', 'text-center', styles.footer__text)}>
         Copyright ©hair Luft all rights reserved
       </div>
     </div>
