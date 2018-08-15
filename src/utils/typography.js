@@ -1,11 +1,22 @@
 import Typography from 'typography'
 
+const GOTHICS = [
+  'Hiragino Kaku Gothic ProN',
+  'ヒラギノ角ゴ ProN W3',
+  'Meiryo',
+  'メイリオ',
+  'Osaka',
+  'MS PGothic',
+  'arial',
+  'helvetica',
+  'sans-serif',
+]
+
 const typography = new Typography({
   baseFontSize: '18px',
   baseLineHeight: 1.5,
-  headerFontFamily: ['Hind'],
-  bodyFontFamily: ['Playfair Display', 'Open Sans'],
-  googleFonts: [{ name: 'Playfair Display', styles: ['700'] }],
+  headerFontFamily: GOTHICS,
+  bodyFontFamily: GOTHICS,
 })
 
 export default typography
