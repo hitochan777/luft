@@ -1,22 +1,5 @@
 @import '../assets/variables';
 
-.contact {
-  position: relative;
-}
-
-.contact__image {
-  width: 100%;
-  height: 400px;
-  opacity: 0.4;
-}
-
-.contact__text {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .imageNav {
   margin-top: 60px;
 }
@@ -24,6 +7,11 @@
 .imageNav__item {
   transition: 0.8s;
   opacity: 1;
+  height: 50px;
+  width: 100%;
+  @media screen and (min-width: $threshold) {
+    height: auto;
+  }
 }
 
 .imageNav__item:hover {

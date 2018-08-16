@@ -30,7 +30,7 @@ const IndexPage = () => (
             animateIn="fadeIn"
             duration={2}
             animateOnce={true}
-            className="col-12 col-lg-3 mb-3 d-flex justify-content-center"
+            className="col-12 col-lg-3 mb-lg-3 d-flex justify-content-center"
           >
             <img src={ConceptImage} className={styles.imageNav__item} />
           </ScrollAnimation>
@@ -38,7 +38,7 @@ const IndexPage = () => (
             animateIn="fadeIn"
             duration={2}
             animateOnce={true}
-            className="col-12 col-lg-3 mb-3 d-flex justify-content-center"
+            className="col-12 col-lg-3 mb-lg-3 d-flex justify-content-center"
           >
             <img src={StylistImage} className={styles.imageNav__item} />
           </ScrollAnimation>
@@ -48,7 +48,7 @@ const IndexPage = () => (
             animateIn="fadeIn"
             duration={2}
             animateOnce={true}
-            className="col-12 col-lg-3 mb-3 d-flex justify-content-center"
+            className="col-12 col-lg-3 mb-lg-3 d-flex justify-content-center"
           >
             <img src={MenuImage} className={styles.imageNav__item} />
           </ScrollAnimation>
@@ -56,7 +56,7 @@ const IndexPage = () => (
             animateIn="fadeIn"
             duration={2}
             animateOnce={true}
-            className="col-12 col-lg-3 mb-3 d-flex justify-content-center"
+            className="col-12 col-lg-3 mb-lg-3 d-flex justify-content-center"
           >
             <img src={InfoImage} className={styles.imageNav__item} />
           </ScrollAnimation>
@@ -85,7 +85,7 @@ const IndexPage = () => (
         <SectionTitle>Shop Information</SectionTitle>
         <div className="row justify-content-center mb-5">
           <div className="col-12 col-lg-7">
-            <div className="row justify-content-center mb-5">
+            <div className="row justify-content-center">
               <div className="col-12 col-lg-6 text-center">
                 <img src={Logo} />
                 <br />
@@ -95,7 +95,7 @@ const IndexPage = () => (
                 定休日: 毎週月曜日、第2・3火曜日<br />
                 駐車場: 2台あり
               </div>
-              <div className="col-12 col-lg-6 text-center">
+              <div className="col-12 col-lg-6 text-center mt-3 mt-lg-0">
                 <img src={ShopInfoImage} />
               </div>
             </div>
