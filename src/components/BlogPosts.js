@@ -32,11 +32,11 @@ const BlogPosts = ({ blogs }) => (
     <tbody>
       {blogs.map(blog => (
         <tr key={blog.id}>
-          <td>
+          <td style={{ borderTop: '1px solid grey' }}>
             <span style={{ color: 'orange' }}>★</span>
             <span>{getDateString(blog.modified)}</span>
           </td>
-          <td>
+          <td style={{ borderTop: '1px solid grey' }}>
             <Link to={`/blog/${blog.id}`}>
               {extractInnerText(blog.title.rendered)}
             </Link>
