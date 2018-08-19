@@ -48,14 +48,6 @@ const Navbar = ({ isNavbarOpen, setIsNavbarOpen }) => (
         Stylist
       </NavLink>
       <NavLink
-        to="/menu"
-        onClick={() => {
-          setIsNavbarOpen(false)
-        }}
-      >
-        Menu
-      </NavLink>
-      <NavLink
         to="/info"
         onClick={() => {
           setIsNavbarOpen(false)

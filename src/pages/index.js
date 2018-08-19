@@ -20,6 +20,23 @@ import styles from './index.module.scss'
 const IndexPage = () => (
   <div>
     <Jumbotron />
+    <ScrollAnimation animateIn="fadeIn" duration={2} animateOnce={true}>
+      <section className="container-fluid mb-5 mt-5">
+        <SectionTitle>Information</SectionTitle>
+        <div className="row justify-content-center mb-5">
+          <div className="col-12 col-lg-6">
+            <BlogPosts limit={5} />
+          </div>
+        </div>
+        <div className="row justify-content-center mb-5">
+          <Link to="/blog">
+            <button className={styles.more_info_button}>
+              ▶&nbsp;&nbsp;More News
+            </button>
+          </Link>
+        </div>
+      </section>
+    </ScrollAnimation>
     <section className="container-fluid mb-5 mt-5">
       <ScrollAnimation animateIn="fadeIn" duration={2} animateOnce={true}>
         <SectionTitle>What's Luft?</SectionTitle>
@@ -42,16 +59,6 @@ const IndexPage = () => (
           >
             <img src={StylistImage} className={styles.imageNav__item} />
           </ScrollAnimation>
-        </div>
-        <div className="row justify-content-center">
-          <ScrollAnimation
-            animateIn="fadeIn"
-            duration={2}
-            animateOnce={true}
-            className="col-12 col-lg-3 mb-lg-3 d-flex justify-content-center"
-          >
-            <img src={MenuImage} className={styles.imageNav__item} />
-          </ScrollAnimation>
           <ScrollAnimation
             animateIn="fadeIn"
             duration={2}
@@ -63,23 +70,6 @@ const IndexPage = () => (
         </div>
       </nav>
     </section>
-    <ScrollAnimation animateIn="fadeIn" duration={2} animateOnce={true}>
-      <section className="container-fluid mb-5 mt-5">
-        <SectionTitle>Information</SectionTitle>
-        <div className="row justify-content-center mb-5">
-          <div className="col-12 col-lg-6">
-            <BlogPosts limit={5} />
-          </div>
-        </div>
-        <div className="row justify-content-center mb-5">
-          <Link to="/blog">
-            <button className={styles.more_info_button}>
-              ▶&nbsp;&nbsp;More News
-            </button>
-          </Link>
-        </div>
-      </section>
-    </ScrollAnimation>
     <ScrollAnimation animateIn="fadeIn" duration={2} animateOnce={true}>
       <section className="container-fluid mb-5 mt-5">
         <SectionTitle>Shop Information</SectionTitle>

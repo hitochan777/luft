@@ -7,13 +7,15 @@ const withBlogs = withState('blogs', 'setBlogs', [])
 
 const extractInnerText = htmlString => htmlString.replace(/<(?:.|\n)*?>/gm, '')
 
+const POST_LIMIT = 3
+
 const withLifecycle = lifecycle({
   componentDidMount() {
     // TODO: replace the endpoint with a real one
     axios
       .get('https://demo.wp-api.org/wp-json/wp/v2/posts')
       .then(posts => {
-        this.props.setBlogs(posts.data.slice(0, 5))
+        this.props.setBlogs(posts.data.slice(0, POST_LIMIT))
       })
       .catch(err => {
         console.log('Failed to fetch blog data for some reason')

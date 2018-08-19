@@ -48,7 +48,7 @@ $logo: 400px;
       display: flex;
       justify-content: space-between;
       flex-direction: row;
-      margin-left: 50%;
+      margin-left: calc(95% - 350px);
       margin-right: 5%;
       height: $navbarHeight;
       animation-name: none;
