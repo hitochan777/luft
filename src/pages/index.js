@@ -10,7 +10,6 @@ import Logo from '../assets/img/logo.png'
 import ShopInfoImage from '../assets/img/shop_info.jpg'
 
 import Jumbotron from '../components/Jumbotron'
-import Table from '../components/Table'
 import Button from '../components/Button'
 import BlogPosts from '../components/BlogPosts'
 import SectionTitle from '../components/SectionTitle'
