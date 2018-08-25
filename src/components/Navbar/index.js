@@ -1,62 +1,65 @@
 import React from 'react'
-import classNames from 'classnames'
+import styled from 'styled-components'
 import { compose, withState } from 'recompose'
 
 import Logo from '../../assets/img/logo.png'
-import styles from './index.module.scss'
 import NavbarToggleButton from './NavbarToggleButton'
 import Link from 'gatsby-link'
 
-const withIsNavbarOpen = withState('isNavbarOpen', 'setIsNavbarOpen', false)
+const StyledNavbarSide = styled.div`
+  position: relative;
+  display: flex;
+  background-color: white;
+  height: 80px;
+  justify-content: center;
+  @media screen and (min-width: 800) {
+    justify-content: flex-start;
+  }
+`
 
-const NavLink = props => (
-  <li className={styles.navbar__item}>
-    <Link className={styles.navbar__link} {...props} />
-  </li>
-)
+const NavbarBrand = styled.img`
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  right: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+`
+const NavbarMain = styled.div``
 
-const Navbar = ({ isNavbarOpen, setIsNavbarOpen }) => (
-  <div className={styles.navbar}>
-    <NavbarToggleButton
+const NavbarSide = ({ isNavbarOpen, setIsNavbarOpen }) => {
+  const NavLinkWithCloseAction = props => (
+    <li
       onClick={() => {
-        setIsNavbarOpen(!isNavbarOpen)
+        setIsNavbarOpen(false)
       }}
-      isCollapsed={!isNavbarOpen}
-    />
-    <Link to="/">
-      <img src={Logo} className={styles.navbar__brand} />
-    </Link>
-    <ul
-      className={classNames(styles.navbar__nav, {
-        [styles.navbar__nav___show]: isNavbarOpen,
-      })}
     >
-      <NavLink
-        to="/concept"
+      <Link {...props} />
+    </li>
+  )
+  return (
+    <StyledNavbarSide>
+      <NavbarToggleButton
         onClick={() => {
-          setIsNavbarOpen(false)
+          setIsNavbarOpen(!isNavbarOpen)
         }}
-      >
-        Concept
-      </NavLink>
-      <NavLink
-        to="/stylist"
-        onClick={() => {
-          setIsNavbarOpen(false)
-        }}
-      >
-        Stylist
-      </NavLink>
-      <NavLink
-        to="/info"
-        onClick={() => {
-          setIsNavbarOpen(false)
-        }}
-      >
-        Info
-      </NavLink>
-    </ul>
-  </div>
-)
+        isCollapsed={!isNavbarOpen}
+      />
+      <Link to="/">
+        <NavbarBrand src={Logo} />
+      </Link>
+      <NavbarMain>
+        <NavLinkWithCloseAction to="/concept">Concept</NavLinkWithCloseAction>
+        <NavLinkWithCloseAction to="/stylist">Stylists</NavLinkWithCloseAction>
+        <NavLinkWithCloseAction to="/info">Info</NavLinkWithCloseAction>
+      </NavbarMain>
+    </StyledNavbarSide>
+  )
+}
 
-export default compose(withIsNavbarOpen)(Navbar)
+export default compose(withState('isNavbarOpen', 'setIsNavbarOpen', false))(
+  NavbarSide
+)

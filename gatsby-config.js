@@ -10,6 +10,7 @@ module.exports = {
         precision: 8,
       },
     },
+    'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-plugin-typography',
       options: {
