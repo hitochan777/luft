@@ -7,38 +7,39 @@ import NavbarToggleButton from './NavbarToggleButton'
 import Link from 'gatsby-link'
 
 const StyledNavbarSide = styled.div`
-  position: relative;
+  position: fixed;
+  left: 0;
+  top: 0;
   display: flex;
+  flex-direction: column;
   background-color: white;
-  height: 80px;
+  height: calc(100vh - ${props => props.theme.footerHeight});
+  width: ${props => props.theme.sideNavbarWidth};
+  min-width: ${props => props.theme.sideNavbarWidth};
   justify-content: center;
-  @media screen and (min-width: 800) {
-    justify-content: flex-start;
-  }
 `
 
 const NavbarBrand = styled.img`
-  width: auto;
-  height: auto;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 20px;
-  right: 0;
-  margin-top: auto;
-  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 `
-const NavbarMain = styled.div``
+const NavbarMain = styled.ul`
+  list-style: none;
+`
+const NavItem = styled.li`
+  margin-left: 20px;
+`
 
 const NavbarSide = ({ isNavbarOpen, setIsNavbarOpen }) => {
   const NavLinkWithCloseAction = props => (
-    <li
+    <NavItem
       onClick={() => {
         setIsNavbarOpen(false)
       }}
     >
       <Link {...props} />
-    </li>
+    </NavItem>
   )
   return (
     <StyledNavbarSide>

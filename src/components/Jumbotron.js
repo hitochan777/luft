@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 import {
   Carousel,
   CarouselItem,
@@ -12,8 +13,28 @@ import SlideImage2 from '../assets/img/slide2.jpg'
 import SlideImage3 from '../assets/img/slide3.jpg'
 import Logo from '../assets/img/top_logo.png'
 
-import styles from './Jumbotron.module.scss'
+const StyledCarousel = styled(Carousel)`
+  position: relative;
+`
 
+const CarouselItemImage = styled.img`
+  width: 100%;
+  height: calc(100vh - ${props => props.theme.footerHeight});
+  object-fit: cover;
+`
+
+const CarouselLogoImage = styled.img`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  @media screen and (min-width: ${props => props.theme.threshold}) {
+    width: 300px;
+  }
+`
 const items = [
   {
     src: SlideImage1,
@@ -81,23 +102,17 @@ class Jumbotron extends React.Component {
           onExited={this.onExited}
           key={item.src}
         >
-          <img
-            src={item.src}
-            alt={item.altText}
-            className={styles.jumbotron__image}
-          />
-
-          <img src={Logo} className={styles.jumbotron__logo} width="400px" />
+          <CarouselItemImage src={item.src} alt={item.altText} />
+          <CarouselLogoImage src={Logo} />
         </CarouselItem>
       )
     })
 
     return (
-      <Carousel
+      <StyledCarousel
         activeIndex={activeIndex}
         next={this.next}
         previous={this.previous}
-        className={styles.jumbotron}
         interval={3000}
         pause={false}
       >
@@ -117,7 +132,7 @@ class Jumbotron extends React.Component {
           directionText="Next"
           onClickHandler={this.next}
         />
-      </Carousel>
+      </StyledCarousel>
     )
   }
 }

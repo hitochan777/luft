@@ -1,24 +1,21 @@
 import React from 'react'
-import Link from 'gatsby-link'
-import FontAwesome from 'react-fontawesome'
-import classNames from 'classnames'
+import styled from 'styled-components'
 
-import styles from './footer.module.scss'
+const StyledFooter = styled.footer`
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: ${props => props.theme.footerHeight};
+  background-color: lightgrey;
+  color: ${props => props.theme.luftColor};
+  line-height: ${props => props.theme.footerHeight};
+  vertical-align: middle;
+  width: 100vw;
+  text-align: center;
+`
 
 const Footer = () => (
-  <footer className={classNames('container-fluid', styles.footer)}>
-    <div
-      className={classNames(
-        'row',
-        'justify-content-center',
-        styles.footer__copywriteBar
-      )}
-    >
-      <div className={classNames('col-12', 'text-center', styles.footer__text)}>
-        Copyright ©hair Luft all rights reserved
-      </div>
-    </div>
-  </footer>
+  <StyledFooter>Copyright ©hair Luft all rights reserved</StyledFooter>
 )
 
 export default Footer
