@@ -28,7 +28,36 @@ const NavbarMain = styled.ul`
   list-style: none;
 `
 const NavItem = styled.li`
+  position: relative;
   margin-left: 20px;
+`
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: ${props => props.theme.luftColor};
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: ${props => props.theme.luftColor};
+    visibility: hidden;
+    transform: scaleX(0);
+    transform-origin: left center 0;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+    background-color: ${props => props.theme.luftColor};
+  }
+
+  &:hover {
+    &::after {
+      visibility: visible;
+      transform: scaleX(1);
+    }
+  }
 `
 
 const NavbarSide = ({ isNavbarOpen, setIsNavbarOpen }) => {
@@ -38,7 +67,7 @@ const NavbarSide = ({ isNavbarOpen, setIsNavbarOpen }) => {
         setIsNavbarOpen(false)
       }}
     >
-      <Link {...props} />
+      <StyledLink {...props} />
     </NavItem>
   )
   return (
