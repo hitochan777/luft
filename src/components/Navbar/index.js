@@ -17,6 +17,7 @@ const StyledNavbarSide = styled.div`
   width: ${props => props.theme.sideNavbarWidth};
   min-width: ${props => props.theme.sideNavbarWidth};
   justify-content: center;
+  z-index: 100;
 `
 
 const NavbarBrand = styled.img`

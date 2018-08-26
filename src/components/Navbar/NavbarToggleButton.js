@@ -9,7 +9,7 @@ const IconBar = styled.span`
   margin-right: 14px;
   padding: 0;
   transition: all 0.8s;
-  background-color: ${({ isOpened }) => (isOpened ? 'white' : 'black')};
+  background-color: black;
   &:nth-of-type(1) {
     transform: rotate(${({ isOpened }) => (isOpened ? '45' : '0')}deg);
     ${({ isOpened }) => isOpened && 'transform-origin: 10% 10%'};
@@ -33,17 +33,17 @@ const StyledNavbarToggleButton = styled.button`
   position: fixed;
   top: 1px;
   right: 1px;
-  height: 80;
-  width: 80;
+  height: 80px;
+  width: 80px;
   background-color: transparent;
   border: none;
-  z-index: 200; 
+  z-index: 200;
   padding: 0;
-  color: ${({ isOpened }) => (isOpened ? 'white' : 'black')}
+  color: black;
   &:focus {
     outline: none;
   }
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: ${props => props.theme.threshold}) {
     display: none;
   }
 `
