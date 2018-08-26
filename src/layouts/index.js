@@ -9,14 +9,16 @@ import '../assets/index.scss'
 import 'animate.css/animate.min.css'
 
 const Content = styled.div`
-  position: absolute;
-  top: 0;
-  left: ${props => props.theme.sideNavbarWidth};
-  width: calc(100% - ${props => props.theme.sideNavbarWidth});
-  min-width: calc(100% - ${props => props.theme.sideNavbarWidth});
-  height: calc(100vh - ${props => props.theme.footerHeight});
   margin: 0;
   padding: 0;
+  @media screen and (min-width: ${props => props.theme.threshold}) {
+    position: absolute;
+    top: 0;
+    left: ${props => props.theme.sideNavbarWidth};
+    width: calc(100% - ${props => props.theme.sideNavbarWidth});
+    min-width: calc(100% - ${props => props.theme.sideNavbarWidth});
+    height: calc(100vh - ${props => props.theme.footerHeight});
+  }
 `
 
 const Main = styled.div`
