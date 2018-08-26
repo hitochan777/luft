@@ -11,9 +11,9 @@ import 'animate.css/animate.min.css'
 const Content = styled.div`
   position: absolute;
   top: 0;
-  left: 200px;
-  width: calc(100vw - ${props => props.theme.sideNavbarWidth});
-  min-width: calc(100vw - ${props => props.theme.sideNavbarWidth});
+  left: ${props => props.theme.sideNavbarWidth};
+  width: calc(100% - ${props => props.theme.sideNavbarWidth});
+  min-width: calc(100% - ${props => props.theme.sideNavbarWidth});
   height: calc(100vh - ${props => props.theme.footerHeight});
   margin: 0;
   padding: 0;
