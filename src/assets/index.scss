@@ -15,3 +15,7 @@ $carousel-indicator-length: 10px;
     max-width: $carousel-indicator-length;
   }
 }
+
+html {
+  overflow-y: auto;
+}
