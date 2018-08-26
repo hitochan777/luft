@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 import styled, { ThemeProvider } from 'styled-components'
 
 import Navbar from '../components/Navbar'
-import Footer from '../components/footer'
+import Footer from '../components/Footer'
 import theme from '../theme'
 import '../assets/index.scss'
 import 'animate.css/animate.min.css'

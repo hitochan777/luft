@@ -10,7 +10,7 @@ const StyledFooter = styled.footer`
   color: ${props => props.theme.luftColor};
   line-height: ${props => props.theme.footerHeight};
   vertical-align: middle;
-  width: 100vw;
+  width: 100%;
   text-align: center;
 `
 
