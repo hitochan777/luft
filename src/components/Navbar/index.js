@@ -122,7 +122,11 @@ const NavbarSide = ({ isNavbarOpen, setIsNavbarOpen }) => {
       <NavbarMain isOpen={isNavbarOpen}>
         <NavLinkWithCloseAction to="/concept">Concept</NavLinkWithCloseAction>
         <NavLinkWithCloseAction to="/stylist">Stylists</NavLinkWithCloseAction>
-        <NavLinkWithCloseAction to="/info">Info</NavLinkWithCloseAction>
+        <NavLinkWithCloseAction to="/info">
+          Shop Information
+        </NavLinkWithCloseAction>
+        <NavLinkWithCloseAction to="/menu">Menu</NavLinkWithCloseAction>
+        <NavLinkWithCloseAction to="/news">News</NavLinkWithCloseAction>
       </NavbarMain>
     </StyledNavbarSide>
   )
