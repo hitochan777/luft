@@ -13,6 +13,7 @@ const Content = styled.div`
   padding: 0;
   @media screen and (min-width: ${props => props.theme.threshold}) {
     position: absolute;
+    padding-top: 50px;
     top: 0;
     left: ${props => props.theme.sideNavbarWidth};
     width: calc(100% - ${props => props.theme.sideNavbarWidth});
