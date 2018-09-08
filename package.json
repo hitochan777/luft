@@ -16,7 +16,6 @@
     "gatsby-plugin-typography": "^1.7.19",
     "normalize.css": "^8.0.0",
     "react": "^16.4.1",
-    "react-animate-on-scroll": "^2.1.5",
     "react-dom": "^16.4.1",
     "react-fontawesome": "^1.6.1",
     "react-helmet": "^5.2.0",
