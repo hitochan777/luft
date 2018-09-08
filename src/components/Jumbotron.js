@@ -19,7 +19,10 @@ const StyledCarousel = styled(Carousel)`
 
 const CarouselItemImage = styled.img`
   width: 100%;
-  height: calc(100vh - ${props => props.theme.footerHeight});
+  height: 60vh;
+  @media screen and (min-width: ${props => props.theme.threshold}) {
+    height: calc(100vh - ${props => props.theme.footerHeight});
+  }
   object-fit: cover;
 `
 
