@@ -11,5 +11,15 @@
         ]
       }
     ]
-  }
+  },
+  "files": [
+    "gatsby-browser.js",
+    "gatsby-config.js",
+    "gatsby-node.js",
+    "gatsby-ssr.js",
+    "now.json",
+    "package.json",
+    "src",
+    "yarn.lock"
+  ]
 }
