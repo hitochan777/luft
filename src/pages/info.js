@@ -1,11 +1,9 @@
 import React from 'react'
+import { Container, Row, Col } from 'reactstrap'
+import styled from 'styled-components'
 
-const Info = () => (
-  <div className="container-fluid mt-5">
-    <div className="row justify-content-center">
-      <h1>Shop Information</h1>
-    </div>
-  </div>
-)
+import Content from '../components/SubPage'
+
+const Info = () => <Content title="Shop Information">hoge</Content>
 
 export default Info
