@@ -27,33 +27,36 @@ const Main = styled.div`
   position: relative;
 `
 
-const Layout = ({ children, data }) => (
-  <ThemeProvider theme={theme}>
-    <div>
-      <Helmet
-        title={data.site.siteMetadata.title}
-        meta={[
-          { name: 'description', content: 'Sample' },
-          { name: 'keywords', content: 'sample, something' },
-        ]}
-      />
-      <Main>
-        <Navbar siteTitle={data.site.siteMetadata.title} />
-        <Content>{children()}</Content>
-        <Footer />
-      </Main>
-    </div>
-  </ThemeProvider>
+const Layout = ({ children }) => (
+  <StaticQuery
+    query={graphql`
+      query SiteTitleQuery {
+        site {
+          siteMetadata {
+            title
+          }
+        }
+      }
+    `}
+    render={data => (
+      <ThemeProvider theme={theme}>
+        <div>
+          <Helmet
+            title={data.site.siteMetadata.title}
+            meta={[
+              { name: 'description', content: 'Sample' },
+              { name: 'keywords', content: 'sample, something' },
+            ]}
+          />
+          <Main>
+            <Navbar siteTitle={data.site.siteMetadata.title} />
+            <Content>{children()}</Content>
+            <Footer />
+          </Main>
+        </div>
+      </ThemeProvider>
+    )}
+  />
 )
 
 export default Layout
-
-export const query = graphql`
-  query SiteTitleQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`
