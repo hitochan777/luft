@@ -3,6 +3,7 @@ import Link from 'gatsby-link'
 import styled from 'styled-components'
 
 import Jumbotron from '../components/Jumbotron'
+import Layout from '../components/Layout'
 
 const NavForSmallDevice = styled.div`
   display: flex;
@@ -20,7 +21,7 @@ const StyledLink = styled(Link)`
 `
 
 const IndexPage = () => (
-  <div>
+  <Layout>
     <Jumbotron />
     <NavForSmallDevice>
       <StyledLink to="/concept">Concept</StyledLink>
@@ -29,7 +30,7 @@ const IndexPage = () => (
       <StyledLink to="/menu">Menu</StyledLink>
       <StyledLink to="/news">News</StyledLink>
     </NavForSmallDevice>
-  </div>
+  </Layout>
 )
 
 export default IndexPage

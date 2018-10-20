@@ -1,9 +1,10 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import styled, { ThemeProvider } from 'styled-components'
+import { StaticQuery, graphql } from 'gatsby'
 
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
+import Navbar from './Navbar'
+import Footer from './Footer'
 import theme from '../theme'
 import '../assets/index.scss'
 import 'animate.css/animate.min.css'
@@ -13,7 +14,6 @@ const Content = styled.div`
   padding: 0;
   @media screen and (min-width: ${props => props.theme.threshold}) {
     position: absolute;
-    padding-top: 50px;
     top: 0;
     left: ${props => props.theme.sideNavbarWidth};
     width: calc(100% - ${props => props.theme.sideNavbarWidth});
@@ -50,7 +50,7 @@ const Layout = ({ children }) => (
           />
           <Main>
             <Navbar siteTitle={data.site.siteMetadata.title} />
-            <Content>{children()}</Content>
+            <Content>{children}</Content>
             <Footer />
           </Main>
         </div>
