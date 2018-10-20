@@ -59,6 +59,7 @@ const NavbarMain = styled.ul`
     bottom: 0;
     right: 0;
     margin: 0;
+    padding: 0;
     background-color: white;
   }
 `
