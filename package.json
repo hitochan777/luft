@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "luft-website",
+  "description": "Luft website",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Hitoshi Otsuki <hitochan777@gmail.com>",
   "dependencies": {
     "animate.css": "^3.7.0",
     "axios": "^0.18.0",
@@ -41,6 +41,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/hitochan777/luft"
   }
 }
