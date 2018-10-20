@@ -8,7 +8,7 @@ import Layout from '../components/Layout'
 const NavForSmallDevice = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: -20px;
+  margin-top: 20px;
   @media screen and (min-width: ${props => props.theme.threshold}) {
     display: none;
   }
