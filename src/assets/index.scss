@@ -18,8 +18,10 @@ $carousel-indicator-length: 10px;
 
 html {
   overflow-y: auto;
+  margin: 0;
 }
 
 body {
-  margin: 0px;
+  margin: 0;
+  padding: 0;
 }

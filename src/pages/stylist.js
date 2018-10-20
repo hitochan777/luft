@@ -8,9 +8,7 @@ import StylistDescItem from '../components/StylistDescItem'
 import Image1 from '../assets/img/slide1.jpg'
 import Image2 from '../assets/img/slide2.jpg'
 
-const StylistDescription = styled.div`
-  text-align: center;
-`
+const StylistDescription = styled.div``
 
 const StylistName = ({ name, experienceYears }) => (
   <span>
@@ -25,13 +23,13 @@ const Stylists = () => (
   <Layout>
     <Content title="Stylist">
       <Container>
-        <Row>
+        <Row noGutters={true}>
           <Col sm={6} xs={12}>
             <Stylist>
               <img
                 src={Image1}
                 height="200px"
-                width="100%"
+                width="80%"
                 style={{ objectFit: 'cover' }}
               />
               <StylistDescription>
@@ -49,7 +47,7 @@ const Stylists = () => (
               <img
                 src={Image1}
                 height="200px"
-                width="100%"
+                width="80%"
                 style={{ objectFit: 'cover' }}
               />
               <StylistDescription>

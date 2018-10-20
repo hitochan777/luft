@@ -11,12 +11,12 @@ const MenuTitle = styled.div`
 `
 
 const MenuSection = ({ title, children }) => (
-  <div>
+  <>
     <MenuTitle>{title}</MenuTitle>
-    <table>
+    <table style={{ width: '80%', textAlign: 'center' }}>
       <tbody>{children}</tbody>
     </table>
-  </div>
+  </>
 )
 
 const MenuItem = styled.tr`
@@ -39,7 +39,7 @@ export default () => (
   <Layout>
     <Content title="Menu">
       <Container>
-        <Row>
+        <Row noGutters={true}>
           <Col xs="12" sm="6">
             <MenuSection title="カット">
               <MenuItem>

@@ -12,9 +12,6 @@ import 'animate.css/animate.min.css'
 const Content = styled.div`
   margin: 0;
   padding: 0;
-`
-
-const Main = styled.div`
   min-height: calc(100vh - ${props => props.theme.footerHeight});
   position: relative;
 `
@@ -41,9 +38,7 @@ const Layout = ({ children }) => (
             ]}
           />
           <Navbar siteTitle={data.site.siteMetadata.title} />
-          <Main>
-            <Content>{children}</Content>
-          </Main>
+          <Content>{children}</Content>
           <Footer />
         </>
       </ThemeProvider>
