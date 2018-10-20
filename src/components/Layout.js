@@ -12,18 +12,10 @@ import 'animate.css/animate.min.css'
 const Content = styled.div`
   margin: 0;
   padding: 0;
-  @media screen and (min-width: ${props => props.theme.threshold}) {
-    position: absolute;
-    top: 0;
-    left: ${props => props.theme.sideNavbarWidth};
-    width: calc(100% - ${props => props.theme.sideNavbarWidth});
-    min-width: calc(100% - ${props => props.theme.sideNavbarWidth});
-    height: calc(100vh - ${props => props.theme.footerHeight});
-  }
 `
 
 const Main = styled.div`
-  min-height: 100vh;
+  min-height: calc(100vh - ${props => props.theme.footerHeight});
   position: relative;
 `
 
@@ -40,7 +32,7 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <ThemeProvider theme={theme}>
-        <div>
+        <>
           <Helmet
             title={data.site.siteMetadata.title}
             meta={[
@@ -48,12 +40,12 @@ const Layout = ({ children }) => (
               { name: 'keywords', content: 'sample, something' },
             ]}
           />
+          <Navbar siteTitle={data.site.siteMetadata.title} />
           <Main>
-            <Navbar siteTitle={data.site.siteMetadata.title} />
             <Content>{children}</Content>
-            <Footer />
           </Main>
-        </div>
+          <Footer />
+        </>
       </ThemeProvider>
     )}
   />
