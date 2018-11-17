@@ -4,19 +4,24 @@ import styled from 'styled-components'
 
 import Content from '../components/SubPage'
 import Layout from '../components/Layout'
+import Table from '../components/atom/Table'
+import TableCell from '../components/atom/TableCell'
 
 const MenuTitle = styled.div`
   text-align: center;
   font-size: 1.5rem;
 `
 
+const StyledMenuSection = styled.div`
+  margin: 30px 10% 0px;
+`
 const MenuSection = ({ title, children }) => (
-  <>
+  <StyledMenuSection>
     <MenuTitle>{title}</MenuTitle>
-    <table style={{ width: '80%', textAlign: 'center' }}>
+    <Table>
       <tbody>{children}</tbody>
-    </table>
-  </>
+    </Table>
+  </StyledMenuSection>
 )
 
 const MenuItem = styled.tr`
@@ -24,15 +29,22 @@ const MenuItem = styled.tr`
     border-bottom: 0 none transparent;
   }
 `
-const MenuContent = ({ content }) => <td>{content}</td>
+
+const MenuContent = (
+  { content, isLastRow } = { content: '', isLastRow: false }
+) => <TableCell isLastRow={isLastRow}>{content}</TableCell>
 const MenuPrice = (
-  { price, minimum } = { price: undefined, minimum: false }
+  { price, minimum, isLastRow } = {
+    price: undefined,
+    minimum: false,
+    isLastRow: false,
+  }
 ) => (
-  <td>
+  <TableCell isLastRow={isLastRow}>
     {price}
     {price && '円'}
     {minimum && '〜'}
-  </td>
+  </TableCell>
 )
 
 export default () => (
@@ -59,8 +71,11 @@ export default () => (
                 <MenuPrice price={500} />
               </MenuItem>
               <MenuItem>
-                <MenuContent content="※カット、シャンプー、ブロー込み" />
-                <MenuPrice />
+                <MenuContent
+                  content="※カット、シャンプー、ブロー込み"
+                  isLastRow
+                />
+                <MenuPrice isLastRow />
               </MenuItem>
             </MenuSection>
           </Col>
@@ -79,8 +94,11 @@ export default () => (
                 <MenuPrice price={6000} />
               </MenuItem>
               <MenuItem>
-                <MenuContent content="※カット、シャンプー、ブロー込み" />
-                <MenuPrice />
+                <MenuContent
+                  content="※カット、シャンプー、ブロー込み"
+                  isLastRow
+                />
+                <MenuPrice isLastRow />
               </MenuItem>
             </MenuSection>
           </Col>
@@ -107,8 +125,11 @@ export default () => (
                 <MenuPrice price={6800} minimum={true} />
               </MenuItem>
               <MenuItem>
-                <MenuContent content="※カット、シャンプー、ブロー込み" />
-                <MenuPrice />
+                <MenuContent
+                  content="※カット、シャンプー、ブロー込み"
+                  isLastRow
+                />
+                <MenuPrice isLastRow />
               </MenuItem>
             </MenuSection>
           </Col>
@@ -127,8 +148,8 @@ export default () => (
                 <MenuPrice price={1500} />
               </MenuItem>
               <MenuItem>
-                <MenuContent content="ブラジリアンワックス（鼻）" />
-                <MenuPrice price={1000} />
+                <MenuContent content="ブラジリアンワックス（鼻）" isLastRow />
+                <MenuPrice price={1000} isLastRow />
               </MenuItem>
             </MenuSection>
           </Col>
