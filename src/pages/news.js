@@ -1,9 +1,9 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import { graphql } from 'gatsby'
 
 import Content from '../components/SubPage'
 import Layout from '../components/Layout'
+import Link from '../components/atom/Link'
 
 export default ({ data }) => {
   const blogs = data.allContentfulBlogPost.edges.map(edge => edge.node)
