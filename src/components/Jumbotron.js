@@ -5,7 +5,6 @@ import {
   CarouselItem,
   CarouselControl,
   CarouselIndicators,
-  CarouselCaption,
 } from 'reactstrap'
 
 import SlideImage1 from '../assets/img/slide1.jpg'
