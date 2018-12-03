@@ -24,6 +24,7 @@ const Concept = () => (
     <Content title="Concept">
       <img
         src={Image1}
+        alt="image1"
         height="400px"
         width="100%"
         style={{ objectFit: 'cover' }}
@@ -47,6 +48,7 @@ const Concept = () => (
       <br />
       <img
         src={Image2}
+        alt="image2"
         height="300px"
         width="100%"
         style={{ objectFit: 'cover' }}
