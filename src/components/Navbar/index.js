@@ -4,7 +4,7 @@ import { compose, withState } from 'recompose'
 
 import Logo from '../../assets/img/logo.png'
 import NavbarToggleButton from './NavbarToggleButton'
-import Link from 'gatsby-link'
+import Link from '../atom/Link'
 
 const StyledNavbarSide = styled.div`
   width: 100%;
@@ -71,34 +71,6 @@ const NavItem = styled.li`
   }
 `
 
-const StyledLink = styled(Link)`
-  text-decoration: none;
-  color: ${props => props.theme.luftColor};
-  position: relative;
-
-  &:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    bottom: 0;
-    left: 0;
-    background-color: ${props => props.theme.luftColor};
-    visibility: hidden;
-    transform: scaleX(0);
-    transform-origin: left center 0;
-    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1) 0s;
-    background-color: ${props => props.theme.luftColor};
-  }
-
-  &:hover {
-    &::after {
-      visibility: visible;
-      transform: scaleX(1);
-    }
-  }
-`
-
 const NavbarSide = ({ isNavbarOpen, setIsNavbarOpen }) => {
   const NavLinkWithCloseAction = props => (
     <NavItem
@@ -106,7 +78,7 @@ const NavbarSide = ({ isNavbarOpen, setIsNavbarOpen }) => {
         setIsNavbarOpen(false)
       }}
     >
-      <StyledLink {...props} />
+      <Link {...props} />
     </NavItem>
   )
   return (
@@ -117,7 +89,7 @@ const NavbarSide = ({ isNavbarOpen, setIsNavbarOpen }) => {
         }}
         isCollapsed={!isNavbarOpen}
       />
-      <Link to="/">
+      <Link to="/" hasUnderline={false}>
         <NavbarBrand src={Logo} />
       </Link>
       <NavbarMain isOpen={isNavbarOpen}>
