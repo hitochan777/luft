@@ -23,6 +23,7 @@ const Info = () => (
             <Stylist>
               <img
                 src={Image1}
+                alt="Atsushi"
                 height="200px"
                 width="80%"
                 style={{ objectFit: 'cover' }}
@@ -42,6 +43,7 @@ const Info = () => (
             <Stylist>
               <img
                 src={Image1}
+                alt="Yuka"
                 height="200px"
                 width="80%"
                 style={{ objectFit: 'cover' }}
