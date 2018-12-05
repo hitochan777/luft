@@ -11,6 +11,7 @@ import SlideImage1 from '../assets/img/slide1.jpg'
 import SlideImage2 from '../assets/img/slide2.jpg'
 import SlideImage3 from '../assets/img/slide3.jpg'
 import Logo from '../assets/img/top_logo.png'
+import RowFull from './RowFull'
 
 const StyledCarousel = styled(Carousel)`
   position: relative;
@@ -111,30 +112,32 @@ class Jumbotron extends React.Component {
     })
 
     return (
-      <StyledCarousel
-        activeIndex={activeIndex}
-        next={this.next}
-        previous={this.previous}
-        interval={3000}
-        pause={false}
-      >
-        <CarouselIndicators
-          items={items}
+      <RowFull>
+        <StyledCarousel
           activeIndex={activeIndex}
-          onClickHandler={this.goToIndex}
-        />
-        {slides}
-        <CarouselControl
-          direction="prev"
-          directionText="Previous"
-          onClickHandler={this.previous}
-        />
-        <CarouselControl
-          direction="next"
-          directionText="Next"
-          onClickHandler={this.next}
-        />
-      </StyledCarousel>
+          next={this.next}
+          previous={this.previous}
+          interval={3000}
+          pause={false}
+        >
+          <CarouselIndicators
+            items={items}
+            activeIndex={activeIndex}
+            onClickHandler={this.goToIndex}
+          />
+          {slides}
+          <CarouselControl
+            direction="prev"
+            directionText="Previous"
+            onClickHandler={this.previous}
+          />
+          <CarouselControl
+            direction="next"
+            directionText="Next"
+            onClickHandler={this.next}
+          />
+        </StyledCarousel>
+      </RowFull>
     )
   }
 }
