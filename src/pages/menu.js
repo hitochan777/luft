@@ -51,7 +51,7 @@ export default () => (
   <Layout>
     <Content title="Menu">
       <Container>
-        <Row noGutters={true}>
+        <Row noGutters={false}>
           <Col xs="12" sm="6">
             <MenuSection title="カット">
               <MenuItem>
