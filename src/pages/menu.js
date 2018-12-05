@@ -13,7 +13,7 @@ const MenuTitle = styled.div`
 `
 
 const StyledMenuSection = styled.div`
-  margin: 30px 10% 0px;
+  margin: 10px 0px;
 `
 const MenuSection = ({ title, children }) => (
   <StyledMenuSection>

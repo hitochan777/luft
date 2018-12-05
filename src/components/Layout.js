@@ -10,7 +10,10 @@ import '../assets/index.scss'
 import 'animate.css/animate.min.css'
 
 const Content = styled.div`
-  margin: 0;
+  margin: 0px;
+  @media screen and (max-width: ${props => props.theme.threshold}) {
+    margin: 0 10px;
+  }
   padding: 0;
   min-height: calc(100vh - ${props => props.theme.footerHeight});
 `

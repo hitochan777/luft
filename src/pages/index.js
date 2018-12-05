@@ -1,9 +1,9 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import styled from 'styled-components'
 
 import Jumbotron from '../components/Jumbotron'
 import Layout from '../components/Layout'
+import BaseLink from '../components/atom/Link'
 
 const NavForSmallDevice = styled.div`
   display: flex;
@@ -14,21 +14,19 @@ const NavForSmallDevice = styled.div`
   }
 `
 
-const StyledLink = styled(Link)`
+const Link = styled(BaseLink)`
   text-align: center;
-  text-decoration: none;
-  color: ${props => props.theme.luftColor};
 `
 
 const IndexPage = () => (
   <Layout>
     <Jumbotron />
     <NavForSmallDevice>
-      <StyledLink to="/concept">Concept</StyledLink>
-      <StyledLink to="/stylist">Stylists</StyledLink>
-      <StyledLink to="/info">Shop Information</StyledLink>
-      <StyledLink to="/menu">Menu</StyledLink>
-      <StyledLink to="/news">News</StyledLink>
+      <Link to="/concept">Concept</Link>
+      <Link to="/stylist">Stylists</Link>
+      <Link to="/info">Shop Information</Link>
+      <Link to="/menu">Menu</Link>
+      <Link to="/news">News</Link>
     </NavForSmallDevice>
   </Layout>
 )
