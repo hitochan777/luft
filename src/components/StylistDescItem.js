@@ -1,9 +1,15 @@
 import React from 'react'
+import styled from "styled-components"
+
+
+const StyledStylistDescItem = styled.div`
+  text-align: center;
+`
 
 const StylistDescItem = ({ title, children }) => (
-  <div>
+  <StyledStylistDescItem>
     {title}: {children}
-  </div>
+  </StyledStylistDescItem>
 )
 
 export default StylistDescItem

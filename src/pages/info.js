@@ -10,7 +10,9 @@ import Image1 from '../assets/img/slide1.jpg'
 
 const StylistDescription = styled.div``
 
-const StylistName = ({ name }) => <h2>{name}</h2>
+const StylistName = styled.h2`
+  text-align: center;
+`
 
 const Stylist = styled.div`
 `
@@ -64,7 +66,7 @@ const Info = () => (
                 style={{ objectFit: 'cover' }}
               />
               <StylistDescription>
-                <StylistName name="ATSUSHI" />
+                <StylistName>ATSUSHI</StylistName>
                 <StylistDescItem title="美容師歴">25年</StylistDescItem>
                 <StylistDescItem title="趣味">スノボー、ゴルフ</StylistDescItem>
                 <StylistDescItem title="好きな言葉">
@@ -84,7 +86,7 @@ const Info = () => (
                 style={{ objectFit: 'cover' }}
               />
               <StylistDescription>
-                <StylistName name="YUKA" />
+                <StylistName>YUKA</StylistName>
                 <StylistDescItem title="美容師歴">18年</StylistDescItem>
                 <StylistDescItem title="趣味">スノボー、ゴルフ</StylistDescItem>
                 <StylistDescItem title="好きな言葉">一期一会</StylistDescItem>
