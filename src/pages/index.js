@@ -23,8 +23,8 @@ const IndexPage = () => (
     <Jumbotron />
     <NavForSmallDevice>
       <Link to="/concept">Concept</Link>
-      <Link to="/stylist">Stylists</Link>
-      <Link to="/info">Shop Information</Link>
+      <Link to="/info">Stylists</Link>
+      <Link to="/info">Access</Link>
       <Link to="/menu">Menu</Link>
       <Link to="/news">News</Link>
     </NavForSmallDevice>
