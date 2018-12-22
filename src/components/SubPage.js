@@ -25,9 +25,9 @@ const SubContent = styled.div`
   }
 `
 
-const Content = ({ title, children, className }) => (
+const Content = ({ id, title, children, className }) => (
   <>
-    <SubContent>
+    <SubContent id={id}>
       <Title>{title}</Title>
       {children}
     </SubContent>
