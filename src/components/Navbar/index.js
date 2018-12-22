@@ -66,6 +66,8 @@ const NavbarMain = styled.ul`
 const NavItem = styled.li`
   position: relative;
   margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   @media screen and (max-width: ${props => props.theme.threshold}) {
     margin-left: 0;
   }
