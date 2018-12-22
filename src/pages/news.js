@@ -1,24 +1,30 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { Flex, Box } from '@rebass/grid'
 
 import Content from '../components/SubPage'
 import Layout from '../components/Layout'
-import Link from '../components/atom/Link'
+import NewsItem from '../components/molecule/NewsItem'
 
 export default ({ data }) => {
   const blogs = data.allContentfulBlogPost.edges.map(edge => edge.node)
   return (
     <Layout>
       <Content title="News">
-        {blogs.map(blog => (
-          <article key={blog.id}>
-            <h2>
-              <Link to={`/blog/${blog.id}`}>{blog.title}</Link>
-            </h2>
-            {blog.publishDate} <br />
-            {blog.description.description}
-          </article>
-        ))}
+        <Flex flexWrap="wrap" justifyContent="space-evenly">
+          {blogs.map(blog => (
+            <Box width={[1, 3 / 10]}>
+              <NewsItem
+                key={blog.id}
+                blogId={blog.id}
+                title={blog.title}
+                description={blog.description.description}
+                publishDate={blog.publishDate}
+                imagePath={blog.thumbnail.resize.src}
+              />
+            </Box>
+          ))}
+        </Flex>
       </Content>
     </Layout>
   )
@@ -35,6 +41,16 @@ export const pageQuery = graphql`
             description
           }
           title
+          thumbnail {
+            resize(width: 200, height: 150) {
+              base64
+              tracedSVG
+              src
+              width
+              height
+              aspectRatio
+            }
+          }
         }
       }
     }
