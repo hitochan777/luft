@@ -21,8 +21,10 @@ const SubContent = styled.div`
 
 const Content = ({ title, children, className }) => (
   <>
-    <Title>{title}</Title>
-    <SubContent>{children}</SubContent>
+    <SubContent>
+        <Title>{title}</Title>
+        {children}
+    </SubContent>
   </>
 )
 

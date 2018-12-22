@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from 'reactstrap'
+import {Flex, Box} from "@rebass/grid"
 import styled from 'styled-components'
 
 import Content from '../components/SubPage'
@@ -9,19 +10,55 @@ import Image1 from '../assets/img/slide1.jpg'
 
 const StylistDescription = styled.div``
 
-const StylistName = ({ name }) => <h2>{name}</h2>
+const StylistName = styled.h2`
+  text-align: center;
+`
 
-const Stylist = styled.div``
+const Stylist = styled.div`
+`
+
+const StylistImage = styled.img`
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  transition: all .2s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
+`
 
 const Info = () => (
   <Layout>
-    <Content title="Access" id="access" />
+    <Content title="Access" id="access">
+      <Flex justifyContent="center" flexWrap="wrap">
+        <Box width={[1, 3/5]}>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3246.186222727575!2d134.81300945126196!3d35.54910278012832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5fffc43e1396ea11%3A0x535fd767914f80fe!2z772I772B772J772S77ys772V772G772U!5e0!3m2!1sen!2sjp!4v1545408396103" width="100%" height="450" frameborder="0" style={{border: 0}} allowfullscreen></iframe>
+        </Box>
+        <Box width={[1, 2/5]} pl={"30px"}>
+          <p>
+          【住所】<br/>
+          Hair Luft（ヘアールフト）<br/>
+          兵庫県豊岡市若松町７‐４
+          </p>
+
+          <p>
+          【情報】<br/>
+          営業時間／ 火～日・祝　9：00～19：00<br/>
+          定休日／ 毎週月曜日、第2・3火曜日<br/>
+          駐車場／２台あり
+          </p>
+        </Box>
+      </Flex>
+    </Content>
     <Content title="Stylists" id="stylists">
-      <Container>
-        <Row noGutters={true}>
-          <Col sm={6} xs={12}>
+      <Flex justifyContent="center" flexWrap="wrap">
+          <Box width={[1, 1/3]}>
             <Stylist>
-              <img
+              <StylistImage
                 src={Image1}
                 alt="Atsushi"
                 height="200px"
@@ -29,7 +66,7 @@ const Info = () => (
                 style={{ objectFit: 'cover' }}
               />
               <StylistDescription>
-                <StylistName name="ATSUSHI" />
+                <StylistName>ATSUSHI</StylistName>
                 <StylistDescItem title="美容師歴">25年</StylistDescItem>
                 <StylistDescItem title="趣味">スノボー、ゴルフ</StylistDescItem>
                 <StylistDescItem title="好きな言葉">
@@ -38,10 +75,10 @@ const Info = () => (
                 <StylistDescItem title="好きな食べ物">焼肉</StylistDescItem>
               </StylistDescription>
             </Stylist>
-          </Col>
-          <Col sm={6} xs={12}>
+          </Box>
+          <Box width={[1, 1/3]}>
             <Stylist>
-              <img
+              <StylistImage
                 src={Image1}
                 alt="Yuka"
                 height="200px"
@@ -49,7 +86,7 @@ const Info = () => (
                 style={{ objectFit: 'cover' }}
               />
               <StylistDescription>
-                <StylistName name="YUKA" />
+                <StylistName>YUKA</StylistName>
                 <StylistDescItem title="美容師歴">18年</StylistDescItem>
                 <StylistDescItem title="趣味">スノボー、ゴルフ</StylistDescItem>
                 <StylistDescItem title="好きな言葉">一期一会</StylistDescItem>
@@ -58,9 +95,8 @@ const Info = () => (
                 </StylistDescItem>
               </StylistDescription>
             </Stylist>
-          </Col>
-        </Row>
-      </Container>
+          </Box>
+        </Flex>
     </Content>
   </Layout>
 )
