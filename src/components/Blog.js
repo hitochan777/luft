@@ -8,9 +8,8 @@ export default ({ data }) => {
   const blog = data.contentfulBlogPost
   return (
     <Layout>
-      <Content>
-        <div className="col-12">{blog.title}</div>
-        <div className="col-12">
+      <Content title={blog.title}>
+        <div className="col-12" style={{ textAlign: 'center' }}>
           <span>{blog.publishDate}</span>
         </div>
         <div className="col-12">
