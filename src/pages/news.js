@@ -43,8 +43,6 @@ export const pageQuery = graphql`
           title
           thumbnail {
             resize(width: 200, height: 150) {
-              base64
-              tracedSVG
               src
               width
               height
