@@ -1,22 +1,24 @@
 import Typography from 'typography'
 
-const GOTHICS = [
-  'Hiragino Kaku Gothic ProN',
+const FONTS = [
+  'Roboto Condensed',
+  'YuGothic',
   'ヒラギノ角ゴ ProN W3',
-  'Meiryo',
+  'Hiragino Kaku Gothic ProN',
   'メイリオ',
-  'Osaka',
+  'Meiryo, Osaka',
+  'ＭＳ Ｐゴシック',
   'MS PGothic',
-  'arial',
-  'helvetica',
   'sans-serif',
 ]
 
 const typography = new Typography({
   baseFontSize: '18px',
   baseLineHeight: 1.5,
-  headerFontFamily: GOTHICS,
-  bodyFontFamily: GOTHICS,
+  headerFontFamily: FONTS,
+  headerWeight: 300,
+  bodyFontFamily: FONTS,
+  bodyWeight: 300,
 })
 
 export default typography
