@@ -11,7 +11,22 @@ const StylistDescription = styled.div``
 
 const StylistName = ({ name }) => <h2>{name}</h2>
 
-const Stylist = styled.div``
+const Stylist = styled.div`
+`
+
+const StylistImage = styled.img`
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  transition: all .2s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
+`
 
 const Info = () => (
   <Layout>
@@ -21,7 +36,7 @@ const Info = () => (
         <Row noGutters={true}>
           <Col sm={6} xs={12}>
             <Stylist>
-              <img
+              <StylistImage
                 src={Image1}
                 alt="Atsushi"
                 height="200px"
@@ -41,7 +56,7 @@ const Info = () => (
           </Col>
           <Col sm={6} xs={12}>
             <Stylist>
-              <img
+              <StylistImage
                 src={Image1}
                 alt="Yuka"
                 height="200px"
