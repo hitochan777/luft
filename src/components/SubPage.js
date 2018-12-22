@@ -2,11 +2,15 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Title = styled.h1`
-    margin: 0 auto 30px;
-    padding-top: 80px;
-    font-family: font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
-    text-align: center;
-    text-decoration: underline;
+  margin: 0 auto 30px;
+  padding-top: 80px;
+  font-size: 50px;
+  text-align: center;
+  // text-decoration: underline;
+  border-bottom: 2px solid black;
+  width: 30%;
+  font-style: italic;
+  text-transform: uppercase;
 `
 
 const SubContent = styled.div`

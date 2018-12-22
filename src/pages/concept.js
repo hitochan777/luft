@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import Content from '../components/SubPage'
 import Layout from '../components/Layout'
+import Image from '../components/atom/Image'
 
 import Image1 from '../assets/img/slide1.jpg'
 import Image2 from '../assets/img/slide2.jpg'
@@ -14,15 +15,14 @@ const OwnerName = styled.div`
   margin-top: 50px;
 `
 
-const SubTitle = styled.h2`
+const SubTitle = styled.h3`
   margin-bottom: 0px;
-  font-weight: bold;
 `
 
 const Concept = () => (
   <Layout>
     <Content title="Concept">
-      <img
+      <Image
         src={Image1}
         alt="image1"
         height="400px"
@@ -46,7 +46,7 @@ const Concept = () => (
       私たちは誰もが持っている「美」を引き出すための
       お手伝いをさせていただきます。 <br />
       <br />
-      <img
+      <Image
         src={Image2}
         alt="image2"
         height="300px"

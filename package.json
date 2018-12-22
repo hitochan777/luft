@@ -16,7 +16,7 @@
     "gatsby-plugin-react-helmet": "^3.0.3",
     "gatsby-plugin-sass": "^2.0.5",
     "gatsby-plugin-styled-components": "^3.0.4",
-    "gatsby-plugin-typography": "^2.2.2",
+    "gatsby-plugin-typography": "^2.2.4",
     "gatsby-source-contentful": "^2.0.16",
     "gatsby-transformer-remark": "^2.1.14",
     "node-sass": "^4.10.0",
@@ -26,9 +26,11 @@
     "react-fontawesome": "^1.6.1",
     "react-helmet": "^5.2.0",
     "react-router-dom": "^4.3.1",
+    "react-typography": "^0.16.18",
     "reactstrap": "^6.5.0",
     "recompose": "^0.30.0",
-    "styled-components": "^4.1.2"
+    "styled-components": "^4.1.2",
+    "typography": "^0.16.18"
   },
   "keywords": [
     "gatsby"
