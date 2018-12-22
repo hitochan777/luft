@@ -1,5 +1,4 @@
 import React from 'react'
-import { Container, Row, Col } from 'reactstrap'
 import {Flex, Box} from "@rebass/grid"
 import styled from 'styled-components'
 
@@ -81,7 +80,7 @@ const Info = () => (
     <Content title="Access" id="access">
       <Flex justifyContent="center" flexWrap="wrap">
         <Box width={[1, 3/5]}>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3246.186222727575!2d134.81300945126196!3d35.54910278012832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5fffc43e1396ea11%3A0x535fd767914f80fe!2z772I772B772J772S77ys772V772G772U!5e0!3m2!1sen!2sjp!4v1545408396103" width="100%" height="450" frameborder="0" style={{border: 0}} allowfullscreen></iframe>
+            <iframe title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3246.186222727575!2d134.81300945126196!3d35.54910278012832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5fffc43e1396ea11%3A0x535fd767914f80fe!2z772I772B772J772S77ys772V772G772U!5e0!3m2!1sen!2sjp!4v1545408396103" width="100%" height="450" frameborder="0" style={{border: 0}} allowFullscreen></iframe>
         </Box>
         <Box width={[1, 2/5]} pl={"30px"}>
           <p>
