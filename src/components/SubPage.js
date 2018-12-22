@@ -8,7 +8,9 @@ const Title = styled.h1`
   text-align: center;
   // text-decoration: underline;
   border-bottom: 2px solid black;
-  width: 30%;
+  @media screen and (min-width: ${props => props.theme.threshold}) {
+    width: 30%;
+  }
   font-style: italic;
   text-transform: uppercase;
 `
