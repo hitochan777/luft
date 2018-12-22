@@ -13,6 +13,7 @@
     ]
   },
   "files": [
+    ".env.production",
     "gatsby-browser.js",
     "gatsby-config.js",
     "gatsby-node.js",
