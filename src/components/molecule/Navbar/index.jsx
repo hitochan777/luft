@@ -2,9 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import { compose, withState } from 'recompose'
 
-import Logo from '../../assets/img/logo.png'
+import Logo from '../../../assets/img/logo.png'
 import NavbarToggleButton from './NavbarToggleButton'
-import Link from '../atom/Link'
+import Link from '../../atom/Link'
 
 const StyledNavbarSide = styled.div`
   width: 100%;

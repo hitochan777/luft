@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { Flex, Box } from '@rebass/grid'
 
-import Content from '../components/SubPage'
-import Layout from '../components/Layout'
+import Content from '../components/template/SubPage'
+import Layout from '../components/template/Layout'
 import Table from '../components/atom/Table'
 import TableCell from '../components/atom/TableCell'
 

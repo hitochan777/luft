@@ -2,8 +2,8 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { Flex, Box } from '@rebass/grid'
 
-import Content from '../components/SubPage'
-import Layout from '../components/Layout'
+import Content from '../components/template/SubPage'
+import Layout from '../components/template/Layout'
 import NewsItem from '../components/molecule/NewsItem'
 
 export default ({ data }) => {
