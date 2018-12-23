@@ -11,7 +11,6 @@ const Title = styled.h1`
   @media screen and (min-width: ${props => props.theme.threshold}) {
     width: 30%;
   }
-  font-style: italic;
   text-transform: uppercase;
 `
 
