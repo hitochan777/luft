@@ -2,9 +2,9 @@ import React from 'react'
 import { Flex, Box } from '@rebass/grid'
 import styled from 'styled-components'
 
-import Content from '../components/SubPage'
-import Layout from '../components/Layout'
-import StylistDescItem from '../components/StylistDescItem'
+import Content from '../components/template/SubPage'
+import Layout from '../components/template/Layout'
+import StylistDescItem from '../components/molecule/StylistDescItem'
 import Image1 from '../assets/img/slide1.jpg'
 
 const StylistDescription = styled.div``

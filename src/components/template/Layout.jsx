@@ -3,11 +3,10 @@ import Helmet from 'react-helmet'
 import styled, { ThemeProvider } from 'styled-components'
 import { StaticQuery, graphql } from 'gatsby'
 
-import Navbar from './Navbar'
-import Footer from './Footer'
-import theme from '../theme'
-import '../assets/index.scss'
-import 'animate.css/animate.min.css'
+import Navbar from '../molecule/Navbar'
+import Footer from '../atom/Footer'
+import theme from '../../theme'
+import '../../assets/index.scss'
 
 const Content = styled.div`
   margin: 0px;

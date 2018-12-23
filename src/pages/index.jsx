@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Jumbotron from '../components/Jumbotron'
-import Layout from '../components/Layout'
+import Jumbotron from '../components/organism/Jumbotron'
+import Layout from '../components/template/Layout'
 import BaseLink from '../components/atom/Link'
 
 const NavForSmallDevice = styled.div`

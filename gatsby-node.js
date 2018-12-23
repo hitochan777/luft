@@ -33,7 +33,7 @@ exports.createPages = async ({ graphql, actions }) => {
   }
 
   // Create Blog pages
-  const productTemplate = path.resolve(`./src/components/Blog.jsx`)
+  const productTemplate = path.resolve(`./src/components/template/Blog.jsx`)
   // We want to create a detailed page for each
   // product node. We'll just use the Contentful id for the slug.
   for (let edge of result.data.allContentfulBlogPost.edges) {

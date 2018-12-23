@@ -2,11 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import { Carousel, CarouselItem, CarouselIndicators } from 'reactstrap'
 
-import SlideImage1 from '../assets/img/slide1.jpg'
-import SlideImage2 from '../assets/img/slide2.jpg'
-import SlideImage3 from '../assets/img/slide3.jpg'
-import Logo from '../assets/img/top_logo.png'
-import RowFull from './RowFull'
+import SlideImage1 from '../../assets/img/slide1.jpg'
+import SlideImage2 from '../../assets/img/slide2.jpg'
+import SlideImage3 from '../../assets/img/slide3.jpg'
+import Logo from '../../assets/img/top_logo.png'
+import RowFull from '../atom/RowFull'
 
 const StyledCarousel = styled(Carousel)`
   position: relative;
