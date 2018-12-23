@@ -9,6 +9,7 @@ const NavForSmallDevice = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 20px;
+  margin-bottom: 20px;
   @media screen and (min-width: ${props => props.theme.threshold}) {
     display: none;
   }
