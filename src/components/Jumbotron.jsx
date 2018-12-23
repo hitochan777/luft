@@ -1,11 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {
-  Carousel,
-  CarouselItem,
-  CarouselControl,
-  CarouselIndicators,
-} from 'reactstrap'
+import { Carousel, CarouselItem, CarouselIndicators } from 'reactstrap'
 
 import SlideImage1 from '../assets/img/slide1.jpg'
 import SlideImage2 from '../assets/img/slide2.jpg'
@@ -126,16 +121,6 @@ class Jumbotron extends React.Component {
             onClickHandler={this.goToIndex}
           />
           {slides}
-          <CarouselControl
-            direction="prev"
-            directionText="Previous"
-            onClickHandler={this.previous}
-          />
-          <CarouselControl
-            direction="next"
-            directionText="Next"
-            onClickHandler={this.next}
-          />
         </StyledCarousel>
       </RowFull>
     )
