@@ -9,7 +9,7 @@ const StyledFooter = styled.footer`
   vertical-align: middle;
   width: 100%;
   text-align: center;
-  @media screen and (max-width: ${props => props.theme.threshold}) {
+  @media screen and (max-width: ${props => props.theme.tablet_width}) {
     font-size: 10px;
   }
 `
