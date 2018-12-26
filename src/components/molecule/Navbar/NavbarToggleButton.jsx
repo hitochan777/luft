@@ -43,7 +43,7 @@ const StyledNavbarToggleButton = styled.button`
   &:focus {
     outline: none;
   }
-  @media screen and (min-width: ${props => props.theme.threshold}) {
+  @media screen and (min-width: ${props => props.theme.tablet_width}) {
     display: none;
   }
 `

@@ -15,7 +15,7 @@ const StyledCarousel = styled(Carousel)`
 const CarouselItemImage = styled.img`
   width: 100%;
   height: 60vh;
-  @media screen and (min-width: ${props => props.theme.threshold}) {
+  @media screen and (min-width: ${props => props.theme.tablet_width}) {
     height: calc(100vh - ${props => props.theme.footerHeight});
   }
   object-fit: cover;
@@ -29,7 +29,7 @@ const CarouselLogoImage = styled.img`
   margin: 0;
   padding: 0;
   width: 200px;
-  @media screen and (min-width: ${props => props.theme.threshold}) {
+  @media screen and (min-width: ${props => props.theme.tablet_width}) {
     width: 300px;
   }
 `

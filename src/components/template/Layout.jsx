@@ -10,7 +10,7 @@ import '../../assets/index.scss'
 
 const Content = styled.div`
   margin: 0px;
-  @media screen and (max-width: ${props => props.theme.threshold}) {
+  @media screen and (max-width: ${props => props.theme.tablet_width}) {
     margin: 0 10px;
   }
   padding: 0;

@@ -8,14 +8,14 @@ const Title = styled.h1`
   text-align: center;
   // text-decoration: underline;
   border-bottom: 2px solid black;
-  @media screen and (min-width: ${props => props.theme.threshold}) {
+  @media screen and (min-width: ${props => props.theme.tablet_width}) {
     width: 30%;
   }
   text-transform: uppercase;
 `
 
 const SubContent = styled.div`
-  @media screen and (min-width: ${props => props.theme.threshold}) {
+  @media screen and (min-width: ${props => props.theme.tablet_width}) {
     margin-left: calc(
       ${props => props.theme.sideNavbarWidth} +
         (100vw - ${props => props.theme.sideNavbarWidth}) * (1 - 0.8) / 2

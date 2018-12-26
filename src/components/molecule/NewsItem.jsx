@@ -12,12 +12,12 @@ const StyledNewsItem = styled.article`
   display: flex;
   flex-direction: column;
   word-wrap: break-word;
-  @media screen and (min-width: ${props => props.theme.threshold}) {
+  @media screen and (min-width: ${props => props.theme.tablet_width}) {
     min-height: 400px;
     height: 400px;
   }
   position: relative;
-  @media screen and (max-width: ${props => props.theme.threshold}) {
+  @media screen and (max-width: ${props => props.theme.tablet_width}) {
     margin-top: 30px;
   }
 `
@@ -43,7 +43,7 @@ const ReadMoreButton = styled.button`
 `
 
 const ButtonLink = styled(Link)`
-  @media screen and (min-width: ${props => props.theme.threshold}) {
+  @media screen and (min-width: ${props => props.theme.tablet_width}) {
     position: absolute;
     bottom: 0;
   }
