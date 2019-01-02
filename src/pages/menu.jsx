@@ -21,7 +21,7 @@ const StyledMenuSection = styled.div`
 `
 const MenuItemWrapper = styled.div`
   width: 100%;
-  @media screen and (min-width: ${props => props.theme.threshold}) {
+  @media screen and (min-width: ${props => props.theme.tablet_width}) {
     width: 80%;
   }
 `
