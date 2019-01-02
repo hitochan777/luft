@@ -9,7 +9,7 @@ import Link from '../../atom/Link'
 const StyledNavbarSide = styled.div`
   width: 100%;
   height: 80px;
-  @media screen and (min-width: ${props => props.theme.threshold}) {
+  @media screen and (min-width: ${props => props.theme.tablet_width}) {
     position: fixed;
     left: 0;
     top: 0;
@@ -27,7 +27,7 @@ const StyledNavbarSide = styled.div`
 const NavbarBrand = styled.img`
   margin-left: 10px;
   display: block;
-  @media screen and (max-width: ${props => props.theme.threshold}) {
+  @media screen and (max-width: ${props => props.theme.tablet_width}) {
     padding-top: 14px;
     padding-bottom: 14px;
   }
@@ -44,7 +44,7 @@ const NavbarMain = styled.ul`
     }
   }
 
-  @media screen and (max-width: ${props => props.theme.threshold}) {
+  @media screen and (max-width: ${props => props.theme.tablet_width}) {
     animation: fadein 0.5s;
     display: ${props => (props.isOpen ? 'flex' : 'none')};
     flex-direction: column;
@@ -68,7 +68,7 @@ const NavItem = styled.li`
   margin-left: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
-  @media screen and (max-width: ${props => props.theme.threshold}) {
+  @media screen and (max-width: ${props => props.theme.tablet_width}) {
     margin-left: 0;
   }
 `
