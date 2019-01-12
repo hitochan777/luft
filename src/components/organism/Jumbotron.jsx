@@ -14,10 +14,7 @@ const StyledCarousel = styled(Carousel)`
 
 const CarouselItemImage = styled.img`
   width: 100%;
-  height: 60vh;
-  @media screen and (min-width: ${props => props.theme.tablet_width}) {
-    height: 100vh;
-  }
+  height: 100vh;
   object-fit: cover;
 `
 
