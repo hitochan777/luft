@@ -13,12 +13,13 @@ const FONTS = [
 ]
 
 const typography = new Typography({
-  baseFontSize: '18px',
-  baseLineHeight: 1.5,
+  baseFontSize: '14px',
+  baseLineHeight: '1.66rem',
   headerFontFamily: FONTS,
   headerWeight: 300,
   bodyFontFamily: FONTS,
   bodyWeight: 300,
+  scaleRatio: 1.5,
 })
 
 export default typography
