@@ -4,10 +4,8 @@ import styled from 'styled-components'
 const Title = styled.h1`
   margin: 0 auto 30px;
   padding-top: 80px;
-  font-size: 3rem;
   text-align: center;
-  // text-decoration: underline;
-  border-bottom: 2px solid black;
+  text-decoration: underline;
   @media screen and (min-width: ${props => props.theme.tablet_width}) {
     width: 30%;
   }
