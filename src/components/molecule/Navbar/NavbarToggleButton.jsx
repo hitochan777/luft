@@ -47,9 +47,14 @@ const StyledNavbarToggleButton = styled.button`
     display: none;
   }
 `
+
+const MenuText = styled.span`
+  font-size: 0.8rem;
+`
+
 const NavbarToggleButton = ({ isCollapsed, onClick }) => (
   <StyledNavbarToggleButton onClick={onClick} isOpened={!isCollapsed}>
-    <span>MENU</span>
+    <MenuText>MENU</MenuText>
     <IconBar isOpened={!isCollapsed} />
     <IconBar isOpened={!isCollapsed} />
     <IconBar isOpened={!isCollapsed} />
