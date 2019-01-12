@@ -9,7 +9,8 @@ const IconBar = styled.span`
   margin-right: auto;
   padding: 0;
   transition: all 0.8s;
-  background-color: black;
+  background-color: ${props =>
+    props.isOpened ? 'white' : props.theme.grayColor};
   &:nth-of-type(2) {
     transform: rotate(${({ isOpened }) => (isOpened ? '45' : '0')}deg);
     ${({ isOpened }) => isOpened && 'transform-origin: 10% 10%'};
@@ -37,7 +38,7 @@ const StyledNavbarToggleButton = styled.button`
   z-index: 200;
   padding: 0;
   margin: 0;
-  color: black;
+  color: ${props => (props.isOpened ? 'white' : props.theme.grayColor)};
   border: none;
   text-align: center;
   &:focus {
@@ -52,13 +53,16 @@ const MenuText = styled.span`
   font-size: 0.8rem;
 `
 
-const NavbarToggleButton = ({ isCollapsed, onClick }) => (
-  <StyledNavbarToggleButton onClick={onClick} isOpened={!isCollapsed}>
-    <MenuText>MENU</MenuText>
-    <IconBar isOpened={!isCollapsed} />
-    <IconBar isOpened={!isCollapsed} />
-    <IconBar isOpened={!isCollapsed} />
-  </StyledNavbarToggleButton>
-)
+const NavbarToggleButton = ({ isCollapsed, onClick }) => {
+  const isOpened = !isCollapsed
+  return (
+    <StyledNavbarToggleButton onClick={onClick} isOpened={isOpened}>
+      <MenuText>{isOpened ? 'CLOSE' : 'MENU'}</MenuText>
+      <IconBar isOpened={isOpened} />
+      <IconBar isOpened={isOpened} />
+      <IconBar isOpened={isOpened} />
+    </StyledNavbarToggleButton>
+  )
+}
 
 export default NavbarToggleButton
