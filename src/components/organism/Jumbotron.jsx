@@ -114,6 +114,7 @@ class Jumbotron extends React.Component {
           previous={this.previous}
           interval={3000}
           pause={false}
+          ride="carousel"
         >
           <CarouselIndicators
             items={items}
