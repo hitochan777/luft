@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import Content from '../components/template/SubPage'
 import Layout from '../components/template/Layout'
-import Image from '../components/atom/Image'
+import { CoverImage } from '../components/atom/Image'
 
 import Image1 from '../assets/img/slide1.jpg'
 
@@ -21,13 +21,7 @@ const SubTitle = styled.h3`
 const Concept = () => (
   <Layout>
     <Content title="Concept">
-      <Image
-        src={Image1}
-        alt="image1"
-        height="400px"
-        width="100%"
-        style={{ objectFit: 'cover' }}
-      />
+      <CoverImage src={Image1} alt="image1" />
       <SubTitle>
         ドイツ語で
         <br />
