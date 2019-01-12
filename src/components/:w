@@ -51,11 +51,11 @@ const Navbar = styled.div`
   }
 `
 const NavItem = styled.li`
-  margin: 0;
   color: ${props => props.theme.greyColor};
   padding-bottom: 5px;
   padding-bottom: 5px;
   position: relative;
+  text-align: center;
   text-transform: uppercase;
   &:hover {
     background-color: white;
@@ -79,21 +79,20 @@ const Footer = styled.div`
 
 const withNavbarOpen = withState('isNavbarOpen', 'setIsNavbarOpen', false)
 
-const StyledLink = styled(({ isFirst, ...props }) => <Link {...props} />)`
-  border-top: ${props => (props.isFirst ? 'none' : '1px solid #e2e2e2')};
-  margin: 0 35px;
-  display: flex;
-  box-align: center;
-`
-
 const NavLink = withState('isNavbarOpen', 'setIsNavbarOpen', false)(
-  ({ isNavbarOpen, setIsNavbarOpen, isFirst = false, ...props }) => (
+  ({ isNavbarOpen, setIsNavbarOpen, ...props }) => (
     <NavItem
       onClick={() => {
         setIsNavbarOpen(false)
       }}
     >
-      <StyledLink isFirst={isFirst} {...props} />
+      <Link
+        {...props}
+        style={{
+          width: '100%',
+          borderTop: '1px solid #e2e2e2',
+        }}
+      />
     </NavItem>
   )
 )
@@ -139,9 +138,7 @@ const NavbarSide = ({ isNavbarOpen, setIsNavbarOpen }) => {
           </Link>
         </Header>
         <Main>
-          <NavLink isFirst to="/concept">
-            Concept
-          </NavLink>
+          <NavLink to="/concept">Concept</NavLink>
           <NavLink to="/info#stylists">Stylists</NavLink>
           <NavLink to="/info#access">Access</NavLink>
           <NavLink to="/menu">Menu</NavLink>
