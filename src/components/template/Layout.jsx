@@ -4,7 +4,6 @@ import styled, { ThemeProvider } from 'styled-components'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Navbar from '../molecule/Navbar'
-import Footer from '../atom/Footer'
 import theme from '../../theme'
 import '../../assets/index.scss'
 
@@ -14,7 +13,7 @@ const Content = styled.div`
     margin: 0 10px;
   }
   padding: 0;
-  min-height: calc(100vh - ${props => props.theme.footerHeight});
+  min-height: 100vh;
 `
 
 const Layout = ({ children }) => (
@@ -40,7 +39,6 @@ const Layout = ({ children }) => (
           />
           <Navbar siteTitle={data.site.siteMetadata.title} />
           <Content>{children}</Content>
-          <Footer />
         </>
       </ThemeProvider>
     )}
