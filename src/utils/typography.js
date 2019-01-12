@@ -1,5 +1,7 @@
 import Typography from 'typography'
 
+import theme from '../theme'
+
 const FONTS = [
   'Roboto Condensed',
   'YuGothic',
@@ -17,8 +19,10 @@ const typography = new Typography({
   baseLineHeight: '1.66rem',
   headerFontFamily: FONTS,
   headerWeight: 300,
+  headerColor: theme.grayColor,
   bodyFontFamily: FONTS,
   bodyWeight: 300,
+  bodyColor: theme.grayColor,
   scaleRatio: 1.5,
 })
 
