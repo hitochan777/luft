@@ -16,6 +16,8 @@ const CarouselItemImage = styled.img`
   width: 100%;
   height: 100vh;
   object-fit: cover;
+  display: block;
+  margin: 0;
 `
 
 const CarouselLogoImage = styled.img`
