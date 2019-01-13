@@ -17,12 +17,9 @@ $carousel-indicator-length: 10px;
   }
 }
 
-html {
-  overflow-y: auto;
-  margin: 0;
-}
-
+html,
 body {
+  overflow: auto;
   margin: 0;
   padding: 0;
 }
