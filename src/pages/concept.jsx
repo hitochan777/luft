@@ -1,11 +1,10 @@
 import React from 'react'
+import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 
 import Content from '../components/template/SubPage'
 import Layout from '../components/template/Layout'
 import { CoverImage } from '../components/atom/Image'
-
-import Image1 from '../assets/img/slide1.jpg'
 
 const OwnerName = styled.div`
   border-left: 6px solid black;
@@ -18,10 +17,10 @@ const SubTitle = styled.h3`
   margin-bottom: 0px;
 `
 
-const Concept = () => (
+const Concept = ({ data }) => (
   <Layout>
     <Content title="Concept">
-      <CoverImage src={Image1} alt="image1" />
+      <CoverImage src={data.cover.file.url} alt="image1" />
       <SubTitle>
         ドイツ語で
         <br />
@@ -51,4 +50,18 @@ const Concept = () => (
   </Layout>
 )
 
-export default Concept
+export default props => (
+  <StaticQuery
+    query={graphql`
+      query {
+        cover: contentfulAsset(title: { eq: "slide1" }) {
+          title
+          file {
+            url
+          }
+        }
+      }
+    `}
+    render={data => <Concept data={data} />}
+  />
+)
