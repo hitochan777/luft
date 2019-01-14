@@ -154,8 +154,8 @@ const NavbarSide = ({ isNavbarOpen, setIsNavbarOpen }) => {
           <NavLink isFirst to="/concept">
             Concept
           </NavLink>
-          <NavLink to="/info#stylists">Stylists</NavLink>
-          <NavLink to="/info#access">Access</NavLink>
+          <NavLink to="/stylist">Stylists</NavLink>
+          <NavLink to="/access">Access</NavLink>
           <NavLink to="/menu">Menu</NavLink>
           <NavLink to="/news">News</NavLink>
         </Main>
