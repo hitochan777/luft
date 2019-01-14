@@ -1,11 +1,11 @@
 import React from 'react'
+import { StaticQuery, graphql } from 'gatsby'
 import { Flex, Box } from '@rebass/grid'
 import styled from 'styled-components'
 
 import Content from '../components/template/SubPage'
 import Layout from '../components/template/Layout'
 import StylistDescItem from '../components/molecule/StylistDescItem'
-import Image1 from '../assets/img/slide1.jpg'
 
 const StylistDescription = styled.div``
 
@@ -29,14 +29,14 @@ const StylistImage = styled.img`
   }
 `
 
-const Info = () => (
+const Info = ({ data }) => (
   <Layout>
     <Content title="Stylists" id="stylists">
       <Flex justifyContent="center" flexWrap="wrap">
         <Box width={[1, 1 / 3]}>
           <Stylist>
             <StylistImage
-              src={Image1}
+              src={data.stylist.file.url}
               alt="Atsushi"
               height="200px"
               width="80%"
@@ -56,7 +56,7 @@ const Info = () => (
         <Box width={[1, 1 / 3]}>
           <Stylist>
             <StylistImage
-              src={Image1}
+              src={data.stylist.file.url}
               alt="Yuka"
               height="200px"
               width="80%"
@@ -111,4 +111,18 @@ const Info = () => (
   </Layout>
 )
 
-export default Info
+export default props => (
+  <StaticQuery
+    query={graphql`
+      query {
+        stylist: contentfulAsset(title: { eq: "slide1" }) {
+          title
+          file {
+            url
+          }
+        }
+      }
+    `}
+    render={data => <Info data={data} />}
+  />
+)

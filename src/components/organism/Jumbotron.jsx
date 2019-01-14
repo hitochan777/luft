@@ -1,11 +1,8 @@
 import React from 'react'
+import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 import { Carousel, CarouselItem, CarouselIndicators } from 'reactstrap'
 
-import SlideImage1 from '../../assets/img/slide1.jpg'
-import SlideImage2 from '../../assets/img/slide2.jpg'
-import SlideImage3 from '../../assets/img/slide3.jpg'
-import Logo from '../../assets/img/top_logo.png'
 import RowFull from '../atom/RowFull'
 
 const StyledCarousel = styled(Carousel)`
@@ -32,20 +29,6 @@ const CarouselLogoImage = styled.img`
     width: 300px;
   }
 `
-const items = [
-  {
-    src: SlideImage1,
-    altText: 'Luft 1',
-  },
-  {
-    src: SlideImage2,
-    altText: 'Luft 2',
-  },
-  {
-    src: SlideImage3,
-    altText: 'Luft 3',
-  },
-]
 
 class Jumbotron extends React.Component {
   constructor(props) {
@@ -69,7 +52,7 @@ class Jumbotron extends React.Component {
   next() {
     if (this.animating) return
     const nextIndex =
-      this.state.activeIndex === items.length - 1
+      this.state.activeIndex === this.slides.length - 1
         ? 0
         : this.state.activeIndex + 1
     this.setState({ activeIndex: nextIndex })
@@ -79,7 +62,7 @@ class Jumbotron extends React.Component {
     if (this.animating) return
     const nextIndex =
       this.state.activeIndex === 0
-        ? items.length - 1
+        ? this.slides.length - 1
         : this.state.activeIndex - 1
     this.setState({ activeIndex: nextIndex })
   }
@@ -92,18 +75,20 @@ class Jumbotron extends React.Component {
   render() {
     const { activeIndex } = this.state
 
-    const slides = items.map(item => {
-      return (
-        <CarouselItem
-          onExiting={this.onExiting}
-          onExited={this.onExited}
-          key={item.src}
-        >
-          <CarouselItemImage src={item.src} alt={item.altText} />
-          <CarouselLogoImage src={Logo} />
-        </CarouselItem>
-      )
-    })
+    this.slides = Object.values(this.props.data.slides.edges).map(
+      (item, index) => {
+        return (
+          <CarouselItem
+            onExiting={this.onExiting}
+            onExited={this.onExited}
+            key={index}
+          >
+            <CarouselItemImage src={item.node.file.url} alt={item.title} />
+            <CarouselLogoImage src={this.props.data.logo.file.url} />
+          </CarouselItem>
+        )
+      }
+    )
 
     return (
       <RowFull>
@@ -116,15 +101,41 @@ class Jumbotron extends React.Component {
           ride="carousel"
         >
           <CarouselIndicators
-            items={items}
+            items={this.slides}
             activeIndex={activeIndex}
             onClickHandler={this.goToIndex}
           />
-          {slides}
+          {this.slides}
         </StyledCarousel>
       </RowFull>
     )
   }
 }
 
-export default Jumbotron
+export default props => (
+  <StaticQuery
+    query={graphql`
+      {
+        slides: allContentfulAsset(
+          sort: { fields: title }
+          filter: { title: { in: ["slide1", "slide2", "slide3"] } }
+        ) {
+          edges {
+            node {
+              file {
+                url
+              }
+            }
+          }
+        }
+        logo: contentfulAsset(title: { eq: "top logo" }) {
+          title
+          file {
+            url
+          }
+        }
+      }
+    `}
+    render={data => <Jumbotron data={data} {...props} />}
+  />
+)
