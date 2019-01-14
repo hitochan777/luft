@@ -75,31 +75,20 @@ class Jumbotron extends React.Component {
   render() {
     const { activeIndex } = this.state
 
-    console.log(this.props)
-    this.slides = Object.values(this.props.data).map((item, index) => {
-      return (
-        <CarouselItem
-          onExiting={this.onExiting}
-          onExited={this.onExited}
-          key={index}
-        >
-          <CarouselItemImage src={item.file.url} alt={item.title} />
-          <StaticQuery
-            query={graphql`
-              query {
-                logo: contentfulAsset(title: { eq: "top logo" }) {
-                  title
-                  file {
-                    url
-                  }
-                }
-              }
-            `}
-            render={data => <CarouselLogoImage src={data.logo.file.url} />}
-          />
-        </CarouselItem>
-      )
-    })
+    this.slides = Object.values(this.props.data.slides.edges).map(
+      (item, index) => {
+        return (
+          <CarouselItem
+            onExiting={this.onExiting}
+            onExited={this.onExited}
+            key={index}
+          >
+            <CarouselItemImage src={item.node.file.url} alt={item.title} />
+            <CarouselLogoImage src={this.props.data.logo.file.url} />
+          </CarouselItem>
+        )
+      }
+    )
 
     return (
       <RowFull>
@@ -126,20 +115,20 @@ class Jumbotron extends React.Component {
 export default props => (
   <StaticQuery
     query={graphql`
-      query {
-        slide1: contentfulAsset(title: { eq: "slide1" }) {
-          title
-          file {
-            url
+      {
+        slides: allContentfulAsset(
+          sort: { fields: title }
+          filter: { title: { in: ["slide1", "slide2", "slide3"] } }
+        ) {
+          edges {
+            node {
+              file {
+                url
+              }
+            }
           }
         }
-        slide2: contentfulAsset(title: { eq: "slide2" }) {
-          title
-          file {
-            url
-          }
-        }
-        slide3: contentfulAsset(title: { eq: "slide3" }) {
+        logo: contentfulAsset(title: { eq: "top logo" }) {
           title
           file {
             url
