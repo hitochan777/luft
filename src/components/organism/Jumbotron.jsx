@@ -1,10 +1,8 @@
 import React from 'react'
+import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 import { Carousel, CarouselItem, CarouselIndicators } from 'reactstrap'
 
-import SlideImage1 from '../../assets/img/slide1.jpg'
-import SlideImage2 from '../../assets/img/slide2.jpg'
-import SlideImage3 from '../../assets/img/slide3.jpg'
 import Logo from '../../assets/img/top_logo.png'
 import RowFull from '../atom/RowFull'
 
@@ -32,20 +30,6 @@ const CarouselLogoImage = styled.img`
     width: 300px;
   }
 `
-const items = [
-  {
-    src: SlideImage1,
-    altText: 'Luft 1',
-  },
-  {
-    src: SlideImage2,
-    altText: 'Luft 2',
-  },
-  {
-    src: SlideImage3,
-    altText: 'Luft 3',
-  },
-]
 
 class Jumbotron extends React.Component {
   constructor(props) {
@@ -69,7 +53,7 @@ class Jumbotron extends React.Component {
   next() {
     if (this.animating) return
     const nextIndex =
-      this.state.activeIndex === items.length - 1
+      this.state.activeIndex === this.slides.length - 1
         ? 0
         : this.state.activeIndex + 1
     this.setState({ activeIndex: nextIndex })
@@ -79,7 +63,7 @@ class Jumbotron extends React.Component {
     if (this.animating) return
     const nextIndex =
       this.state.activeIndex === 0
-        ? items.length - 1
+        ? this.slides.length - 1
         : this.state.activeIndex - 1
     this.setState({ activeIndex: nextIndex })
   }
@@ -92,14 +76,15 @@ class Jumbotron extends React.Component {
   render() {
     const { activeIndex } = this.state
 
-    const slides = items.map(item => {
+    console.log(this.props)
+    this.slides = Object.values(this.props.data).map((item, index) => {
       return (
         <CarouselItem
           onExiting={this.onExiting}
           onExited={this.onExited}
-          key={item.src}
+          key={index}
         >
-          <CarouselItemImage src={item.src} alt={item.altText} />
+          <CarouselItemImage src={item.file.url} alt={item.title} />
           <CarouselLogoImage src={Logo} />
         </CarouselItem>
       )
@@ -116,15 +101,41 @@ class Jumbotron extends React.Component {
           ride="carousel"
         >
           <CarouselIndicators
-            items={items}
+            items={this.slides}
             activeIndex={activeIndex}
             onClickHandler={this.goToIndex}
           />
-          {slides}
+          {this.slides}
         </StyledCarousel>
       </RowFull>
     )
   }
 }
 
-export default Jumbotron
+export default props => (
+  <StaticQuery
+    query={graphql`
+      query {
+        slide1: contentfulAsset(title: { eq: "slide1" }) {
+          title
+          file {
+            url
+          }
+        }
+        slide2: contentfulAsset(title: { eq: "slide2" }) {
+          title
+          file {
+            url
+          }
+        }
+        slide3: contentfulAsset(title: { eq: "slide3" }) {
+          title
+          file {
+            url
+          }
+        }
+      }
+    `}
+    render={data => <Jumbotron data={data} {...props} />}
+  />
+)
