@@ -3,7 +3,6 @@ import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 import { Carousel, CarouselItem, CarouselIndicators } from 'reactstrap'
 
-import Logo from '../../assets/img/top_logo.png'
 import RowFull from '../atom/RowFull'
 
 const StyledCarousel = styled(Carousel)`
@@ -85,7 +84,19 @@ class Jumbotron extends React.Component {
           key={index}
         >
           <CarouselItemImage src={item.file.url} alt={item.title} />
-          <CarouselLogoImage src={Logo} />
+          <StaticQuery
+            query={graphql`
+              query {
+                logo: contentfulAsset(title: { eq: "top logo" }) {
+                  title
+                  file {
+                    url
+                  }
+                }
+              }
+            `}
+            render={data => <CarouselLogoImage src={data.logo.file.url} />}
+          />
         </CarouselItem>
       )
     })

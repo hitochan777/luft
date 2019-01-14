@@ -1,8 +1,8 @@
 import React from 'react'
+import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 import { compose, withState } from 'recompose'
 
-import Logo from '../../../assets/img/logo.png'
 import NavbarToggleButton from './NavbarToggleButton'
 import Link from '../../atom/Link'
 
@@ -135,7 +135,19 @@ const NavbarSide = ({ isNavbarOpen, setIsNavbarOpen }) => {
       <Navbar isOpen={isNavbarOpen}>
         <Header>
           <Link to="/" hasUnderline={false}>
-            <NavbarBrand src={Logo} />
+            <StaticQuery
+              query={graphql`
+                query {
+                  logo: contentfulAsset(title: { eq: "logo" }) {
+                    title
+                    file {
+                      url
+                    }
+                  }
+                }
+              `}
+              render={data => <NavbarBrand src={data.logo.file.url} />}
+            />
           </Link>
         </Header>
         <Main>
