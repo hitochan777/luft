@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import Link from '../atom/Link'
 import Image from '../atom/Image'
+import * as media from '../../utils/media'
 
 const Thumbnail = styled(Image)`
   border-radius: 10px;
@@ -12,14 +13,14 @@ const StyledNewsItem = styled.article`
   display: flex;
   flex-direction: column;
   word-wrap: break-word;
-  @media screen and (min-width: ${props => props.theme.tablet_width}) {
+  ${media.min.tablet`
     min-height: 400px;
     height: 400px;
-  }
+  `}
   position: relative;
-  @media screen and (max-width: ${props => props.theme.tablet_width}) {
+  ${media.max.tablet`
     margin-top: 30px;
-  }
+  `}
 `
 
 const Title = styled.h2`
@@ -43,10 +44,10 @@ const ReadMoreButton = styled.button`
 `
 
 const ButtonLink = styled(Link)`
-  @media screen and (min-width: ${props => props.theme.tablet_width}) {
+  ${media.min.tablet`
     position: absolute;
     bottom: 0;
-  }
+  `}
   width: 100%;
 `
 

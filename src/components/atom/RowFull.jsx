@@ -1,10 +1,12 @@
 import styled from 'styled-components'
 
+import * as media from '../../utils/media'
+
 export default styled.div`
-  @media screen and (max-width: ${props => props.theme.tablet_width}) {
+  ${media.max.tablet`
     width: 100vw;
     position: relative;
     margin-left: -50vw;
     left: 50%;
-  }
+  `}
 `

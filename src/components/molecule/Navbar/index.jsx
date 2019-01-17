@@ -5,14 +5,15 @@ import { compose, withState } from 'recompose'
 
 import NavbarToggleButton from './NavbarToggleButton'
 import Link from '../../atom/Link'
+import * as media from '../../../utils/media'
 
 const NavbarBrand = styled.img`
   margin: 0 auto;
   display: block;
-  @media screen and (max-width: ${props => props.theme.tablet_width}) {
+  ${media.min.tablet`
     padding-top: 14px;
     padding-bottom: 14px;
-  }
+  `}
 `
 const Navbar = styled.div`
   display: flex;
@@ -36,19 +37,19 @@ const Navbar = styled.div`
     }
   }
 
-  @media screen and (min-width: ${props => props.theme.tablet_width}) {
+  ${media.min.tablet`
     width: ${props => props.theme.sideNavbarWidth};
     min-width: ${props => props.theme.sideNavbarWidth};
-  }
+  `}
 
-  @media screen and (max-width: ${props => props.theme.tablet_width}) {
+  ${media.max.tablet`
     animation: fadein 0.5s;
     display: ${props => (props.isOpen ? 'flex' : 'none')};
     width: 215px;
     bottom: 0;
     right: 0;
     margin: 0;
-  }
+  `}
 `
 const NavItem = styled.li`
   margin: 0;
@@ -99,7 +100,7 @@ const NavLink = withState('isNavbarOpen', 'setIsNavbarOpen', false)(
 )
 
 const StyledNavCloseCover = styled.span`
-  @media screen and (max-width: ${props => props.theme.tablet_width}) {
+  ${media.max.tablet`
     @keyframes fadein {
       from {
         opacity: 0;
@@ -116,7 +117,7 @@ const StyledNavCloseCover = styled.span`
     height: 100vh;
     z-index: 125;
     animation: fadein 0.5s;
-  }
+  `}
 `
 const NavCloseCover = ({ setIsNavbarOpen }) => (
   <StyledNavCloseCover onClick={() => setIsNavbarOpen(false)} />

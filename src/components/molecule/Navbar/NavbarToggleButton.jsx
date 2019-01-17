@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import * as media from '../../../utils/media'
 
 const IconBar = styled.span`
   width: 22px;
@@ -44,9 +45,9 @@ const StyledNavbarToggleButton = styled.button`
   &:focus {
     outline: none;
   }
-  @media screen and (min-width: ${props => props.theme.tablet_width}) {
+  ${media.min.tablet`
     display: none;
-  }
+  `}
 `
 
 const MenuText = styled.span`

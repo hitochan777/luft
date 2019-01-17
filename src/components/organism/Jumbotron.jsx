@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { Carousel, CarouselItem, CarouselIndicators } from 'reactstrap'
 
 import RowFull from '../atom/RowFull'
+import * as media from '../../utils/media'
 
 const StyledCarousel = styled(Carousel)`
   position: relative;
@@ -25,9 +26,9 @@ const CarouselLogoImage = styled.img`
   margin: 0;
   padding: 0;
   width: 200px;
-  @media screen and (min-width: ${props => props.theme.tablet_width}) {
+  ${media.min.tablet`
     width: 300px;
-  }
+  `}
 `
 
 class Jumbotron extends React.Component {
