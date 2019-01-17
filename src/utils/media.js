@@ -1,6 +1,6 @@
-import css from 'styled-components'
+import { css } from 'styled-components'
 
-import sizes from '../theme'
+import { sizes } from '../theme'
 
 export const max = Object.keys(sizes).reduce((acc, label) => {
   acc[label] = (...args) => css`
