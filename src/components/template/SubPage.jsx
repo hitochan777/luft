@@ -16,13 +16,12 @@ const Title = styled.h1`
 `
 
 const SubContent = styled.div`
-  margin-left: calc(
-    ${props => props.theme.sideNavbarWidth} +
-      (100vw - ${props => props.theme.sideNavbarWidth}) * (1 - 0.8) / 2
-  );
-  width: calc((100vw - ${props => props.theme.sideNavbarWidth}) * 0.8);
-  ${media.max.tablet`
-    width: 100%;
+  ${media.min.tablet`
+    margin-left: calc(
+      ${props => props.theme.sideNavbarWidth} +
+        (100vw - ${props => props.theme.sideNavbarWidth}) * (1 - 0.8) / 2
+    );
+    width: calc((100vw - ${props => props.theme.sideNavbarWidth}) * 0.8);
   `}
 `
 
