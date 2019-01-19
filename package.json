@@ -37,7 +37,8 @@
     "deploy": "now",
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write '**/*.js'",
+    "format": "prettier --write '**/*.{js,jsx,json}'",
+    "check-format": "prettier --list-different '**/*.{js,jsx,json}'",
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -r .cache public"
   },
