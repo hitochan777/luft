@@ -36,7 +36,7 @@ const Info = ({ data }) => (
         <Box width={[1, 1 / 3]}>
           <Stylist>
             <StylistImage
-              src={data.stylist.file.url}
+              src={data.stylist_atsushi.file.url}
               alt="Atsushi"
               height="200px"
               width="80%"
@@ -56,7 +56,7 @@ const Info = ({ data }) => (
         <Box width={[1, 1 / 3]}>
           <Stylist>
             <StylistImage
-              src={data.stylist.file.url}
+              src={data.stylist_yuka.file.url}
               alt="Yuka"
               height="200px"
               width="80%"
@@ -80,7 +80,13 @@ export default props => (
   <StaticQuery
     query={graphql`
       query {
-        stylist: contentfulAsset(title: { eq: "slide1" }) {
+        stylist_atsushi: contentfulAsset(title: { eq: "stylist_atsushi" }) {
+          title
+          file {
+            url
+          }
+        }
+        stylist_yuka: contentfulAsset(title: { eq: "stylist_yuka" }) {
           title
           file {
             url
