@@ -1,7 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
-import { compose, withState } from 'recompose'
 
 import NavbarToggleButton from './NavbarToggleButton'
 import Link from '../../atom/Link'
@@ -78,26 +77,12 @@ const Footer = styled.div`
   bottom: 30px;
 `
 
-const withNavbarOpen = withState('isNavbarOpen', 'setIsNavbarOpen', false)
-
 const StyledLink = styled(({ isFirst, ...props }) => <Link {...props} />)`
   border-top: ${props => (props.isFirst ? 'none' : '1px solid #e2e2e2')};
   margin: 0 35px;
   display: flex;
   box-align: center;
 `
-
-const NavLink = withState('isNavbarOpen', 'setIsNavbarOpen', false)(
-  ({ isNavbarOpen, setIsNavbarOpen, isFirst = false, ...props }) => (
-    <NavItem
-      onClick={() => {
-        setIsNavbarOpen(false)
-      }}
-    >
-      <StyledLink isFirst={isFirst} {...props} />
-    </NavItem>
-  )
-)
 
 const StyledNavCloseCover = styled.span`
   ${media.max.tablet`
@@ -123,7 +108,19 @@ const NavCloseCover = ({ setIsNavbarOpen }) => (
   <StyledNavCloseCover onClick={() => setIsNavbarOpen(false)} />
 )
 
-const NavbarSide = ({ isNavbarOpen, setIsNavbarOpen }) => {
+const NavbarSide = () => {
+  const [isNavbarOpen, setIsNavbarOpen] = useState(false)
+
+  const NavLink = ({ isFirst = false, ...props }) => (
+    <NavItem
+      onClick={() => {
+        setIsNavbarOpen(false)
+      }}
+    >
+      <StyledLink isFirst={isFirst} {...props} />
+    </NavItem>
+  )
+
   return (
     <>
       <NavbarToggleButton
@@ -166,4 +163,4 @@ const NavbarSide = ({ isNavbarOpen, setIsNavbarOpen }) => {
   )
 }
 
-export default compose(withNavbarOpen)(NavbarSide)
+export default NavbarSide
