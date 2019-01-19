@@ -53,7 +53,7 @@ export default props => (
   <StaticQuery
     query={graphql`
       query {
-        cover: contentfulAsset(title: { eq: "slide1" }) {
+        cover: contentfulAsset(title: { eq: "access" }) {
           title
           file {
             url
