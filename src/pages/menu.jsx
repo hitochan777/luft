@@ -11,11 +11,11 @@ import * as media from '../utils/media'
 const MenuTitle = styled.div`
   text-align: center;
   font-size: 1.5rem;
+  margin-bottom: 10px;
 `
 
 const StyledMenuSection = styled.div`
   margin: 10px 0px;
-
   display: flex;
   flex-basis: 200px;
   justify-content: center;
