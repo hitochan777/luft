@@ -6,6 +6,7 @@ import Content from '../components/template/SubPage'
 import Layout from '../components/template/Layout'
 import Table from '../components/atom/Table'
 import TableCell from '../components/atom/TableCell'
+import * as media from '../utils/media'
 
 const MenuTitle = styled.div`
   text-align: center;
@@ -21,9 +22,9 @@ const StyledMenuSection = styled.div`
 `
 const MenuItemWrapper = styled.div`
   width: 100%;
-  @media screen and (min-width: ${props => props.theme.tablet_width}) {
+  ${media.min.tablet`
     width: 80%;
-  }
+  `}
 `
 
 const MenuSection = ({ title, children }) => (
