@@ -5,7 +5,10 @@ import * as media from '../../utils/media'
 
 const Title = styled.h1`
   margin: 0 auto 30px;
-  padding-top: 80px;
+  padding-top: 35px;
+  ${media.min.tablet`
+    padding-top: 80px;
+  `}
   text-align: center;
   text-decoration: underline;
   text-transform: uppercase;
