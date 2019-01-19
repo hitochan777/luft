@@ -15,6 +15,8 @@ const OwnerName = styled.div`
 
 const SubTitle = styled.h3`
   margin-bottom: 0px;
+  font-weight: bold;
+  line-height: 1.7;
 `
 
 const Concept = ({ data }) => (
@@ -28,15 +30,20 @@ const Concept = ({ data }) => (
       </SubTitle>
       <br />
       どんよりしていた空気も、からっとするように、
+      <br />
       ここに来れば誰もが「笑顔」になれる美容室を。
       <br />
       そんな想いをこめて、2007年にオープンしました。
       <br />
+      <br />
       たかが髪型と言われるかもしれませんが、
-      見た目が変わると、テンションがあがります。
+      <br />
+      見た目が変わるとテンションがあがります。
       <br />
       私たちは誰もが持っている「美」を引き出すための
-      お手伝いをさせていただきます。 <br />
+      <br />
+      お手伝いをさせていただきます。
+      <br />
       <br />
       <SubTitle>
         Long user future together... <br /> 皆さまと、ずっと。

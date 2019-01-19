@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import * as media from '../../utils/media'
+
 const Image = ({ src, alt, ...props }) => <img src={src} alt={alt} {...props} />
 
 export const CoverImage = styled(Image)`
@@ -18,6 +20,12 @@ export const CoverImage = styled(Image)`
   animation-duration: 5s;
   object-fit: cover;
   height: 400px;
+  ${media.max.tablet`
+    height: 300px;
+  `}
+  ${media.max.phone`
+    height: 200px;
+  `}
   width: 100%;
 `
 
