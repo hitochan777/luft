@@ -5,6 +5,11 @@ import Link from '../atom/Link'
 import Image from '../atom/Image'
 import * as media from '../../utils/media'
 
+const tetEllipsis = (str, maxLength) => {
+  if (str.length > maxLength) {
+  }
+}
+
 const Thumbnail = styled(Image)`
   border-radius: 10px;
 `
@@ -51,7 +56,15 @@ const ButtonLink = styled(Link)`
   width: 100%;
 `
 
-const NewsItem = ({ blogId, imagePath, title, description, publishDate }) => (
+const NewsItem = ({
+  blogId,
+  imagePath,
+  title,
+  description,
+  publishDate,
+  maxTitleLength = 10,
+  maxBodyLength = 30,
+}) => (
   <StyledNewsItem>
     <Thumbnail src={imagePath} />
     <Title>{title}</Title>
