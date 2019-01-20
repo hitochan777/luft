@@ -47,19 +47,27 @@ const MenuItem = styled.tr`
 const MenuContent = (
   { content, isLastRow } = { content: '', isLastRow: false }
 ) => <TableCell isLastRow={isLastRow}>{content}</TableCell>
+
+const PriceTableCell = styled(TableCell)`
+  text-align: right;
+`
+
 const MenuPrice = (
   { price, minimum, isLastRow } = {
     price: undefined,
     minimum: false,
     isLastRow: false,
   }
-) => (
-  <TableCell isLastRow={isLastRow}>
-    {price}
-    {price && '円'}
-    {minimum && '〜'}
-  </TableCell>
-)
+) => {
+  return (
+    /* Put comma for every 3 digits */
+    <PriceTableCell isLastRow={isLastRow}>
+      {price && String(price).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,')}
+      {price && '円'}
+      {minimum && '〜'}
+    </PriceTableCell>
+  )
+}
 
 export default () => (
   <Layout>
