@@ -53,9 +53,8 @@ const Navbar = styled.div`
 `
 const NavItem = styled.li`
   margin: 0;
+  line-height: 2rem;
   color: ${props => props.theme.greyColor};
-  padding-bottom: 5px;
-  padding-bottom: 5px;
   position: relative;
   text-transform: uppercase;
   &:hover {
