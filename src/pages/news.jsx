@@ -13,12 +13,11 @@ export default ({ data }) => {
       <Content title="News">
         <Flex flexWrap="wrap" justifyContent="space-between">
           {blogs.map(blog => (
-            <Box width={[1, 4 / 9, 3 / 10]} mb="20px">
+            <Box width={[1, 4 / 9, 3 / 10]} mb="20px" key={blog.id}>
               <NewsItem
-                key={blog.id}
                 blogId={blog.id}
                 title={blog.title}
-                description={blog.description.description}
+                excerpt={blog.body.childMarkdownRemark.excerpt}
                 publishDate={blog.publishDate}
                 imagePath={blog.thumbnail.resize.src}
               />
@@ -37,8 +36,10 @@ export const pageQuery = graphql`
         node {
           id
           publishDate(formatString: "YYYY月MM月DD日", locale: "ja-JP")
-          description {
-            description
+          body {
+            childMarkdownRemark {
+              excerpt
+            }
           }
           title
           thumbnail {
