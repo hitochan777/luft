@@ -169,8 +169,12 @@ export default () => (
               <MenuPrice price={1500} />
             </MenuItem>
             <MenuItem>
-              <MenuContent content="ブラジリアンワックス（鼻）" />
+              <MenuContent content="ノーズワックス" />
               <MenuPrice price={1000} />
+            </MenuItem>
+            <MenuItem>
+              <MenuContent content="ヘアセット" />
+              <MenuPrice price={3200} />
             </MenuItem>
           </MenuSection>
         </Box>

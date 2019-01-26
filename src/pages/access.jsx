@@ -13,18 +13,18 @@ const Access = ({ data }) => (
       <Flex justifyContent="center" flexWrap="wrap" mt="50px">
         <Box width={[1, 2 / 5]} pl="30px">
           <p>
-            Hair Luft（ヘアールフト）
+            hair Luft（ヘアールフト）
             <br />
             兵庫県豊岡市若松町7-4
           </p>
         </Box>
         <Box width={[1, 2 / 5]} pl="30px">
           <p>
-            営業時間／ 火～日・祝　9:00～19:00
+            営業時間／9:00～19:00
             <br />
-            定休日／ 毎週月曜日、第2・3火曜日
+            定休日／毎週月曜日、第2・3火曜日
             <br />
-            駐車場／2台あり
+            駐車場あり
           </p>
         </Box>
       </Flex>

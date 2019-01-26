@@ -52,7 +52,7 @@ const Concept = ({ data }) => (
       家族と一緒にでも、 仕事帰りで作業着のままでも、 <br />
       生後6ヶ月でも、ご来店をお待ちしています。
       <br />
-      <OwnerName style={{ marginBottom: '30px' }}>オーナー 川見 淳</OwnerName>
+      <OwnerName style={{ marginBottom: '30px' }}>オーナー 河見 淳</OwnerName>
     </Content>
   </Layout>
 )

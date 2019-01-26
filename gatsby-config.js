@@ -4,7 +4,7 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: 'hairLuft【ヘアールフト】',
+    title: 'hair Luft【ヘアールフト】',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
