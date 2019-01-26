@@ -29,10 +29,12 @@ const StyledNewsItem = styled.article`
 `
 
 const Title = styled.h2`
-  margin-top: 10px;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
 `
 
-const Description = styled.p``
+const Excerpt = styled.p``
 
 const ReadMoreButton = styled.button`
   background-color: ${props => props.theme.luftColor};
@@ -51,24 +53,30 @@ const ReadMoreButton = styled.button`
 const ButtonLink = styled(Link)`
   ${media.min.tablet`
     position: absolute;
-    bottom: 0;
+    bottom: 30px;
   `}
   width: 100%;
+`
+
+const PublishDate = styled.span`
+  text-align: center;
+  margin-bottom: 0.5rem;
 `
 
 const NewsItem = ({
   blogId,
   imagePath,
   title,
-  description,
+  excerpt,
   publishDate,
   maxTitleLength = 10,
   maxBodyLength = 30,
 }) => (
   <StyledNewsItem>
-    <Thumbnail src={imagePath} />
     <Title>{title}</Title>
-    <Description>{description}</Description>
+    <PublishDate>{publishDate}</PublishDate>
+    <Thumbnail src={imagePath} />
+    <Excerpt>{excerpt}</Excerpt>
     <ButtonLink to={`/blog/${blogId}`} hasUnderline={false}>
       <ReadMoreButton>もっと読む</ReadMoreButton>
     </ButtonLink>

@@ -1,14 +1,20 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import styled from 'styled-components'
 
 import Content from './SubPage'
 import Layout from './Layout'
+
+const Title = styled.h2`
+  text-align: center;
+`
 
 export default ({ data }) => {
   const blog = data.contentfulBlogPost
   return (
     <Layout>
-      <Content title={blog.title}>
+      <Content title={'news'}>
+        <Title>{blog.title}</Title>
         <div className="col-12" style={{ textAlign: 'center' }}>
           <span>{blog.publishDate}</span>
         </div>
