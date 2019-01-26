@@ -1,18 +1,19 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Button = styled.button`
+const Button = styled.a`
   background-color: white;
-  color: black;
+  color: ${props => props.theme.grayColor};
   text-decoration: none;
   text-align: center;
-  border: none;
+  border: 1px solid ${props => props.theme.lightGray};
   width: 100%;
   transition: 0.8s;
+  border-radius: 10px;
   &:hover {
-    background-color: black;
-    color: white;
+    background-color: ${props => props.theme.lightGray};
   }
+  text-transform: uppercase;
 `
 
 export default Button
