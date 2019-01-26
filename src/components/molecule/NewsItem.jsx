@@ -5,11 +5,6 @@ import Link from '../atom/Link'
 import Image from '../atom/Image'
 import * as media from '../../utils/media'
 
-const tetEllipsis = (str, maxLength) => {
-  if (str.length > maxLength) {
-  }
-}
-
 const Thumbnail = styled(Image)`
   border-radius: 10px;
 `
