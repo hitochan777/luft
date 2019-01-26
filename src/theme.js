@@ -8,5 +8,6 @@ export default {
   sideNavbarWidth: '200px',
   luftColor: 'rgb(105, 76, 62)',
   grayColor: '#545454',
+  lightGray: '#e2e2e2',
   breakpoints: [sizes.phone, sizes.tablet, sizes.desktop],
 }

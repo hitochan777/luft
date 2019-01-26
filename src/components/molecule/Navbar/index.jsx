@@ -4,6 +4,7 @@ import styled from 'styled-components'
 
 import NavbarToggleButton from './NavbarToggleButton'
 import Link from '../../atom/Link'
+import Button from '../../atom/Button'
 import * as media from '../../../utils/media'
 
 const NavbarBrand = styled.img`
@@ -157,6 +158,12 @@ const NavbarSide = () => {
           <NavLink to="/menu">Menu</NavLink>
           <NavLink to="/news">News</NavLink>
         </Main>
+        <Button
+          href="tel:xxxxxxxx"
+          style={{ width: '75%', margin: '20px auto 0px' }}
+        >
+          Tel
+        </Button>
         <Footer>©hair Luft</Footer>
       </Navbar>
     </>
