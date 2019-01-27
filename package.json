@@ -40,9 +40,11 @@
     "format": "prettier --write '**/*.{js,jsx,json}'",
     "check-format": "prettier --list-different '**/*.{js,jsx,json}'",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "clean": "rm -r .cache public"
+    "clean": "rm -r .cache public",
+    "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "devDependencies": {
+    "@storybook/react": "^4.1.11",
     "prettier": "^1.15.3"
   },
   "repository": {
