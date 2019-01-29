@@ -3,7 +3,16 @@ import styled from 'styled-components'
 
 import * as media from '../../utils/media'
 
-const Image = ({ src, alt, ...props }) => <img src={src} alt={alt} {...props} />
+const StyledImage = styled.img`
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 2rem;
+`
+
+const Image = ({ src, alt, ...props }) => (
+  <StyledImage src={src} alt={alt} {...props} />
+)
 
 export const CoverImage = styled(Image)`
   @keyframes cover-image {
@@ -26,7 +35,15 @@ export const CoverImage = styled(Image)`
   ${media.max.phone`
     height: 200px;
   `}
-  width: 100%;
+  width: calc(100vw - ${props => props.theme.sideNavbarWidth});
+  position: relative;
+  left: 50%;
+  margin-left: calc(-1 * (100vw - ${props =>
+    props.theme.sideNavbarWidth}) / 2 );
+  ${media.max.tablet`
+    width: 100vw;
+    margin-left: -50vw;
+  `}
 `
 
 export default Image
