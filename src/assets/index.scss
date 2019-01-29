@@ -19,7 +19,8 @@ $carousel-indicator-length: 10px;
 
 html,
 body {
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
 }
