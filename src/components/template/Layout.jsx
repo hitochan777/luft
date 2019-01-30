@@ -24,6 +24,7 @@ const Layout = ({ children }) => (
         site {
           siteMetadata {
             title
+            tel
           }
         }
       }
@@ -38,7 +39,10 @@ const Layout = ({ children }) => (
               { name: 'keywords', content: 'sample, something' },
             ]}
           />
-          <Navbar siteTitle={data.site.siteMetadata.title} />
+          <Navbar
+            siteTitle={data.site.siteMetadata.title}
+            tel={data.site.siteMetadata.tel}
+          />
           <Content>{children}</Content>
         </>
       </ThemeProvider>

@@ -36,10 +36,10 @@ const Access = ({ data }) => (
             <br />
             兵庫県豊岡市若松町7-4
             <br />
-            Tel: xxxxxxx
+            Tel: {data.site.siteMetadata.tel}
             <br />
             <Button
-              href="tel:xxxxxxxx"
+              href={`tel:${data.site.siteMetadata.tel}`}
               style={{
                 width: '100%',
                 marginTop: '1rem',
@@ -88,6 +88,11 @@ export default props => (
           title
           file {
             url
+          }
+        }
+        site {
+          siteMetadata {
+            tel
           }
         }
       }
