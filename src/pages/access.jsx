@@ -44,9 +44,8 @@ const Access = ({ data }) => (
                 width: '100%',
                 marginTop: '1rem',
                 height: '3rem',
+                lineHeight: '3rem',
                 display: 'block',
-                padding: '1rem 0 1rem', // FIXME: not a properway to center text inside button
-                lineHeight: '1rem',
               }}
             >
               Tel
