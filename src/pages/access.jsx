@@ -1,24 +1,58 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import { Flex, Box } from '@rebass/grid'
+import styled from 'styled-components'
 
+import * as media from '../utils/media'
 import Content from '../components/template/SubPage'
 import Layout from '../components/template/Layout'
 import { CoverImage } from '../components/atom/Image'
+import Button from '../components/atom/Button'
+
+const RightBox = styled(Box)`
+  padding-left: 30px;
+  border-left: 1px solid ${props => props.theme.lightGray};
+  ${media.max.tablet`
+  border: none;
+  border-top: 1px solid ${props => props.theme.lightGray};
+    padding-top: 2rem;
+  `};
+`
+const LeftBox = styled(Box)`
+  padding-right: 30px;
+  ${media.max.tablet`
+    padding-left: 30px;
+  `};
+`
 
 const Access = ({ data }) => (
   <Layout>
     <Content title="Access">
       <CoverImage src={data.cover.file.url} alt="image1" />
       <Flex justifyContent="center" flexWrap="wrap" mt="50px">
-        <Box width={[1, 2 / 5]} pl="30px">
+        <LeftBox width={[1, 2 / 5]}>
           <p>
             hair Luft（ヘアールフト）
             <br />
             兵庫県豊岡市若松町7-4
+            <br />
+            Tel: {data.site.siteMetadata.tel}
+            <br />
+            <Button
+              href={`tel:${data.site.siteMetadata.tel}`}
+              style={{
+                width: '100%',
+                marginTop: '1rem',
+                height: '3rem',
+                lineHeight: '3rem',
+                display: 'block',
+              }}
+            >
+              Tel
+            </Button>
           </p>
-        </Box>
-        <Box width={[1, 2 / 5]} pl="30px">
+        </LeftBox>
+        <RightBox width={[1, 2 / 5]}>
           <p>
             営業時間／9:00～19:00
             <br />
@@ -26,7 +60,7 @@ const Access = ({ data }) => (
             <br />
             駐車場あり
           </p>
-        </Box>
+        </RightBox>
       </Flex>
       <Flex justifyContent="center" flexWrap="wrap" mt="50px">
         <Box width={[1]}>
@@ -53,6 +87,11 @@ export default props => (
           title
           file {
             url
+          }
+        }
+        site {
+          siteMetadata {
+            tel
           }
         }
       }

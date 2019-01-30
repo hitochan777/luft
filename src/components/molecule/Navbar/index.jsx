@@ -108,7 +108,7 @@ const NavCloseCover = ({ setIsNavbarOpen }) => (
   <StyledNavCloseCover onClick={() => setIsNavbarOpen(false)} />
 )
 
-const NavbarSide = () => {
+const NavbarSide = ({ tel }) => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false)
 
   const NavLink = ({ isFirst = false, ...props }) => (
@@ -158,7 +158,7 @@ const NavbarSide = () => {
           <NavLink to="/news">News</NavLink>
         </Main>
         <Button
-          href="tel:xxxxxxxx"
+          href={`tel:${tel}`}
           style={{ width: '75%', margin: '20px auto 0px' }}
         >
           Tel
