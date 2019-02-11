@@ -1,7 +1,7 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
-import { Carousel, CarouselItem, CarouselIndicators } from 'reactstrap'
+import Carousel from 'nuka-carousel'
 
 import RowFull from '../atom/RowFull'
 import * as media from '../../utils/media'
@@ -31,86 +31,26 @@ const CarouselLogoImage = styled.img`
   `}
 `
 
-class Jumbotron extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = { activeIndex: 0 }
-    this.next = this.next.bind(this)
-    this.previous = this.previous.bind(this)
-    this.goToIndex = this.goToIndex.bind(this)
-    this.onExiting = this.onExiting.bind(this)
-    this.onExited = this.onExited.bind(this)
-  }
-
-  onExiting() {
-    this.animating = true
-  }
-
-  onExited() {
-    this.animating = false
-  }
-
-  next() {
-    if (this.animating) return
-    const nextIndex =
-      this.state.activeIndex === this.slides.length - 1
-        ? 0
-        : this.state.activeIndex + 1
-    this.setState({ activeIndex: nextIndex })
-  }
-
-  previous() {
-    if (this.animating) return
-    const nextIndex =
-      this.state.activeIndex === 0
-        ? this.slides.length - 1
-        : this.state.activeIndex - 1
-    this.setState({ activeIndex: nextIndex })
-  }
-
-  goToIndex(newIndex) {
-    if (this.animating) return
-    this.setState({ activeIndex: newIndex })
-  }
-
-  render() {
-    const { activeIndex } = this.state
-
-    this.slides = Object.values(this.props.data.slides.edges).map(
-      (item, index) => {
-        return (
-          <CarouselItem
-            onExiting={this.onExiting}
-            onExited={this.onExited}
-            key={index}
-          >
-            <CarouselItemImage src={item.node.file.url} alt={item.title} />
-            <CarouselLogoImage src={this.props.data.logo.file.url} />
-          </CarouselItem>
-        )
-      }
-    )
-
-    return (
-      <RowFull>
-        <StyledCarousel
-          activeIndex={activeIndex}
-          next={this.next}
-          previous={this.previous}
-          interval={3000}
-          pause={false}
-          ride="carousel"
-        >
-          <CarouselIndicators
-            items={this.slides}
-            activeIndex={activeIndex}
-            onClickHandler={this.goToIndex}
-          />
-          {this.slides}
-        </StyledCarousel>
-      </RowFull>
-    )
-  }
+const Jumbotron = ({ urls, logo }) => {
+  return (
+    <StyledCarousel
+      autoplay
+      swipe
+      speed={5000}
+      transitionMode="fade"
+      pauseOnHover={false}
+      autoplayInterval={5000}
+      wrapAround
+      withoutControls
+    >
+      {urls.map(url => (
+        <div key={url}>
+          <CarouselItemImage src={url} />
+          <CarouselLogoImage src={logo} />
+        </div>
+      ))}
+    </StyledCarousel>
+  )
 }
 
 export default props => (
@@ -137,6 +77,14 @@ export default props => (
         }
       }
     `}
-    render={data => <Jumbotron data={data} {...props} />}
+    render={({ slides, logo }) => (
+      <RowFull>
+        <Jumbotron
+          urls={slides.edges.map(slide => slide.node.file.url)}
+          logo={logo.file.url}
+          {...props}
+        />
+      </RowFull>
+    )}
   />
 )
