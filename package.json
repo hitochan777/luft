@@ -43,7 +43,7 @@
     "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "devDependencies": {
-    "@storybook/react": "4.1.12",
+    "@storybook/react": "4.1.13",
     "prettier": "1.16.4"
   },
   "repository": {
