@@ -82,6 +82,7 @@ const StyledLink = styled(({ isFirst, ...props }) => <Link {...props} />)`
   margin: 0 35px;
   display: flex;
   box-align: center;
+  font-size: 0.8rem;
 `
 
 const StyledNavCloseCover = styled.span`
