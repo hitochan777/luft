@@ -7,6 +7,7 @@ import * as media from '../../utils/media'
 
 const Thumbnail = styled(Image)`
   border-radius: 10px;
+  height: 10rem;
 `
 
 const StyledNewsItem = styled.article`
@@ -14,8 +15,8 @@ const StyledNewsItem = styled.article`
   flex-direction: column;
   word-wrap: break-word;
   ${media.min.tablet`
-    min-height: 400px;
-    height: 400px;
+    min-height: 30rem;
+    height: 30rem;
   `}
   position: relative;
   ${media.max.tablet`
@@ -27,6 +28,9 @@ const Title = styled.h2`
   text-align: center;
   margin-top: 1rem;
   margin-bottom: 0.3rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 `
 
 const Excerpt = styled.p``
