@@ -4,7 +4,7 @@ import { sizes } from '../theme'
 
 export const max = Object.keys(sizes).reduce((acc, label) => {
   acc[label] = (...args) => css`
-    @media (max-width: ${sizes[label] / 16}em) {
+    @media (max-width: ${sizes[label]}px) {
       ${css(...args)}
     }
   `
@@ -13,7 +13,7 @@ export const max = Object.keys(sizes).reduce((acc, label) => {
 
 export const min = Object.keys(sizes).reduce((acc, label) => {
   acc[label] = (...args) => css`
-    @media (min-width: ${sizes[label] / 16}em) {
+    @media (min-width: ${sizes[label]}px) {
       ${css(...args)}
     }
   `

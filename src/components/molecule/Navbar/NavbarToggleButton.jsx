@@ -45,7 +45,7 @@ const StyledNavbarToggleButton = styled.button`
   &:focus {
     outline: none;
   }
-  ${media.min.tablet`
+  ${media.min.desktop`
     display: none;
   `}
 `
