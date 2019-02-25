@@ -40,7 +40,7 @@ export const CoverImage = styled(Image)`
   left: 50%;
   margin-left: calc(-1 * (100vw - ${props =>
     props.theme.sideNavbarWidth}) / 2 );
-  ${media.max.tablet`
+  ${media.max.desktop`
     width: 100vw;
     margin-left: -50vw;
   `}

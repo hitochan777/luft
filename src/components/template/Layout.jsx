@@ -10,7 +10,7 @@ import * as media from '../../utils/media'
 
 const Content = styled.div`
   margin: 0px;
-  ${media.max.tablet`
+  ${media.max.desktop`
     margin: 0 10px;
   `}
   padding: 0;

@@ -32,7 +32,7 @@ const StylistImage = styled.img`
 const Info = ({ data }) => (
   <Layout>
     <Content title="Stylists" id="stylists">
-      <Flex justifyContent="center" flexWrap="wrap">
+      <Flex justifyContent="space-evenly" flexWrap="wrap">
         <Box width={[1, 1 / 3]}>
           <Stylist>
             <StylistImage
@@ -53,7 +53,7 @@ const Info = ({ data }) => (
             </StylistDescription>
           </Stylist>
         </Box>
-        <Box width={[1, 1 / 3]}>
+        <Box width={[1, 1, 1 / 3]}>
           <Stylist>
             <StylistImage
               src={data.stylist_yuka.file.url}

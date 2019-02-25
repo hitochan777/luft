@@ -10,7 +10,7 @@ import * as media from '../../../utils/media'
 const NavbarBrand = styled.img`
   margin: 0 auto;
   display: block;
-  ${media.min.tablet`
+  ${media.min.desktop`
     padding-top: 14px;
     padding-bottom: 14px;
   `}
@@ -37,12 +37,12 @@ const Navbar = styled.div`
     }
   }
 
-  ${media.min.tablet`
+  ${media.min.desktop`
     width: ${props => props.theme.sideNavbarWidth};
     min-width: ${props => props.theme.sideNavbarWidth};
   `}
 
-  ${media.max.tablet`
+  ${media.max.desktop`
     animation: fadein 0.5s;
     display: ${props => (props.isOpen ? 'flex' : 'none')};
     width: 215px;
@@ -86,7 +86,7 @@ const StyledLink = styled(({ isFirst, ...props }) => <Link {...props} />)`
 `
 
 const StyledNavCloseCover = styled.span`
-  ${media.max.tablet`
+  ${media.max.desktop`
     @keyframes fadein {
       from {
         opacity: 0;
