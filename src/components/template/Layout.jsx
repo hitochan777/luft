@@ -6,17 +6,13 @@ import { StaticQuery, graphql } from 'gatsby'
 import Navbar from '../molecule/Navbar'
 import theme from '../../theme'
 import '../../assets/index.scss'
-import * as media from '../../utils/media'
 
 import favicon16 from '../../assets/favicon16x16.ico'
 import favicon32 from '../../assets/favicon32x32.ico'
 import favicon48 from '../../assets/favicon48x48.ico'
 
 const Content = styled.div`
-  margin: 0px;
-  ${media.max.desktop`
-    margin: 0 10px;
-  `}
+  margin: 0;
   padding: 0;
   min-height: 100vh;
 `
