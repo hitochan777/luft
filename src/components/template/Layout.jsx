@@ -35,8 +35,20 @@ const Layout = ({ children }) => (
           <Helmet
             title={data.site.siteMetadata.title}
             meta={[
-              { name: 'description', content: 'Sample' },
-              { name: 'keywords', content: 'sample, something' },
+              { name: 'description', content: '豊岡にあるヘアサロン' },
+              {
+                name: 'keywords',
+                content:
+                  'hair luft,ルフト,ヘアサロン,ヘア,サロン,理容室,豊岡,とよおか,兵庫',
+              },
+              {
+                name: 'robots',
+                content: 'index,follow',
+              },
+              {
+                name: 'copyright',
+                content: 'Copyright &copy; hair Luft. All rights reserved.',
+              },
             ]}
           />
           <Navbar
