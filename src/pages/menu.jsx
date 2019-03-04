@@ -27,13 +27,14 @@ const MenuItemWrapper = styled.div`
   `}
 `
 
-const MenuSection = ({ title, children }) => (
+const MenuSection = ({ title, children, remarks }) => (
   <StyledMenuSection>
     <MenuItemWrapper>
       <MenuTitle>{title}</MenuTitle>
       <Table>
         <tbody>{children}</tbody>
       </Table>
+      {remarks}
     </MenuItemWrapper>
   </StyledMenuSection>
 )
@@ -74,7 +75,7 @@ export default () => (
     <Content title="Menu">
       <Flex justifyContent="center" flexWrap="wrap">
         <Box width={[1, 1 / 2]}>
-          <MenuSection title="カット">
+          <MenuSection title="カット" remarks="※カット、シャンプー、ブロー込み">
             <MenuItem>
               <MenuContent content="カット" />
               <MenuPrice price={3800} />
@@ -91,17 +92,10 @@ export default () => (
               <MenuContent content="フロントカット" />
               <MenuPrice price={500} />
             </MenuItem>
-            <MenuItem>
-              <MenuContent
-                content="※カット、シャンプー、ブロー込み"
-                isLastRow
-              />
-              <MenuPrice isLastRow />
-            </MenuItem>
           </MenuSection>
         </Box>
         <Box width={[1, 1 / 2]}>
-          <MenuSection title="カラー">
+          <MenuSection title="カラー" remarks="※カット、シャンプー、ブロー込み">
             <MenuItem>
               <MenuContent content="カラー" />
               <MenuPrice price={8500} minimum={true} />
@@ -114,17 +108,10 @@ export default () => (
               <MenuContent content="白髪ぼかし" />
               <MenuPrice price={6000} />
             </MenuItem>
-            <MenuItem>
-              <MenuContent
-                content="※カット、シャンプー、ブロー込み"
-                isLastRow
-              />
-              <MenuPrice isLastRow />
-            </MenuItem>
           </MenuSection>
         </Box>
         <Box width={[1, 1 / 2]}>
-          <MenuSection title="パーマ">
+          <MenuSection title="パーマ" remarks="※カット、シャンプー、ブロー込み">
             <MenuItem>
               <MenuContent content="パーマ" />
               <MenuPrice price={8500} minimum={true} />
@@ -144,13 +131,6 @@ export default () => (
             <MenuItem>
               <MenuContent content="ポイントストレート" />
               <MenuPrice price={6800} minimum={true} />
-            </MenuItem>
-            <MenuItem>
-              <MenuContent
-                content="※カット、シャンプー、ブロー込み"
-                isLastRow
-              />
-              <MenuPrice isLastRow />
             </MenuItem>
           </MenuSection>
         </Box>
