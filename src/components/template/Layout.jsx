@@ -8,6 +8,10 @@ import theme from '../../theme'
 import '../../assets/index.scss'
 import * as media from '../../utils/media'
 
+import favicon16 from '../../assets/favicon16x16.ico'
+import favicon32 from '../../assets/favicon32x32.ico'
+import favicon48 from '../../assets/favicon48x48.ico'
+
 const Content = styled.div`
   margin: 0px;
   ${media.max.desktop`
@@ -37,6 +41,26 @@ const Layout = ({ children }) => (
             meta={[
               { name: 'description', content: 'Sample' },
               { name: 'keywords', content: 'sample, something' },
+            ]}
+            link={[
+              {
+                rel: 'icon',
+                type: 'image/x-icon',
+                href: favicon16,
+                sizes: '16x16',
+              },
+              {
+                rel: 'icon',
+                type: 'image/x-icon',
+                href: favicon32,
+                sizes: '32x32',
+              },
+              {
+                rel: 'icon',
+                type: 'image/x-icon',
+                href: favicon48,
+                sizes: '48x48',
+              },
             ]}
           />
           <Navbar
