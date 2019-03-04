@@ -26,6 +26,9 @@ const SubContent = styled.div`
     );
     width: calc((100vw - ${props => props.theme.sideNavbarWidth}) * 0.8);
   `}
+  ${media.max.desktop`
+    padding: 0 10px;
+  `}
 `
 
 const Content = ({ id, title, children, className }) => (
