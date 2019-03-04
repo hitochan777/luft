@@ -35,11 +35,13 @@ const Layout = ({ children }) => (
           <Helmet
             title={data.site.siteMetadata.title}
             meta={[
-              { name: 'description', content: '豊岡にあるヘアサロン' },
+              {
+                name: 'description',
+                content: data.site.siteMetadata.description,
+              },
               {
                 name: 'keywords',
-                content:
-                  'hair luft,ルフト,ヘアサロン,ヘア,サロン,理容室,豊岡,とよおか,兵庫',
+                content: data.site.siteMetadata.keywords,
               },
               {
                 name: 'robots',
@@ -47,7 +49,7 @@ const Layout = ({ children }) => (
               },
               {
                 name: 'copyright',
-                content: 'Copyright &copy; hair Luft. All rights reserved.',
+                content: data.site.siteMetadata.copyright,
               },
             ]}
           />

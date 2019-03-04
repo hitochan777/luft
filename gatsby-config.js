@@ -4,7 +4,12 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: 'hair Luft【ヘアールフト】',
+    title: '豊岡市・但馬の美容院 | hair Luft【ヘアールフト】',
+    description:
+      '『何か今の髪型は違う』『カッコよく、キレイにしてほしい』『新しい美容院を探している』そんな方はhair Luftへ。',
+    copyright: 'Copyright &copy; hair Luft. All rights reserved.',
+    keywords:
+      '豊岡,美容院,美容室,ヘアーサロン,豊岡駅,豊岡市,兵庫県,但馬,hair Luft,カット,カラー,パーマ,ストレート,縮毛矯正,エクステ,季節,ヘアスタイル,予約,眉カット,鼻毛',
     tel: 'xxxxxxxx',
   },
   plugins: [
