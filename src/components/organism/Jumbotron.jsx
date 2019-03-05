@@ -43,10 +43,10 @@ const Jumbotron = ({ urls, logo }) => {
       wrapAround
       withoutControls
     >
-      {urls.map(url => (
+      {urls.map((url, index) => (
         <div key={url}>
-          <CarouselItemImage src={url} />
-          <CarouselLogoImage src={logo} />
+          <CarouselItemImage src={url} alt={`${index}-th slide`} />
+          <CarouselLogoImage src={logo} alt="logo image" />
         </div>
       ))}
     </StyledCarousel>
