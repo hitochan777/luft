@@ -10,7 +10,7 @@ module.exports = {
     copyright: 'Copyright &copy; hair Luft. All rights reserved.',
     keywords:
       '豊岡,美容院,美容室,ヘアーサロン,豊岡駅,豊岡市,兵庫県,但馬,hair Luft,カット,カラー,パーマ,ストレート,縮毛矯正,エクステ,季節,ヘアスタイル,予約,眉カット,鼻毛',
-    tel: 'xxxxxxxx',
+    tel: '0796-23-2123',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
