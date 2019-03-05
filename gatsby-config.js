@@ -50,5 +50,11 @@ module.exports = {
         exclude: [],
       },
     },
+    {
+      resolve: 'gatsby-plugin-html-attributes',
+      options: {
+        lang: 'ja',
+      },
+    },
   ],
 }
