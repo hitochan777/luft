@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import Carousel from 'nuka-carousel'
 
 import RowFull from '../atom/RowFull'
-import * as media from '../../utils/media'
 
 const StyledCarousel = styled(Carousel)`
   position: relative;
