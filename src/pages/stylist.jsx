@@ -27,6 +27,7 @@ const StylistImage = styled.img`
   &:hover {
     transform: scale(1.1);
   }
+  border: 2px solid ${props => props.theme.luftColor};
 `
 
 const Info = ({ data }) => (
