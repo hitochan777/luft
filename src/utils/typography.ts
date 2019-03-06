@@ -16,7 +16,7 @@ const FONTS = [
 
 const typography = new Typography({
   baseFontSize: '14px',
-  baseLineHeight: '1.66rem',
+  baseLineHeight: 1.66,
   headerFontFamily: FONTS,
   headerWeight: 300,
   headerColor: theme.grayColor,

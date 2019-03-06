@@ -56,5 +56,6 @@ module.exports = {
         lang: 'ja',
       },
     },
+    'gatsby-plugin-typescript',
   ],
 }

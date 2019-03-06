@@ -5,6 +5,11 @@
   "author": "Hitoshi Otsuki <hitochan777@gmail.com>",
   "dependencies": {
     "@rebass/grid": "6.0.0-7",
+    "@types/react-helmet": "^5.0.8",
+    "@types/react-router-hash-link": "^1.2.1",
+    "@types/rebass": "^3.0.3",
+    "@types/styled-components": "^4.1.12",
+    "@types/typography": "^0.16.2",
     "babel-plugin-styled-components": "1.10.0",
     "gatsby": "2.1.18",
     "gatsby-plugin-google-analytics": "2.0.14",
@@ -14,6 +19,7 @@
     "gatsby-plugin-react-helmet": "3.0.7",
     "gatsby-plugin-sass": "2.0.10",
     "gatsby-plugin-styled-components": "3.0.6",
+    "gatsby-plugin-typescript": "^2.0.10",
     "gatsby-plugin-typography": "2.2.7",
     "gatsby-source-contentful": "2.0.32",
     "gatsby-transformer-remark": "2.3.0",
@@ -26,6 +32,7 @@
     "react-router-hash-link": "1.2.1",
     "react-typography": "0.16.18",
     "styled-components": "4.1.3",
+    "typescript": "^3.3.3333",
     "typography": "0.16.18"
   },
   "keywords": [
@@ -37,11 +44,12 @@
     "deploy": "now",
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write '**/*.{js,jsx,json}'",
-    "check-format": "prettier --list-different '**/*.{js,jsx,json}'",
+    "format": "prettier --write '**/*.{js,jsx,ts,tsx,json}'",
+    "check-format": "prettier --list-different '**/*.{js,jsx,ts,tsx,json}'",
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -r .cache public",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "type-check": "tsc"
   },
   "devDependencies": {
     "@storybook/react": "4.1.13",

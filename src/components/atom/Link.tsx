@@ -37,7 +37,7 @@ const UnderlineLink = styled(BaseLink)`
   }
 `
 
-export default ({ hasUnderline, ...props }) => {
+export default ({ hasUnderline, ...props }: {hasUnderline: boolean}) => {
   if (hasUnderline) {
     return <UnderlineLink smooth {...props} /> // FIXME: smooth is not working
   }

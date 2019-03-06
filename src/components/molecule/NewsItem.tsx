@@ -62,19 +62,25 @@ const PublishDate = styled.span`
   margin-bottom: 0.5rem;
 `
 
+interface Props {
+  blogId: string;
+  imagePath: string;
+  title: string;
+  excerpt: string;
+  publishDate: string;
+}
+
 const NewsItem = ({
   blogId,
   imagePath,
   title,
   excerpt,
   publishDate,
-  maxTitleLength = 10,
-  maxBodyLength = 30,
-}) => (
+}: Props) => (
   <StyledNewsItem>
     <Title>{title}</Title>
     <PublishDate>{publishDate}</PublishDate>
-    <Thumbnail src={imagePath} />
+    <Thumbnail src={imagePath} alt={title}/>
     <Excerpt>{excerpt}</Excerpt>
     <ButtonLink to={`/blog/${blogId}`} hasUnderline={false}>
       <ReadMoreButton>もっと読む</ReadMoreButton>

@@ -57,7 +57,7 @@ const Concept = ({ data }) => (
   </Layout>
 )
 
-export default props => (
+export default () => (
   <StaticQuery
     query={graphql`
       query {

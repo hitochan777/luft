@@ -17,7 +17,7 @@ const CarouselItemImage = styled.img`
   margin: 0;
 `
 
-const Jumbotron = ({ urls, logo }) => {
+const Jumbotron = ({ urls }: {urls: string[]}) => {
   return (
     <StyledCarousel
       autoplay
@@ -38,7 +38,7 @@ const Jumbotron = ({ urls, logo }) => {
   )
 }
 
-export default props => (
+export default (props: any) => (
   <StaticQuery
     query={graphql`
       {
@@ -54,19 +54,12 @@ export default props => (
             }
           }
         }
-        logo: contentfulAsset(title: { eq: "top logo" }) {
-          title
-          file {
-            url
-          }
-        }
       }
     `}
-    render={({ slides, logo }) => (
+    render={({ slides }) => (
       <RowFull>
         <Jumbotron
           urls={slides.edges.map(slide => slide.node.file.url)}
-          logo={logo.file.url}
           {...props}
         />
       </RowFull>

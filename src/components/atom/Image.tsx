@@ -10,7 +10,7 @@ const StyledImage = styled.img`
   padding-bottom: 2rem;
 `
 
-const Image = ({ src, alt, ...props }) => (
+const Image = ({ src, alt, ...props }: {src: string; alt:string}) => (
   <StyledImage src={src} alt={alt} {...props} />
 )
 
