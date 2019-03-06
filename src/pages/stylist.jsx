@@ -1,11 +1,11 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import { Flex, Box } from '@rebass/grid'
 import styled from 'styled-components'
 
 import Content from '../components/template/SubPage'
 import Layout from '../components/template/Layout'
 import StylistDescItem from '../components/molecule/StylistDescItem'
+import { Flex, Box } from '../components/atom/Grid'
 
 const StylistDescription = styled.div``
 

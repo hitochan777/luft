@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Flex, Box } from '@rebass/grid'
 
 import Content from '../components/template/SubPage'
 import Layout from '../components/template/Layout'
 import Table from '../components/atom/Table'
 import TableCell from '../components/atom/TableCell'
 import * as media from '../utils/media'
+import { Flex, Box } from '../components/atom/Grid'
 
 const MenuTitle = styled.div`
   text-align: center;
