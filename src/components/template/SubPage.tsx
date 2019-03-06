@@ -31,7 +31,15 @@ const SubContent = styled.div`
   `}
 `
 
-const Content = ({ id, title, children }: {id: string; title: string; children: React.ReactChildren}) => (
+const Content = ({
+  id,
+  title,
+  children,
+}: {
+  id: string
+  title: string
+  children: React.ReactChildren
+}) => (
   <>
     <SubContent id={id}>
       <Title>{title}</Title>

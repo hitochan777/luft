@@ -17,7 +17,7 @@ const Content = styled.div`
   min-height: 100vh;
 `
 
-const Layout = ({ children }: {children: React.ReactChildren}) => (
+const Layout = ({ children }: { children: React.ReactChildren }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {

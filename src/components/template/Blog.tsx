@@ -9,7 +9,17 @@ const Title = styled.h2`
   text-align: center;
 `
 
-export default ({ data }: {data: {contentfulBlogPost: {title: string; publishDate: string; body: {childMarkdownRemark: {html: string}}}}}) => {
+export default ({
+  data,
+}: {
+  data: {
+    contentfulBlogPost: {
+      title: string
+      publishDate: string
+      body: { childMarkdownRemark: { html: string } }
+    }
+  }
+}) => {
   const blog = data.contentfulBlogPost
   return (
     <Layout>

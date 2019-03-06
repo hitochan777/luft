@@ -17,7 +17,7 @@ const CarouselItemImage = styled.img`
   margin: 0;
 `
 
-const Jumbotron = ({ urls }: {urls: string[]}) => {
+const Jumbotron = ({ urls }: { urls: string[] }) => {
   return (
     <StyledCarousel
       autoplay

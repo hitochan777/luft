@@ -63,11 +63,11 @@ const PublishDate = styled.span`
 `
 
 interface Props {
-  blogId: string;
-  imagePath: string;
-  title: string;
-  excerpt: string;
-  publishDate: string;
+  blogId: string
+  imagePath: string
+  title: string
+  excerpt: string
+  publishDate: string
 }
 
 const NewsItem = ({
@@ -80,7 +80,7 @@ const NewsItem = ({
   <StyledNewsItem>
     <Title>{title}</Title>
     <PublishDate>{publishDate}</PublishDate>
-    <Thumbnail src={imagePath} alt={title}/>
+    <Thumbnail src={imagePath} alt={title} />
     <Excerpt>{excerpt}</Excerpt>
     <ButtonLink to={`/blog/${blogId}`} hasUnderline={false}>
       <ReadMoreButton>もっと読む</ReadMoreButton>
