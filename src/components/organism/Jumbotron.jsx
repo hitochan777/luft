@@ -18,19 +18,6 @@ const CarouselItemImage = styled.img`
   margin: 0;
 `
 
-const CarouselLogoImage = styled.img`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0;
-  padding: 0;
-  width: 200px;
-  ${media.min.tablet`
-    width: 300px;
-  `}
-`
-
 const Jumbotron = ({ urls, logo }) => {
   return (
     <StyledCarousel
@@ -46,7 +33,6 @@ const Jumbotron = ({ urls, logo }) => {
       {urls.map((url, index) => (
         <div key={url}>
           <CarouselItemImage src={url} alt={`${index}-th slide`} />
-          <CarouselLogoImage src={logo} alt="logo image" />
         </div>
       ))}
     </StyledCarousel>
