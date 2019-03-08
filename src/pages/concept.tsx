@@ -19,10 +19,10 @@ const SubTitle = styled.h3`
   line-height: 1.7;
 `
 
-const Concept = ({ data }) => (
+const Concept = ({ url }: { url: string }) => (
   <Layout>
     <Content title="Concept">
-      <CoverImage src={data.cover.file.url} alt="image1" />
+      <CoverImage src={url} alt="image1" />
       <SubTitle>
         ドイツ語で
         <br />
@@ -69,6 +69,8 @@ export default () => (
         }
       }
     `}
-    render={data => <Concept data={data} />}
+    render={(data: { cover: { file: { url: string } } }) => (
+      <Concept url={data.cover.file.url} />
+    )}
   />
 )

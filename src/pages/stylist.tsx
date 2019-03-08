@@ -30,14 +30,20 @@ const StylistImage = styled.img`
   border: 2px solid ${props => props.theme.luftColor};
 `
 
-const Info = ({ data }) => (
+const Info = ({
+  atsushi_url,
+  yuka_url,
+}: {
+  atsushi_url: string
+  yuka_url: string
+}) => (
   <Layout>
-    <Content title="Stylists" id="stylists">
+    <Content title="Stylists">
       <Flex justifyContent="space-evenly" flexWrap="wrap">
         <Box width={[1, 1 / 3]}>
           <Stylist>
             <StylistImage
-              src={data.stylist_atsushi.file.url}
+              src={atsushi_url}
               alt="Atsushi"
               height="200px"
               width="80%"
@@ -57,7 +63,7 @@ const Info = ({ data }) => (
         <Box width={[1, 1, 1 / 3]}>
           <Stylist>
             <StylistImage
-              src={data.stylist_yuka.file.url}
+              src={yuka_url}
               alt="Yuka"
               height="200px"
               width="80%"
@@ -77,24 +83,30 @@ const Info = ({ data }) => (
   </Layout>
 )
 
-export default props => (
+export default () => (
   <StaticQuery
     query={graphql`
       query {
         stylist_atsushi: contentfulAsset(title: { eq: "stylist_atsushi" }) {
-          title
           file {
             url
           }
         }
         stylist_yuka: contentfulAsset(title: { eq: "stylist_yuka" }) {
-          title
           file {
             url
           }
         }
       }
     `}
-    render={data => <Info data={data} />}
+    render={(data: {
+      stylist_atsushi: { file: { url: string } }
+      stylist_yuka: { file: { url: string } }
+    }) => (
+      <Info
+        atsushi_url={data.stylist_atsushi.file.url}
+        yuka_url={data.stylist_yuka.file.url}
+      />
+    )}
   />
 )
