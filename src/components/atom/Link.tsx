@@ -1,11 +1,8 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import styled from 'styled-components'
 import GatsbyLink from 'gatsby-link'
-import { genericHashLink } from 'react-router-hash-link'
 
-const Link = props => genericHashLink(props, GatsbyLink)
-
-const BaseLink = styled(Link)`
+const BaseLink = styled(GatsbyLink)`
   text-decoration: none;
   color: ${props => props.theme.luftColor};
   position: relative;
@@ -37,9 +34,26 @@ const UnderlineLink = styled(BaseLink)`
   }
 `
 
-export default ({ hasUnderline, ...props }: { hasUnderline: boolean }) => {
+export default ({
+  hasUnderline,
+  to,
+  children,
+  ...props
+}: {
+  hasUnderline: boolean
+  to: string
+  children: ReactNode
+}) => {
   if (hasUnderline) {
-    return <UnderlineLink smooth {...props} /> // FIXME: smooth is not working
+    return (
+      <UnderlineLink to={to} {...props}>
+        {children}
+      </UnderlineLink>
+    )
   }
-  return <BaseLink smooth {...props} /> // FIXME: smooth is not working
+  return (
+    <BaseLink to={to} {...props}>
+      {children}
+    </BaseLink>
+  )
 }
