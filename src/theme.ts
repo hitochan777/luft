@@ -1,4 +1,6 @@
-export const sizes = {
+export type DeviceType = 'desktop' | 'tablet' | 'phone'
+export type DeviceSizes = { [K in DeviceType]: number }
+export const sizes: DeviceSizes = {
   desktop: 992,
   tablet: 768,
   phone: 576,

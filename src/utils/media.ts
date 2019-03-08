@@ -1,21 +1,39 @@
 import { css } from 'styled-components'
 
-import { sizes } from '../theme'
+import { sizes, DeviceType, DeviceSizes } from '../theme'
 
-export const max = Object.keys(sizes).reduce((acc, label) => {
-  acc[label] = (...args) => css`
-    @media (max-width: ${sizes[label] - 1}px) {
-      ${css(...args)}
-    }
-  `
-  return acc
-}, {})
+type DeviceMediaQueryFunction = typeof css
 
-export const min = Object.keys(sizes).reduce((acc, label) => {
-  acc[label] = (...args) => css`
-    @media (min-width: ${sizes[label]}px) {
-      ${css(...args)}
-    }
-  `
-  return acc
-}, {})
+export const max = (Object.keys(sizes) as DeviceType[]).reduce<
+  Partial<{ [K in DeviceType]: DeviceMediaQueryFunction }>
+>(
+  (
+    acc: Partial<{ [K in DeviceType]: DeviceMediaQueryFunction }>,
+    label: DeviceType
+  ) => {
+    acc[label] = (first: any, ...interpolations: any) => css`
+      @media (max-width: ${sizes[label] - 1}px) {
+        ${css(first, ...interpolations)}
+      }
+    `
+    return acc
+  },
+  {}
+) as { [K in DeviceType]: DeviceMediaQueryFunction }
+
+export const min = (Object.keys(sizes) as DeviceType[]).reduce<
+  Partial<{ [K in DeviceType]: DeviceMediaQueryFunction }>
+>(
+  (
+    acc: Partial<{ [K in DeviceType]: DeviceMediaQueryFunction }>,
+    label: DeviceType
+  ) => {
+    acc[label] = (first: any, ...interpolations: any) => css`
+      @media (min-width: ${sizes[label]}px) {
+        ${css(first, ...interpolations)}
+      }
+    `
+    return acc
+  },
+  {}
+) as { [K in DeviceType]: DeviceMediaQueryFunction }
