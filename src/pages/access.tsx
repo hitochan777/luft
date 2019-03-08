@@ -25,10 +25,10 @@ const LeftBox = styled(Box)`
   `};
 `
 
-const Access = ({ data }) => (
+const Access = ({ url, tel }: { url: string; tel: string }) => (
   <Layout>
     <Content title="Access">
-      <CoverImage src={data.cover.file.url} alt="image1" />
+      <CoverImage src={url} alt="image1" />
       <Flex justifyContent="center" flexWrap="wrap" mt="50px">
         <LeftBox width={[1, 2 / 5]}>
           <p>
@@ -36,10 +36,10 @@ const Access = ({ data }) => (
             <br />
             兵庫県豊岡市若松町7-4
             <br />
-            Tel: {data.site.siteMetadata.tel}
+            Tel: {tel}
             <br />
             <Button
-              href={`tel:${data.site.siteMetadata.tel}`}
+              href={`tel:${tel}`}
               style={{
                 width: '100%',
                 marginTop: '1rem',
@@ -79,7 +79,7 @@ const Access = ({ data }) => (
   </Layout>
 )
 
-export default props => (
+export default () => (
   <StaticQuery
     query={graphql`
       query {
@@ -96,6 +96,9 @@ export default props => (
         }
       }
     `}
-    render={data => <Access data={data} />}
+    render={(data: {
+      cover: { file: { url: string } }
+      site: { siteMetadata: { tel: string } }
+    }) => <Access url={data.cover.file.url} tel={data.site.siteMetadata.tel} />}
   />
 )

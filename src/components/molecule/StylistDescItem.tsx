@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import styled from 'styled-components'
 
 const StyledStylistDescItem = styled.div`
@@ -10,7 +10,7 @@ const StylistDescItem = ({
   children,
 }: {
   title: string
-  children: React.ReactChildren
+  children: ReactNode
 }) => (
   <StyledStylistDescItem>
     {title}: {children}

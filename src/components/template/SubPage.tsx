@@ -35,7 +35,6 @@ const Content = ({
   title,
   children,
 }: {
-  id: string
   title: string
   children: ReactNode
 }) => (
