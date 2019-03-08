@@ -15,6 +15,11 @@ const NavbarBrand = styled.img`
     padding-bottom: 14px;
   `}
 `
+
+interface NavbarProps {
+  isOpen: boolean
+}
+
 const Navbar = styled.div`
   display: flex;
   flex-direction: column;
@@ -44,7 +49,7 @@ const Navbar = styled.div`
 
   ${media.max.desktop`
     animation: fadein 0.5s;
-    display: ${props => (props.isOpen ? 'flex' : 'none')};
+    display: ${(props: NavbarProps) => (props.isOpen ? 'flex' : 'none')};
     width: 215px;
     bottom: 0;
     right: 0;
@@ -105,11 +110,13 @@ const StyledNavCloseCover = styled.span`
     animation: fadein 0.5s;
   `}
 `
-const NavCloseCover = ({ setIsNavbarOpen }) => (
-  <StyledNavCloseCover onClick={() => setIsNavbarOpen(false)} />
-)
+const NavCloseCover = ({
+  setIsNavbarOpen,
+}: {
+  setIsNavbarOpen: (newVal: boolean) => void
+}) => <StyledNavCloseCover onClick={() => setIsNavbarOpen(false)} />
 
-const NavbarSide = ({ tel }) => {
+const NavbarSide = ({ tel }: { tel: string }) => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false)
 
   const NavLink = ({ isFirst = false, ...props }) => (
