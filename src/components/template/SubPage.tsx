@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import styled from 'styled-components'
 
 import * as media from '../../utils/media'
@@ -32,16 +32,15 @@ const SubContent = styled.div`
 `
 
 const Content = ({
-  id,
   title,
   children,
 }: {
   id: string
   title: string
-  children: React.ReactChildren
+  children: ReactNode
 }) => (
   <>
-    <SubContent id={id}>
+    <SubContent>
       <Title>{title}</Title>
       {children}
     </SubContent>

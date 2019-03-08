@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import Helmet from 'react-helmet'
 import styled, { ThemeProvider } from 'styled-components'
 import { StaticQuery, graphql } from 'gatsby'
@@ -17,7 +17,7 @@ const Content = styled.div`
   min-height: 100vh;
 `
 
-const Layout = ({ children }: { children: React.ReactChildren }) => (
+const Layout = ({ children }: { children: ReactNode }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
