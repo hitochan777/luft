@@ -6,13 +6,15 @@ import Content from '../components/template/SubPage'
 import Layout from '../components/template/Layout'
 import NewsItem from '../components/molecule/NewsItem'
 
-export default ({ data }) => {
-  const blogs = data.allContentfulBlogPost.edges.map(edge => edge.node)
+export default ({ data }: { data: any }) => {
+  const blogs = data.allContentfulBlogPost.edges.map(
+    (edge: { node: any }) => edge.node
+  )
   return (
     <Layout>
       <Content title="News">
         <Flex flexWrap="wrap" justifyContent="space-between">
-          {blogs.map(blog => (
+          {blogs.map((blog: any) => (
             <Box width={[1, 4 / 9, 3 / 10]} mb="20px" key={blog.id}>
               <NewsItem
                 blogId={blog.id}

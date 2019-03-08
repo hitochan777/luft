@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import styled from 'styled-components'
 
 import Content from '../components/template/SubPage'
@@ -27,7 +27,15 @@ const MenuItemWrapper = styled.div`
   `}
 `
 
-const MenuSection = ({ title, children, remarks }) => (
+const MenuSection = ({
+  title,
+  children,
+  remarks,
+}: {
+  title: string
+  children: ReactNode
+  remarks?: string
+}) => (
   <StyledMenuSection>
     <MenuItemWrapper>
       <MenuTitle>{title}</MenuTitle>
@@ -45,24 +53,23 @@ const MenuItem = styled.tr`
   }
 `
 
-const MenuContent = (
-  { content, isLastRow } = { content: '', isLastRow: false }
-) => <TableCell isLastRow={isLastRow}>{content}</TableCell>
+const MenuContent = ({ content }: { content: string } = { content: '' }) => (
+  <TableCell>{content}</TableCell>
+)
 
 const PriceTableCell = styled(TableCell)`
   text-align: right;
 `
 
 const MenuPrice = (
-  { price, minimum, isLastRow } = {
+  { price, minimum }: { price?: number; minimum?: boolean } = {
     price: undefined,
     minimum: false,
-    isLastRow: false,
   }
 ) => {
   return (
     /* Put comma for every 3 digits */
-    <PriceTableCell isLastRow={isLastRow}>
+    <PriceTableCell>
       {price && String(price).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,')}
       {price && '円'}
       {minimum && '〜'}
