@@ -77,7 +77,6 @@ const Layout = ({ children }: { children: ReactNode }) => (
             ]}
           />
           <Navbar
-            siteTitle={data.site.siteMetadata.title}
             tel={data.site.siteMetadata.tel}
           />
           <Content>{children}</Content>

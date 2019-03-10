@@ -21,7 +21,7 @@ const Jumbotron = ({ urls }: { urls: string[] }) => {
   return (
     <StyledCarousel
       autoplay
-      swipe
+      swiping
       speed={5000}
       transitionMode="fade"
       pauseOnHover={false}
@@ -59,7 +59,7 @@ export default (props: any) => (
     render={({ slides }) => (
       <RowFull>
         <Jumbotron
-          urls={slides.edges.map(slide => slide.node.file.url)}
+          urls={slides.edges.map((slide: {node: {file: {url: string}}}) => slide.node.file.url)}
           {...props}
         />
       </RowFull>

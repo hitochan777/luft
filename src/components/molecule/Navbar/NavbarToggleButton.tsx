@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import * as media from '../../../utils/media'
 
-const IconBar = styled.span`
+const IconBar = styled.span<{isOpened: boolean}>`
   width: 22px;
   display: block;
   height: 2px;
@@ -31,7 +31,7 @@ const IconBar = styled.span`
   }
 `
 
-const StyledNavbarToggleButton = styled.button`
+const StyledNavbarToggleButton = styled.button<{isOpened: boolean}>`
   position: fixed;
   top: 14px;
   right: 10px;
@@ -59,7 +59,7 @@ const NavbarToggleButton = ({
   onClick,
 }: {
   isCollapsed: boolean
-  onClick: Function
+  onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
 }) => {
   const isOpened = !isCollapsed
   return (
