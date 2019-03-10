@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import * as media from '../../../utils/media'
 
-const IconBar = styled.span<{isOpened: boolean}>`
+const IconBar = styled.span<{ isOpened: boolean }>`
   width: 22px;
   display: block;
   height: 2px;
@@ -31,7 +31,7 @@ const IconBar = styled.span<{isOpened: boolean}>`
   }
 `
 
-const StyledNavbarToggleButton = styled.button<{isOpened: boolean}>`
+const StyledNavbarToggleButton = styled.button<{ isOpened: boolean }>`
   position: fixed;
   top: 14px;
   right: 10px;

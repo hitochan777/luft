@@ -76,9 +76,7 @@ const Layout = ({ children }: { children: ReactNode }) => (
               },
             ]}
           />
-          <Navbar
-            tel={data.site.siteMetadata.tel}
-          />
+          <Navbar tel={data.site.siteMetadata.tel} />
           <Content>{children}</Content>
         </>
       </ThemeProvider>

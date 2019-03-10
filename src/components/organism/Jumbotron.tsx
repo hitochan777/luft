@@ -59,7 +59,9 @@ export default (props: any) => (
     render={({ slides }) => (
       <RowFull>
         <Jumbotron
-          urls={slides.edges.map((slide: {node: {file: {url: string}}}) => slide.node.file.url)}
+          urls={slides.edges.map(
+            (slide: { node: { file: { url: string } } }) => slide.node.file.url
+          )}
           {...props}
         />
       </RowFull>

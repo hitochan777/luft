@@ -16,7 +16,7 @@ const NavbarBrand = styled.img`
   `}
 `
 
-const Navbar = styled.div<{isOpen: boolean}>`
+const Navbar = styled.div<{ isOpen: boolean }>`
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -43,7 +43,7 @@ const Navbar = styled.div<{isOpen: boolean}>`
     min-width: ${props => props.theme.sideNavbarWidth};
   `}
 
-  ${media.max.desktop<{isOpen: boolean}>`
+  ${media.max.desktop<{ isOpen: boolean }>`
     animation: fadein 0.5s;
     display: ${props => (props.isOpen ? 'flex' : 'none')};
     width: 215px;
