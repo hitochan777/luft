@@ -20,7 +20,7 @@ export default ({ data }: { data: any }) => {
                 blogId={blog.id}
                 title={blog.title}
                 excerpt={blog.body.childMarkdownRemark.excerpt}
-                publishDate={blog.publishDate}
+                publishDate={blog.updatedAt}
                 imagePath={blog.thumbnail.resize.src}
               />
             </Box>
@@ -37,7 +37,7 @@ export const pageQuery = graphql`
       edges {
         node {
           id
-          publishDate(formatString: "YYYY月MM月DD日", locale: "ja-JP")
+          updatedAt(formatString: "YYYY月MM月DD日", locale: "ja-JP")
           body {
             childMarkdownRemark {
               excerpt
