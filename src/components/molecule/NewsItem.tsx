@@ -15,8 +15,8 @@ const StyledNewsItem = styled.article`
   flex-direction: column;
   word-wrap: break-word;
   ${media.min.tablet`
-    min-height: 30rem;
-    height: 30rem;
+    min-height: 25rem;
+    height: 25rem;
   `}
   position: relative;
   ${media.max.tablet`

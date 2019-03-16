@@ -40,7 +40,7 @@ export const pageQuery = graphql`
           updatedAt(formatString: "YYYY月MM月DD日", locale: "ja-JP")
           body {
             childMarkdownRemark {
-              excerpt
+              excerpt(pruneLength: 70, truncate: true)
             }
           }
           title
