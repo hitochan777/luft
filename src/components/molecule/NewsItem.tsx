@@ -33,8 +33,6 @@ const Title = styled.h2`
   white-space: nowrap;
 `
 
-const Excerpt = styled.p``
-
 const ReadMoreButton = styled.button`
   background-color: ${props => props.theme.luftColor};
   color: white;
@@ -81,7 +79,7 @@ const NewsItem = ({
     <Title>{title}</Title>
     <PublishDate>{publishDate}</PublishDate>
     <Thumbnail src={imagePath} alt={title} />
-    <Excerpt>{excerpt}</Excerpt>
+    <p>{excerpt}</p>
     <ButtonLink to={`/blog/${blogId}`} hasUnderline={false}>
       <ReadMoreButton>もっと読む</ReadMoreButton>
     </ButtonLink>
