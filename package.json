@@ -49,11 +49,9 @@
     "check-format": "prettier --list-different '**/*.{js,jsx,ts,tsx,json}'",
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -r .cache public",
-    "storybook": "start-storybook -p 9001 -c .storybook",
     "type-check": "tsc"
   },
   "devDependencies": {
-    "@storybook/react": "5.0.1",
     "prettier": "1.16.4"
   },
   "repository": {
