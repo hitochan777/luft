@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
 import { Carousel } from '../components/organism/Carousel'
 import Layout from '../components/template/Layout'
@@ -32,25 +32,31 @@ const CarouselItemImage = styled.img`
   object-fit: cover;
   display: block;
   margin: 0;
-  @keyframes zoom-and-scale {
-    from {
-      opacity: 0;
-      transform: scale(1.05);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
+`
+
+const currentStyle = `
+  @keyframes slider-animation{
+  from {
+    opacity: 0;
+    transform: scale(1.05);
   }
-  animation-name: zoom-and-scale;
-  animation: zoom-and-scale 10s infinite;
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+  } 
+
+  animation: slider-animation 10s;
 `
 
 export default ({ data: { slides } }: QueryResponse) => {
   return (
     <Layout>
       <RowFull>
-        <StyledCarousel autoplayInterval={10 * 1000}>
+        <StyledCarousel
+          autoplayInterval={10 * 1000}
+          currentStyle={currentStyle}
+        >
           {slides.edges.map((slide: SlideNode, index) => (
             <CarouselItemImage
               key={index}

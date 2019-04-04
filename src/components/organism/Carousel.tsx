@@ -18,20 +18,23 @@ const StyledItemWrapper = styled(ItemWrapper)`
 
 interface CarouselItemProps {
   children: ReactNode
+  currentStyle?: string
   isCurrent: boolean
-  fadeInterval?: number
 }
 
 const CarouselItem = ({
   children,
   isCurrent,
-  fadeInterval = 3000,
+  currentStyle,
   ...props
 }: CarouselItemProps) => {
+  const List = styled.li`
+    ${isCurrent ? currentStyle : ''}
+  `
   return (
-    <li aria-hidden={!isCurrent} className="slide" {...props}>
+    <List aria-hidden={!isCurrent} {...props}>
       {children}
-    </li>
+    </List>
   )
 }
 
@@ -49,28 +52,24 @@ const StyledCarouselItem = styled(CarouselItem)`
 `
 
 interface CarouselProps {
-  autoplay?: boolean
   autoplayInterval?: number
-  fadeInterval?: number
   children: ReactNode[]
+  currentStyle?: string
 }
 
 export const Carousel = ({
   autoplayInterval = 3000,
-  fadeInterval,
+  currentStyle = '',
   children,
 }: CarouselProps) => {
   const [currentIndex, setCurrentIndex] = useState(0)
   useEffect(() => {
     const timeout = setTimeout(() => {
       setCurrentIndex((currentIndex + 1) % children.length)
+      console.log('change')
     }, autoplayInterval)
     return () => clearTimeout(timeout)
   })
-
-  if (!fadeInterval) {
-    fadeInterval = autoplayInterval
-  }
 
   return (
     <StyledItemWrapper>
@@ -78,7 +77,7 @@ export const Carousel = ({
         <StyledCarouselItem
           key={index}
           isCurrent={index === currentIndex}
-          fadeInterval={fadeInterval}
+          currentStyle={currentStyle}
         >
           {child}
         </StyledCarouselItem>
