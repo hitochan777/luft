@@ -32,7 +32,7 @@
     "react-router-hash-link": "1.2.1",
     "react-typography": "0.16.19",
     "styled-components": "4.2.0",
-    "typescript": "3.3.4000",
+    "typescript": "3.4.1",
     "typography": "0.16.19"
   },
   "keywords": [
