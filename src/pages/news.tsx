@@ -13,7 +13,7 @@ export default ({ data }: { data: any }) => {
   return (
     <Layout>
       <Content title="News">
-        <Flex flexWrap="wrap" justifyContent="space-between">
+        <Flex flexWrap="wrap" justifyContent="space-evenly">
           {blogs.map((blog: any) => (
             <Box width={[1, 4 / 9, 3 / 10]} mb="20px" key={blog.id}>
               <NewsItem
