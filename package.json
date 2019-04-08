@@ -9,7 +9,7 @@
     "@types/react-router-hash-link": "1.2.1",
     "@types/rebass": "3.0.3",
     "@types/rebass__grid": "6.0.4",
-    "@types/styled-components": "4.1.13",
+    "@types/styled-components": "4.1.14",
     "@types/typography": "0.16.2",
     "babel-plugin-styled-components": "1.10.0",
     "gatsby": "2.3.13",
