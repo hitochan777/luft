@@ -51,7 +51,7 @@
     "type-check": "tsc"
   },
   "devDependencies": {
-    "prettier": "1.16.4"
+    "prettier": "1.18.2"
   },
   "repository": {
     "type": "git",
