@@ -1,6 +1,6 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import { Flex, Box } from '@rebass/grid'
+import { Flex, Box } from 'reflexbox'
 import styled from 'styled-components'
 
 import * as media from '../utils/media'

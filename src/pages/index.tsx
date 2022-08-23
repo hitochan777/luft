@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 
 import { Carousel } from '../components/organism/Carousel'
 import Layout from '../components/template/Layout'
@@ -27,7 +27,7 @@ const StyledCarousel = styled(Carousel)`
 `
 
 const CarouselItemImage = styled.img`
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   object-fit: cover;
   display: block;
