@@ -85,7 +85,7 @@ export default () => (
           <MenuSection title="カット" remarks="※カット、シャンプー、ブロー込み">
             <MenuItem>
               <MenuContent content="カット" />
-              <MenuPrice price={3800} />
+              <MenuPrice price={3900} />
             </MenuItem>
             <MenuItem>
               <MenuContent content="高校生カット" />
@@ -93,7 +93,7 @@ export default () => (
             </MenuItem>
             <MenuItem>
               <MenuContent content="中学生カット" />
-              <MenuPrice price={2500} />
+              <MenuPrice price={2800} />
             </MenuItem>
             <MenuItem>
               <MenuContent content="フロントカット" />
