@@ -13,15 +13,11 @@ module.exports = {
     tel: '0796-23-2123',
   },
   plugins: [
+    'gatsby-plugin-image',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-offline',
     'gatsby-plugin-styled-components',
-    {
-      resolve: 'gatsby-plugin-sass',
-      options: {
-        precision: 8,
-      },
-    },
+    'gatsby-plugin-sass',
     {
       resolve: `gatsby-source-contentful`,
       options: {

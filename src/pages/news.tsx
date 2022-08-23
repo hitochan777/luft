@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { Flex, Box } from '@rebass/grid'
+import { Flex, Box } from 'reflexbox'
 
 import Content from '../components/template/SubPage'
 import Layout from '../components/template/Layout'
@@ -49,7 +49,6 @@ export const pageQuery = graphql`
               src
               width
               height
-              aspectRatio
             }
           }
         }
