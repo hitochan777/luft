@@ -2,6 +2,7 @@ import React, { ReactNode } from 'react'
 import Helmet from 'react-helmet'
 import styled, { ThemeProvider } from 'styled-components'
 import { StaticQuery, graphql } from 'gatsby'
+import { Script } from "gatsby"
 
 import Navbar from '../molecule/Navbar'
 import theme from '../../theme'
@@ -76,6 +77,16 @@ const Layout = ({ children }: { children: ReactNode }) => (
               },
             ]}
           />
+          <Script src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GTAG}`} /> 
+          <Script id="gtag-config"forward={[`gtag`]}>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', '${process.env.GTAG}');
+          `}
+          </Script>
           <Navbar tel={data.site.siteMetadata.tel} />
           <Content>{children}</Content>
         </>
