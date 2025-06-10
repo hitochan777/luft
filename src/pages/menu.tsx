@@ -85,15 +85,15 @@ export default () => (
           <MenuSection title="カット" remarks="※カット、シャンプー、ブロー込み">
             <MenuItem>
               <MenuContent content="カット" />
-              <MenuPrice price={3900} />
+              <MenuPrice price={4200} />
             </MenuItem>
             <MenuItem>
               <MenuContent content="高校生カット" />
-              <MenuPrice price={3300} />
+              <MenuPrice price={3400} />
             </MenuItem>
             <MenuItem>
               <MenuContent content="中学生カット" />
-              <MenuPrice price={2800} />
+              <MenuPrice price={3000} />
             </MenuItem>
             <MenuItem>
               <MenuContent content="フロントカット" />
@@ -105,15 +105,15 @@ export default () => (
           <MenuSection title="カラー" remarks="※カット、シャンプー、ブロー込み">
             <MenuItem>
               <MenuContent content="カラー" />
-              <MenuPrice price={8500} minimum={true} />
+              <MenuPrice price={9000} minimum={true} />
             </MenuItem>
             <MenuItem>
               <MenuContent content="Wカラー" />
-              <MenuPrice price={8500} minimum={true} />
+              <MenuPrice price={11000} minimum={true} />
             </MenuItem>
             <MenuItem>
               <MenuContent content="白髪ぼかし" />
-              <MenuPrice price={6000} />
+              <MenuPrice price={6300} />
             </MenuItem>
           </MenuSection>
         </Box>
@@ -121,23 +121,15 @@ export default () => (
           <MenuSection title="パーマ" remarks="※カット、シャンプー、ブロー込み">
             <MenuItem>
               <MenuContent content="パーマ" />
-              <MenuPrice price={8500} minimum={true} />
-            </MenuItem>
-            <MenuItem>
-              <MenuContent content="ポイントパーマ" />
-              <MenuPrice price={6500} minimum={true} />
+              <MenuPrice price={9000} minimum={true} />
             </MenuItem>
             <MenuItem>
               <MenuContent content="ツイストパーマ" />
-              <MenuPrice price={10800} minimum={true} />
+              <MenuPrice price={11000} minimum={true} />
             </MenuItem>
             <MenuItem>
               <MenuContent content="ストレートパーマ" />
-              <MenuPrice price={13900} minimum={true} />
-            </MenuItem>
-            <MenuItem>
-              <MenuContent content="ポイントストレート" />
-              <MenuPrice price={6800} minimum={true} />
+              <MenuPrice price={14500} minimum={true} />
             </MenuItem>
           </MenuSection>
         </Box>
@@ -145,15 +137,15 @@ export default () => (
           <MenuSection title="その他">
             <MenuItem>
               <MenuContent content="ヘアトリートメント" />
-              <MenuPrice price={3500} />
+              <MenuPrice price={3600} />
             </MenuItem>
             <MenuItem>
               <MenuContent content="ヘッドスパ" />
-              <MenuPrice price={3500} />
+              <MenuPrice price={3600} />
             </MenuItem>
             <MenuItem>
               <MenuContent content="フェイスシェービング" />
-              <MenuPrice price={1500} />
+              <MenuPrice price={1800} />
             </MenuItem>
             <MenuItem>
               <MenuContent content="ノーズワックス" />
@@ -161,7 +153,7 @@ export default () => (
             </MenuItem>
             <MenuItem>
               <MenuContent content="ヘアセット" />
-              <MenuPrice price={3200} />
+              <MenuPrice price={3600} />
             </MenuItem>
           </MenuSection>
         </Box>
