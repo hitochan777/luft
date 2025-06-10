@@ -18,9 +18,7 @@ module.exports = {
     'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-plugin-sass',
-      options: {
-        precision: 8,
-      },
+      options: {},
     },
     {
       resolve: `gatsby-source-contentful`,
@@ -30,12 +28,6 @@ module.exports = {
       },
     },
     'gatsby-transformer-remark',
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
-    },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -50,12 +42,7 @@ module.exports = {
         exclude: [],
       },
     },
-    {
-      resolve: 'gatsby-plugin-html-attributes',
-      options: {
-        lang: 'ja',
-      },
-    },
     'gatsby-plugin-typescript',
+    'gatsby-plugin-image',
   ],
 }
